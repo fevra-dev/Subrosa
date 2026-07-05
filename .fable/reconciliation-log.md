@@ -1,0 +1,41 @@
+# Reconciliation Log — taxonomy ↔ downstream skills
+
+One line per reconciliation: file · claim · outcome (record-wins / subfile-wins→core-fixed / consistent / both-flagged). Subagent fragments (`recon-*.md`) merge here.
+
+## 2026-07-04 — consent-language family (wiring pattern proof, done inline)
+
+- `consent-language--rights-language.md` · response timelines (GDPR 1mo+2, CCPA 45+45, PIPEDA 30, Law25 30+10, LGPD 15) · **consistent** with records A6.
+- `consent-language--rights-language.md` · LGPD Object → Art. 18(II) duplicates the Access anchor · **both-flagged** — `[VERIFY]` inline (†) and in `br-lgpd` A6. Not resolvable from suite sources; do not guess the correct anchor.
+- `consent-language--breach-notification.md` · Law 25 72h to CAI + individuals · **both-flagged** — consistent across suite files, but primary-source doubt stands (`[VERIFY]` inline † and in `ca-pipeda-law25` A8). GDPR 72h floor unaffected.
+- `consent-language--breach-notification.md` · all other timeline rows · **consistent** with records A8 (LGPD 3bd/5bd, SG 3cd/500+, PIPL immediately, PIPEDA RROSH-feasible, POPIA ASAP, CCPA none).
+- `consent-language--childrens-consent.md` · age table · **consistent** with records A9 (CA 13-guidance, EU 16/13–16, UK 13+AADC, BR 18, CN 14, ZA 18, AU 15-guidance).
+- `consent-language--notice-templates.md` · "[30 days — GDPR]" in templates vs 1-month clock in records/timeline table · **consistent-by-design** — deliberate plain-language rendering (Grade-8 target); noted in the file's provenance line, no edit.
+- `consent-language--notice-templates.md` · UK IDTA in transfer checklist · operational template content, no record equivalent (A10 UK divergence block doesn't enumerate IDTA) · **no action** — record A10 already carries `[UNVERIFIED]` on Chapter V mechanics.
+- `consent-language--cookie-consent.md` · GPC table (CA §7026 binding; EU withdrawal-only per EDPB 8/2024; UK ICO draft) · **consistent** with `us-ca-ccpa` A2 / `eu-gdpr-uk` divergence block.
+- `consent-language.md` · Art. 6 bases, Art. 4(11)/7(3) consent standard, Arts. 13/14 checklist · **consistent** with `eu-gdpr-uk` A2/A6.
+
+## 2026-07-04 — data-minimization family (done inline; subagents lost to session limit)
+
+- `data-minimization--regulatory-reference.md` · POPIA enforcer "IOPA / IO" in both quick-select tables vs "Information Regulator (IR)" in its own section text · **fixed** — both table cells corrected to match section text; `[VERIFY]` on body-name stands in `za-popia`.
+- `data-minimization--regulatory-reference.md` + `--pipeda-gdpr.md` · grounding-source provenance notes added (records canonical going forward; fixes land record-first).
+- `data-minimization--quasi-identifiers.md` · 1 statutory-pattern line (prose GDPR caution, no citations) · **no-action** — left untouched by design.
+- `data-minimization--ocsf-minimization.md` · exception-record citations (GDPR 5(1)(c)/25(1), PIPEDA 4.7.1, NIS2 Art. 21) · **consistent** with records; provenance added; cross-linked to conflict C2.
+
+## 2026-07-04 — privacy-impact-assessment family (done inline)
+
+- `privacy-impact-assessment.md` · LGPD Art. 38 (ANPD may require DPIAs) · **subfile-wins → core fixed** — `br-lgpd` A12 upgraded from [UNVERIFIED] to sourced; trigger-scope flag retained.
+- `privacy-impact-assessment.md` · Singapore PDPC-advisory DPIA recommendation · **subfile-wins → core fixed** — `sg-pdpa` A12 upgraded from [UNVERIFIED] to sourced.
+- `privacy-impact-assessment.md` · PIPEDA OPC-recommended PIAs · **subfile-wins → core enriched** — `ca-pipeda-law25` A12.
+- `privacy-impact-assessment.md` · PIPL Art. 55 trigger row listed "large-scale processing", not in the Art. 55 list per its own `--dpia-triggers.md` (entrusting/sharing is) · **record-wins → subfile fixed** — row corrected to match Art. 55.
+- `privacy-impact-assessment--dpia-triggers.md` · Law 25 63.5 list, EDPB 09/2022, HIPAA, PIPL 55/56 · **consistent** with records A12 (records were built from this file); grounding-source provenance added.
+- `privacy-impact-assessment--pia-template.md` · 45 statutory-pattern lines · provenance added; **consistent**.
+
+## 2026-07-04 — threat-model-privacy family (done inline)
+
+- All three sub-files (`adversary-profiles`, `asset-taxonomy`, `mitigations`) · 0 statutory-pattern lines each · **no-action** — left untouched by design.
+- `threat-model-privacy.md` · regulatory-grounding pointer paragraph added (axes A1/A8/A10 + conflicts register for Archetypes 6–7 / INSTITUTIONAL class).
+
+## 2026-07-04 — suite router
+
+- `privacy-suite.md` · "GDPR/PIPAA/HIPAA/LGPD" typo · **fixed** → PIPEDA.
+- `privacy-suite.md` · taxonomy routing section + skill summary added.

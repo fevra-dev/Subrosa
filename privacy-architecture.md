@@ -16,7 +16,8 @@ Cryptographic primitive selection and implementation guidance for systems where 
 **Composable with:**
 - `threat-model-privacy` — run first to establish what must be protected and from whom; guides primitive selection
 - `data-minimization` — verify the minimized schema matches the architecture
-- `privacy-impact-assessment` — document architectural choices in a DPIA; ZK-based designs often eliminate DPIA requirements by making privacy mathematically enforced
+- `privacy-impact-assessment` — document architectural choices in a DPIA; ZK-based designs shrink the residual-risk register toward nil, but the assessment duty itself is procedural and remains (GDPR Art. 35 / Law 25 Art. 63.5 — see `regulatory-taxonomy--arch-rollup.md`, axis A12)
+- `regulatory-taxonomy` — the statutory payoff of every primitive here is mapped in `references/regulatory-dissolution.md` (primitive-first) and `regulatory-taxonomy--arch-rollup.md` (axis-first); cite records, not vibes
 
 ---
 
@@ -39,6 +40,8 @@ Quick routing from use case to primitive. Load the relevant reference section fo
 | Execute code in a hardware-isolated trusted environment | Trusted Execution Environment | `references/tee.md` |
 | Route communications so origin is unlinkable | Mixnet / Onion Routing | `references/comms.md` |
 | AI agent infers patterns without seeing individual records | Federated Learning + DP | `references/primitives.md` |
+
+**Statutory payoff per primitive** — which obligations each one dissolves, discharges, or is outright mandated by (APP 2, BIPA § 15(c), DPDPA § 9, KR PIPA, HIPAA Safe Harbor): `references/regulatory-dissolution.md`.
 
 ---
 
@@ -169,10 +172,14 @@ Consequences:
   Limitations: [what the primitive does NOT hide]
   Performance: [proving time, proof size, verification cost]
   
-Regulatory mapping:
-  GDPR Art. 5(1)(c): [how this satisfies data minimisation]
-  GDPR Art. 17: [how this satisfies right to erasure, if applicable]
-  [other applicable provisions]
+Regulatory mapping (cite taxonomy records, not freetext — worked example in
+references/regulatory-dissolution.md):
+  DISSOLVES:  [obligations that never attach — record + axis, e.g.
+               "GDPR Art. 9 never triggered (eu-gdpr-uk A5)"]
+  DISCHARGES: [duties satisfied by the primitive — record + axis]
+  RESIDUAL:   [what stays PROCEDURAL — notices, rights workflow, assessment paper]
+  FLOOR:      [which regulatory-taxonomy--floor.md rows this satisfies]
+  CONFLICTS:  [any C1–C7 entry this design resolves, with its residual-risk note]
 ```
 
 ---
@@ -338,6 +345,7 @@ Note: This is acoustic traffic analysis resistance, not encryption —
 - `references/web3-privacy.md` — Web3 / blockchain privacy: stealth addresses, ring signatures, confidential transactions, ZK rollups, Tornado Cash architecture analysis, Solana-specific privacy tooling
 - `references/tee.md` — Trusted execution environments: Intel SGX, ARM TrustZone, Apple Secure Enclave, Solana Seed Vault, known side-channel vulnerabilities, attestation protocols
 - `references/comms.md` — Communications privacy: Tor/onion routing, mixnets, Signal Protocol, forward secrecy, acoustic channel privacy (Kyma context)
+- `references/regulatory-dissolution.md` — The Statutory Dissolution Map: primitive → obligations dissolved/discharged across the 25-record taxonomy; the ARCH-MANDATES statutes; C1–C7 resolutions; the record-cited ADR pattern
 
 ---
 

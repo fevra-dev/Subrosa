@@ -1,6 +1,9 @@
 # Foundational Cryptographic Primitives
 
-Commitment schemes, PSI, homomorphic encryption, MPC, differential privacy, and ORAM — the building blocks beneath ZKPs and credentials.
+> *"We stand today on the brink of a revolution in cryptography... Public key cryptosystems... may permit... transactions to be carried out with neither party seeing the other's true name or number."*
+> — Whitfield Diffie & Martin Hellman, "New Directions in Cryptography" (1976)
+
+Everything below descends from that 1976 revolution: two strangers on a network establishing secrets without meeting made the intermediary optional, and Chaum (1985) turned it into a program. Commitment schemes, PSI, homomorphic encryption, MPC, differential privacy, and ORAM — the building blocks beneath ZKPs and credentials.
 
 ---
 

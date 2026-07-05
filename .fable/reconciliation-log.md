@@ -35,6 +35,10 @@ One line per reconciliation: file · claim · outcome (record-wins / subfile-win
 - All three sub-files (`adversary-profiles`, `asset-taxonomy`, `mitigations`) · 0 statutory-pattern lines each · **no-action** — left untouched by design.
 - `threat-model-privacy.md` · regulatory-grounding pointer paragraph added (axes A1/A8/A10 + conflicts register for Archetypes 6–7 / INSTITUTIONAL class).
 
+## 2026-07-05 — independent verification pass (12 Tier-3 + sectoral records)
+
+- Context-match verification (subagent, thorough): **1 issue in 12 records.** `us-coppa` S2 cited § 312.4 untagged — substantively correct COPPA but not traceable to suite sources · **fixed** — [UNVERIFIED] tag added. Informational: "no private right of action" in `us-hipaa`/`us-glba` untagged standard characterizations · **fixed** — tagged. All other untagged citations and concrete values confirmed matching on both section number and content (AU s. 13G penalties, JP Art. 2(3) list, KR Art. 34 clocks, HIPAA §§ 160.404/164.404-408, GLBA § 314.4 element letters, BIPA § 15(a)–(e) + verdicts, COPPA VPC table).
+
 ## 2026-07-04 — suite router
 
 - `privacy-suite.md` · "GDPR/PIPAA/HIPAA/LGPD" typo · **fixed** → PIPEDA.

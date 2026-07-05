@@ -14,7 +14,7 @@ FTC; state AGs under § 6504(b). Civil penalties to **$51,744 per violation per 
 
 ## S2 — Obligation Spine
 - **Verifiable parental consent before collection** (§ 6502(b)(1)(A); § 312.5) — approved methods per § 312.5(b): email-plus, print-and-send, video conference, government-ID check (+ delete afterward), credit card, KBA; face-match proposed 2023. Email-only is not verifiable.
-- **Notice** (§ 312.5(a) + § 312.4): home page and every collection point; direct notice to parents.
+- **Notice** (§ 312.5(a) + § 312.4 `[UNVERIFIED — § 312.4 not in suite sources; substance is standard COPPA but confirm against 16 CFR]`): home page and every collection point; direct notice to parents.
 - **No conditioning** (§ 6502(b)(1)(D) via § 312.7): participation may not be conditioned on more PI than reasonably necessary.
 - **Retention/deletion** (§ 312.10): keep only as long as reasonably necessary; protected deletion.
 - **Neutral age screening**: no PI collection after an under-13 signal; no re-ask; no bypassable gates ("actual knowledge" accrues on circumventable screens).

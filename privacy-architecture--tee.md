@@ -1,6 +1,9 @@
 # Trusted Execution Environments
 
-Hardware-enforced isolated execution. Code and data inside the enclave are protected from the host OS, hypervisor, and physical memory attacks — even from the device owner in some configurations.
+> *"Trusted third parties are security holes."*
+> — Nick Szabo (2001)
+
+By Szabo's razor, a TEE is not an elimination of the trusted third party but its **minimization into silicon** — you still trust the chip vendor, the attestation chain, and the microcode. That makes TEEs the honest compromise of this suite: use one when the cryptographic primitives (ZKP, MPC, HE) can't meet the performance budget, and threat-model it as the TTP it is (side-channel history below). Hardware-enforced isolated execution: code and data inside the enclave are protected from the host OS, hypervisor, and physical memory attacks — even from the device owner in some configurations.
 
 ---
 

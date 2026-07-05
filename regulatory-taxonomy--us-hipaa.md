@@ -10,7 +10,7 @@
 **PHI × (covered entity ∪ business associate).** Covered entities: health plans, clearinghouses, providers transmitting PHI electronically (§ 160.103). BAs: vendors that create/receive/maintain/transmit PHI for a CE — BAA required (§ 164.308(b)). **Inferred health data is PHI** if held by a covered entity, regardless of source (`data-minimization.md` Step 2b rule 2).
 
 ## S1 — Enforcement
-HHS OCR. Civil: $100–$50,000+ per violation, up to $1.9M per violation category per year (§ 160.404, adjusted annually). Criminal: up to 10 years for knowing misuse (42 U.S.C. § 1320d-6). Private right of action: none under HIPAA itself.
+HHS OCR. Civil: $100–$50,000+ per violation, up to $1.9M per violation category per year (§ 160.404, adjusted annually). Criminal: up to 10 years for knowing misuse (42 U.S.C. § 1320d-6). Private right of action: none under HIPAA itself `[UNVERIFIED — standard characterization, not stated in suite sources]`.
 
 ## S2 — Obligation Spine
 - **Minimum Necessary** (§ 164.502(b)) — limit PHI to the minimum needed for the purpose; internal-use policies § 164.514(d). *Not* applicable to: disclosures to the individual, to HHS, required-by-law, treatment communications.

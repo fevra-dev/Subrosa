@@ -15,13 +15,13 @@ Complete language for each right, per jurisdiction, including exercise mechanism
 | Erasure | Art. 17 | Art. 17 | Cl. 4.5.3 | § 1798.105 | Art. 28 PPIPS | Art. 18(VI) | Art. 47 |
 | Restriction | Art. 18 | Art. 18 | — | — | — | — | — |
 | Portability | Art. 20 | Art. 20 | — | § 1798.100 | Art. 27 PPIPS | Art. 18(V) | Art. 45 |
-| Object | Art. 21 | Art. 21 | Cl. 4.3.8 | § 1798.120 | — | Art. 18(II)† | Art. 44 |
+| Object | Art. 21 | Art. 21 | Cl. 4.3.8 | § 1798.120 | — | Art. 18 § 2† | Art. 44 |
 | Automated decisions | Art. 22 | Art. 22 | — | — | — | Art. 20 | Art. 24 |
 | De-indexing | — | — | — | — | Art. 28.1 PPIPS | — | — |
 | Opt-out of sale | — | — | — | § 1798.120 | — | — | — |
 | Limit sensitive PI | — | — | — | § 1798.121 | — | — | — |
 
-† `[VERIFY — LGPD Object and Access both mapped to Art. 18(II) here; duplicate anchor looks suspect. Confirm objection's true anchor against the primary statute. Flag mirrored in the br-lgpd taxonomy record.]`
+† **Corrected 2026-07-05 (primary-source check):** LGPD objection is **Art. 18 § 2** (opposition to processing on non-consent bases in case of noncompliance). This matrix previously duplicated Art. 18(II) — the access anchor — for Object. Mirrored in the `br-lgpd` record; details in `.fable/reconciliation-log.md`.
 
 ---
 

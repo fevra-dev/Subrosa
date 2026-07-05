@@ -110,13 +110,17 @@ Each obligation is tagged for whether architecture or only process can satisfy i
 | 🇰🇷 PIPA | `regulatory-taxonomy--kr-pipa.md` | 3b | SCAFFOLD |
 | 🇦🇪 PDPL (federal; DIFC/ADGM separate) | `regulatory-taxonomy--ae-pdpl.md` | 3b | SCAFFOLD |
 | 🇳🇬 NDPA | `regulatory-taxonomy--ng-ndpa.md` | 3b | SCAFFOLD |
-| 🇻🇳 PDPD | `regulatory-taxonomy--vn-pdpd.md` | 3b | SCAFFOLD |
+| 🇻🇳 PDPD → **superseded by PDPL 91/2025/QH15, eff. 2026-01-01** | `regulatory-taxonomy--vn-pdpd.md` | 3b | SCAFFOLD (SUPERSEDED — re-author) |
 | Long tail (AR 25.326, NZ Privacy Act, US states, SA/KE/ID — no suite source) | `regulatory-taxonomy--stubs.md` | 3c | STUB |
 | 🇺🇸 HIPAA (health) | `regulatory-taxonomy--us-hipaa.md` | S | SECTORAL-OVERLAY |
 | 🇺🇸 GLBA / FTC Safeguards (financial) | `regulatory-taxonomy--us-glba.md` | S | SECTORAL-OVERLAY |
 | 🇺🇸 COPPA (children) | `regulatory-taxonomy--us-coppa.md` | S | SECTORAL-OVERLAY |
 | 🇺🇸 BIPA (Illinois biometrics) | `regulatory-taxonomy--us-il-bipa.md` | S | SECTORAL-OVERLAY |
-| Sectoral, registered only (FERPA, ePrivacy, NIS2, DORA, EU AI Act) | — pending S-profile records | S | SECTORAL |
+| 🇺🇸 FERPA (education) | `regulatory-taxonomy--us-ferpa.md` | S | SECTORAL-OVERLAY |
+| 🇪🇺 ePrivacy Directive | `regulatory-taxonomy--eu-eprivacy.md` | S | SECTORAL-OVERLAY |
+| 🇪🇺 NIS2 | `regulatory-taxonomy--eu-nis2.md` | S | SECTORAL-OVERLAY |
+| 🇪🇺 DORA | `regulatory-taxonomy--eu-dora.md` | S | SECTORAL-OVERLAY |
+| 🇪🇺 AI Act | `regulatory-taxonomy--eu-ai-act.md` | S | SECTORAL-OVERLAY |
 
 **Derived artifacts** (regenerate on any record change): `regulatory-taxonomy--floor.md` — strictest-regime-wins design floor · `regulatory-taxonomy--conflicts.md` — cross-regime conflict register C1–C7 · `regulatory-taxonomy--arch-rollup.md` — architecture-vs-policy roll-up. Derived 2026-07-04 from Tier-1 + suite prose.
 
@@ -126,7 +130,7 @@ Each obligation is tagged for whether architecture or only process can satisfy i
 
 Compact answers to the motivating queries. Full strictest-wins derivation happens in Phase 2; this index is regenerated whenever a record changes.
 
-**Breach clocks (regulator):** GDPR/UK 72h fixed · Quebec Law 25 72h `[VERIFY — suite files state 72h; primary text may phrase as "promptly/with diligence"]` · LGPD 3 business days (ANPD Res. 15/2023) · Singapore PDPA 3 calendar days · Thailand PDPA 72h · PIPL "immediately" · PIPEDA "as soon as feasible" (RROSH) · POPIA "as soon as reasonably possible" · CCPA none (civil action only). Source: `consent-language--breach-notification.md`.
+**Breach clocks (regulator):** GDPR/UK 72h fixed · Quebec Law 25 **promptly** *(primary-source corrected 2026-07-05 — suite's prior 72h claim was wrong)* · LGPD 3 business days (ANPD Res. 15/2023) · Singapore PDPA 3 calendar days · Thailand PDPA 72h · PIPL "immediately" · PIPEDA "as soon as feasible" (RROSH) · POPIA "as soon as reasonably possible" · CCPA none (civil action only). Source: `consent-language--breach-notification.md` + reconciliation log.
 
 **Children's ages:** US 13 (COPPA) · EU 16 default, member-state floor 13 · UK 13 (+AADC to 18) · Canada 13 (OPC guidance, non-statutory) · Brazil 18 · China 14 · South Africa 18 · Australia 15 (guidance). Source: `consent-language--childrens-consent.md`.
 

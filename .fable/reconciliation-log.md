@@ -1,5 +1,16 @@
 # Reconciliation Log — taxonomy ↔ downstream skills
 
+## 2026-07-05 — [VERIFY] ledger resolved by primary-source web research (6/6)
+
+Five genuine suite errors + one supersession, all corrected across records, prose files, master, floor, and conflicts:
+
+1. **Law 25 breach clock — SUITE WAS WRONG.** No 72-hour clock exists; the standard is *prompt* notification to CAI/individuals + a mandatory all-incident register. Corrected in `ca-pipeda-law25` A8, breach-notification table, reg-ref, pipeda-gdpr, master quick index, floor A8 (GDPR Art. 33 now the sole fixed-clock floor-setter). Sources: Gowling WLG, OneTrust, Termly, CFIB analyses of Law 25 s. 3.5.
+2. **POPIA condition numbering — SUITE WAS WRONG (whole table shifted).** Canonical: processing limitation ss. 9–12 (minimality s. 10), purpose spec ss. 13–14, further processing s. 15, quality s. 16, openness ss. 17–18, safeguards ss. 19–22 (breach s. 22), participation ss. 23–25. Record rewritten; reg-ref table + minimization-framework paragraph corrected. Sources: gov.za Act text, popia.co.za.
+3. **LGPD objection anchor — SUITE WAS WRONG.** Objection = **Art. 18 § 2**, not Art. 18(II) (that's access). Also gained Art. 18(IV) (deletion of *excessive* data — a statutory minimization right). Corrected in `br-lgpd` A6 + rights matrix. Sources: lgpd-brazil.info, IAPP, ICLG.
+4. **nFADP "Art. 12" — SUITE CONFLATED two provisions.** Art. 12 = register of processing activities (>250 employees); the notify-unless-DPO mechanic is Art. 23(4); DPIA = Art. 22 + Ordinance Art. 14; FDPIC consultation = Art. 23. Corrected in `ch-nfadp` A12. Sources: fedlex.admin.ch, kmu.admin.ch, Termly.
+5. **UAE penalties — suite's AED 20M figure uncorroborated; withdrawn.** Web: administrative fines AED 50k–5M; implementing rules = Cabinet Decision No. 33 of 2024 (in force); Data Office de facto 72h breach standard. Corrected in `ae-pdpl` A1/A8. Sources: Securiti, RecordingLaw, CookieYes.
+6. **Vietnam — INSTRUMENT SUPERSEDED.** PDPL No. 91/2025/QH15 (enacted 2025-06-26, effective 2026-01-01) replaced Decree 13. Also resolves the Art. 9 collision: PDPL Art. 9 = consent, rights at Art. 4; the Decree's own Art. 9 was rights, so the quick-select "Art. 9 (minimization)" was wrong twice over. Record banner added; registry, C3, floor A10 caveated pending re-authoring. Sources: Rouse, Tilleke & Gibbins, FPF, luatvietnam.vn.
+
 One line per reconciliation: file · claim · outcome (record-wins / subfile-wins→core-fixed / consistent / both-flagged). Subagent fragments (`recon-*.md`) merge here.
 
 ## 2026-07-04 — consent-language family (wiring pattern proof, done inline)

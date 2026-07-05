@@ -13,7 +13,7 @@ Templates for notifying regulators and affected individuals following a personal
 | GDPR (EU/EEA) | 72 hours of becoming aware | Without undue delay (if high risk to individuals) | All breaches to regulator; high-risk to individuals |
 | UK GDPR | 72 hours | Without undue delay (if high risk) | Same as GDPR |
 | PIPEDA (Canada) | "As soon as feasible" | "As soon as feasible" after regulator notice | Real risk of significant harm (RROSH) |
-| Quebec Law 25 | 72 hours to CAI† | 72 hours (same as CAI)† | Privacy incident with "serious injury" risk |
+| Quebec Law 25 | Promptly to CAI† | Promptly† | Privacy incident with "serious injury" risk; all-incident register mandatory |
 | HIPAA (US Healthcare) | 60 days of discovery | 60 days of discovery | Any unsecured PHI breach |
 | HIPAA (>500 in state) | 60 days + media notification | Same | > 500 affected in a state |
 | CCPA (California) | N/A (civil action only) | Immediate — prior to contacting individuals | Unauthorized access to PI |
@@ -24,7 +24,7 @@ Templates for notifying regulators and affected individuals following a personal
 | POPIA (South Africa) | ASAP (reasonable period) | ASAP | Unlawful access to PI |
 | NIS2 (EU — critical infrastructure) | 24 hours (early warning) + 72 hours (incident notification) + 1 month (final report) | N/A (NIS2 = regulator/CSIRT) | Significant incidents |
 
-† `[VERIFY — the primary Law 25 text may phrase the CAI/individual duty as "promptly/with diligence" rather than a fixed 72-hour clock. Confirm against PPIPS before relying on the fixed clock. Flag mirrored in the ca-pipeda-law25 taxonomy record. The GDPR 72-hour floor stands independently.]`
+† **Corrected 2026-07-05 (primary-source check):** Law 25 requires *prompt* notification — the 72-hour clock previously stated in this suite was incorrect (no fixed clock exists in the Quebec regime; a confidentiality-incident register is mandatory for all incidents). The GDPR 72-hour floor stands independently. Details: `.fable/reconciliation-log.md`.
 
 ---
 

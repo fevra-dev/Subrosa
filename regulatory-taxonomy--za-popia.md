@@ -2,47 +2,47 @@
 
 | | |
 |---|---|
-| **Record** | `za-popia` · **Status/Tier:** SCAFFOLD / Tier 2 · **Schema:** v1.0 · **Current as of:** 2026-07-04 |
+| **Record** | `za-popia` · **Status/Tier:** SCAFFOLD / Tier 2 · **Schema:** v1.0 · **Current as of:** 2026-07-05 (primary-source corrected) |
 | **Instrument** | Protection of Personal Information Act, Act 4 of 2013; enforcement operative July 1 2021 |
-| **Sources** | `data-minimization--regulatory-reference.md` §POPIA · `consent-language--breach-notification.md` · `consent-language--childrens-consent.md` |
+| **Sources** | `data-minimization--regulatory-reference.md` §POPIA · `consent-language--breach-notification.md` · `consent-language--childrens-consent.md` · **primary-source web check 2026-07-05** (gov.za Act text; popia.co.za; see reconciliation log) |
 
-**Source-accuracy caution:** the suite's POPIA condition table (ss. 8–25) compresses the eight conditions into single section numbers whose assignments look shifted against the statute's actual structure `[VERIFY — canonical POPIA spreads conditions across ranges: quality s. 16, openness ss. 17–18, safeguards ss. 19–22, participation ss. 23–25; the suite table maps quality→§12, openness→§13, safeguards→§14, participation→§15. Confirm every section number against the primary Act before downstream use]`. Cells below carry the suite's values with this flag standing over them.
+**Correction record (2026-07-05):** the suite's original condition table compressed each condition into a single shifted section number. Canonical structure, now used throughout: Accountability **s. 8** · Processing limitation **ss. 9–12** (lawfulness s. 9; **minimality s. 10** — adequate, relevant, not excessive; consent/justification s. 11; direct collection s. 12) · Purpose specification **ss. 13–14** (s. 14 = retention) · Further-processing limitation **s. 15** · Information quality **s. 16** · Openness **ss. 17–18** · Security safeguards **ss. 19–22** (breach notification **s. 22**) · Data-subject participation **ss. 23–25**.
 
 ## A0 — Scope
 Responsible parties processing PI. Extraterritorial reach: *not located*. Thresholds/exemptions: *not located*.
 
 ## A1 — Enforcement
-**Information Regulator (IR)** per the POPIA section text `[VERIFY — the jurisdiction quick-select tables render this as "IOPA / IO"; "Information Regulator" is the correct body name]`. Penalties: up to ZAR 10M or imprisonment up to 10 years. Private right of action: *not located*.
+**Information Regulator (IR)** (naming corrected — one suite table had "IOPA"). Penalties: up to ZAR 10M or imprisonment up to 10 years. Private right of action: *not located*.
 
 ## A2 — Lawful Basis & Consent
-`basis_model:` *not located* — POPIA's justification grounds (s. 11) are not in suite sources `[UNVERIFIED — s. 11 lists consent, contract, legal obligation, legitimate interest et al.; confirm]`. Sensitive escalation: § 26 prohibition except § 27 grounds. Direct marketing by electronic communication: prior consent (§ 69). Tag: `PROCEDURAL`.
+`basis_model:` justification-grounds — **s. 11**: consent, contract, legal obligation, protection of legitimate interest, public-law duty, legitimate interests of responsible/third party (web-confirmed placement; enumeration `[UNVERIFIED — confirm the full s. 11(1) list against the Act text]`). Sensitive escalation: § 26 prohibition except § 27 grounds. Direct marketing by electronic communication: prior consent (§ 69). Tag: `PROCEDURAL`.
 
 ## A3 — Collection Limitation
-`test_type:` necessity (non-excessiveness). **§ 9 processing limitation** — PI must be adequate, relevant, and **not excessive** (mirrors GDPR Art. 5(1)(c) verbatim, per source) + **§ 10 purpose specification** — specific, explicitly defined, lawful purpose. Together these constitute the POPIA minimization framework (sourced). P-mapping: **P1** (§ 9), **P1/P2** (§ 10). Tag: `ARCH-DISSOLVES`.
+`test_type:` necessity (non-excessiveness). **s. 10 — minimality:** PI must be adequate, relevant, and **not excessive** (mirrors GDPR Art. 5(1)(c)); within the processing-limitation condition ss. 9–12. P-mapping: **P1**. Tag: `ARCH-DISSOLVES`.
 
 ## A4 — Purpose Limitation
-§ 10 purpose specification + § 11 further-processing limitation (compatibility with original purpose) `[VERIFY — further-processing is s. 15 in the canonical numbering; suite table says § 11]`. P2. Tag: `PROCEDURAL` + `ARCH-SATISFIES` via separation.
+**s. 13** purpose specification (specific, explicitly defined, lawful purpose) + **s. 15** further-processing compatibility. P2. Tag: `PROCEDURAL` + `ARCH-SATISFIES` via separation.
 
 ## A5 — Sensitive Categories
 `sensitive_model:` prohibitive-list. § 26 special information: religious/philosophical beliefs; race/ethnic origin; trade union membership; political persuasion; health/sex life; biometric information; criminal behaviour. Processing prohibited except on § 27 grounds. Tag: `ARCH-DISSOLVES` where provable-not-disclosable; else `PROCEDURAL`.
 
 ## A6 — Rights
-Data subject participation — access and correction (§ 15 per suite table `[VERIFY — canonical ss. 23–25]`). Erasure / restriction / portability / objection / ADM: *not located in suite sources*. Response clock: *not located*. Tag: `PROCEDURAL`.
+Data-subject participation **ss. 23–25**: access (s. 23), correction/deletion request (s. 24), manner of request (s. 25). Objection: s. 11(3) `[UNVERIFIED — confirm]`. Portability: none in the Act. Response clock: *not located*. Tag: `PROCEDURAL`.
 
 ## A7 — Retention & Erasure
-No dedicated retention condition in suite sources — *not located* `[UNVERIFIED — canonical POPIA s. 14 covers retention and restriction of records; confirm]`. P4. Tag: `ARCH-SATISFIES` (TTL) pending confirmed anchor.
+**s. 14:** retention only as long as necessary for the purpose; destruction/deletion/de-identification thereafter (within the purpose-specification condition). P4. Tag: `ARCH-SATISFIES` (TTL).
 
 ## A8 — Breach Notification
-`clock_model:` promptness-standard. "As soon as reasonably possible" to regulator and individuals; threshold: unlawful access to PI (per `consent-language--breach-notification.md` timeline table). Statutory anchor `[UNVERIFIED — s. 22 security-compromise notification; not in suite sources]`. Tag: duty `PROCEDURAL`; trigger shrinks with minimized holdings.
+`clock_model:` promptness-standard. **s. 22:** notify the Information Regulator and affected data subjects **as soon as reasonably possible** after reasonable grounds to believe PI was accessed/acquired unlawfully (anchor web-confirmed; previously [UNVERIFIED]). Tag: duty `PROCEDURAL`; trigger shrinks with minimized holdings.
 
 ## A9 — Children
-**Under 18**; parental/guardian consent — § 35 (per `consent-language--childrens-consent.md` age table). Tag: `PROCEDURAL`.
+**Under 18**; parental/guardian consent — § 35 (per children's-consent age table). Tag: `PROCEDURAL`.
 
 ## A10 — Cross-Border Transfer
-*Not located in suite sources* `[UNVERIFIED — canonical anchor s. 72 (adequacy / binding rules / consent / contract necessity); confirm]`. `transfer_model:` pending confirmation.
+s. 72 — adequacy / binding corporate rules / consent / contract necessity `[UNVERIFIED — anchor widely cited but not context-verified; confirm s. 72(1) grounds]`. `transfer_model:` adequacy+mechanisms pending confirmation.
 
 ## A11 — Security Safeguards
-Security safeguards condition — integrity and confidentiality via technical/organisational measures (§ 14 per suite table `[VERIFY — canonical ss. 19–22]`). **P7**. Tag: `ARCH-SATISFIES`.
+**ss. 19–22:** appropriate, reasonable technical and organisational measures against loss, damage, unauthorised destruction, and unlawful access/processing (s. 19); operator duties (ss. 20–21); breach notification (s. 22). **P7**. Tag: `ARCH-SATISFIES`.
 
 ## A12 — DPIA / PIA
-`dpia_model:` none documented in suite sources — *not located*.
+`dpia_model:` none documented — *not located* (a PIA appears in the Regulator's s. 55 prior-authorisation/compliance-framework context `[UNVERIFIED]`).

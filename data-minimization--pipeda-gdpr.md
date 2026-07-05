@@ -31,7 +31,7 @@ Field-level applicability guide for Canadian, EU, and California privacy law.
 
 **Breach reporting (ss. 10.1–10.3):** Organizations must report to the OPC and notify affected individuals of breaches involving a "real risk of significant harm" (s. 10.1(1)). Factors: sensitivity of PI, number of individuals affected, systemic nature (s. 10.1(3)). Data minimization directly reduces PIPEDA breach exposure — less data = lower severity = lower reporting threshold.
 
-**Quebec Law 25 divergences (effective Sept 2023):** Privacy Impact Assessments mandatory for new projects involving PI (s. 63.5); explicit opt-in consent for sensitive PI; 72-hour breach notification to Commission d'accès à l'information (s. 3.2); right to data portability (s. 27); right to de-indexing (s. 28.1). Stricter than PIPEDA on all counts — design to Law 25 standard for any Quebec data subjects.
+**Quebec Law 25 divergences (effective Sept 2023):** Privacy Impact Assessments mandatory for new projects involving PI (s. 63.5); explicit opt-in consent for sensitive PI; prompt breach notification to Commission d'accès à l'information + mandatory incident register *(corrected 2026-07-05 — previously misstated as a 72-hour clock)*; right to data portability (s. 27); right to de-indexing (s. 28.1). Stricter than PIPEDA on all counts — design to Law 25 standard for any Quebec data subjects.
 
 ---
 

@@ -19,7 +19,7 @@
 **Arch reading:** `ARCH-SATISFIES` — the conflict is dissolved at field granularity, not log granularity.
 
 ## C3 — Localization regimes vs global service architecture and portability
-**Collides:** PIPL Arts. 38–43 (CAC assessment/contract/certification; Art. 43 reciprocity) + **VN PDPD Art. 26 (in-country storage of citizens' data; MPS approval or self-assessment for export)** ↔ GDPR Art. 20 portability, global processing topologies, Law 25 Art. 17 outbound assessments.
+**Collides:** PIPL Arts. 38–43 (CAC assessment/contract/certification; Art. 43 reciprocity) + **VN localization (Decree 13 Art. 26; verify carry-over into PDPL 91/2025/QH15, which replaced the Decree effective Jan 1 2026)** ↔ GDPR Art. 20 portability, global processing topologies, Law 25 Art. 17 outbound assessments.
 **Mechanism:** data that lawfully cannot leave the territory cannot be ported, replicated, or centrally processed; PIPL volume thresholds (1M+ individuals; 100k+/10k+ sensitive) trip mandatory CAC assessment; Vietnam adds a hard storage-location mandate.
 **Resolution:** regional data residency; collect-locally-process-locally; and the sourced design rule — *if you cannot lawfully transfer it, don't collect it*.
 **Residual risk:** CAC discretion and reciprocity countermeasures are policy-driven and can shift without statutory change.

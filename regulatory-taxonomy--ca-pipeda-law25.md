@@ -88,9 +88,9 @@ P-mapping: P4. Tag: `ARCH-SATISFIES` (automated TTL / crypto-erasure); `ARCH-DIS
 
 ## A8 — Breach Notification
 
-- `clock_model:` PIPEDA **promptness-standard** · Law 25 **fixed-clock** `[VERIFY]`.
+- `clock_model:` PIPEDA **promptness-standard** · Law 25 **promptness-standard** *(primary-source corrected 2026-07-05)*.
 - PIPEDA (ss. 10.1–10.3): report to OPC and notify individuals "as soon as feasible" where breach presents **real risk of significant harm (RROSH)**; factors: sensitivity, number affected, systemic nature (s. 10.1(3)).
-- Law 25: **72 hours to CAI and to individuals** per `consent-language--breach-notification.md` and `data-minimization--regulatory-reference.md` (citing Art. 3.2 PPIPS); threshold: privacy incident with "serious injury" risk. `[VERIFY — suite files state a 72-hour clock; primary text may phrase the duty as "promptly/with diligence" — confirm against PPIPS before relying on the fixed clock]`
+- Law 25: notify CAI and affected individuals **promptly** where a confidentiality incident presents a risk of **serious injury**; the privacy officer participates in the risk assessment; a **confidentiality-incident register** must be maintained for *all* incidents regardless of threshold. **Correction:** the suite previously stated a 72-hour clock (citing "Art. 3.2 PPIPS") — primary-source check found no fixed clock; the standard is promptness (s. 3.5 lineage). GDPR's 72h floor is unaffected.
 - Minimization linkage (sourced): less data → lower breach severity → lower reporting threshold.
 
 Tag: duty once triggered `PROCEDURAL`; trigger surface `ARCH-DISSOLVES` under minimized/commitment-only holdings (the RROSH threshold is directly a function of what was held).
@@ -126,4 +126,4 @@ Tag: `PROCEDURAL` — irreducibly documentary; but a selective-disclosure design
 
 ## Divergence Block — Law 25 vs PIPEDA (sourced summary)
 
-Stricter on all counts: mandatory PIAs (63.5) · explicit opt-in for sensitive PI (Art. 12) · 72h breach clock `[VERIFY]` (vs "as soon as feasible") · portability (Art. 27) · de-indexing (Art. 28.1) · outside-Quebec transfer assessment (Art. 17) · CAD 25M / 4% penalties (Art. 90.1).
+Stricter on all counts: mandatory PIAs (63.5) · explicit opt-in for sensitive PI (Art. 12) · prompt breach notification + mandatory all-incident register (vs RROSH-only reporting) · portability (Art. 27) · de-indexing (Art. 28.1) · outside-Quebec transfer assessment (Art. 17) · CAD 25M / 4% penalties (Art. 90.1).

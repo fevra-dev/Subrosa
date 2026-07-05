@@ -11,4 +11,4 @@ Normalized template stubs. Axes **not populated** — each entry records instrum
 | `ke-dpa` | Kenya Data Protection Act 2019 `[UNVERIFIED]` | ODPC `[UNVERIFIED]` | **none** | Same — Malaysia pattern on promotion |
 | `id-pdp` | Indonesia PDP Law No. 27/2022 `[UNVERIFIED]` | PDP authority (formation status unknown) `[UNVERIFIED]` | **none** | Same — Malaysia pattern on promotion |
 
-**Sectoral registry:** HIPAA, GLBA, COPPA, BIPA now have SECTORAL-OVERLAY records (S-profile v1.1, operator-approved 2026-07-05). Still registered-only, pending S-profile records: FERPA · ePrivacy Directive · NIS2 · DORA · EU AI Act · state biometric variants (TX CUBI, WA MHMD, NYC LL 894). Suite sources for all are substantial (`data-minimization--regulatory-reference.md`).
+**Sectoral registry:** HIPAA, GLBA, COPPA, BIPA, FERPA, ePrivacy, NIS2, DORA, and the EU AI Act all have SECTORAL-OVERLAY records (S-profile v1.1). Still registered-only: state biometric variants (TX CUBI, WA MHMD, NYC LL 894) and DIFC/ADGM data-protection frameworks (per `ae-pdpl` S0 note).

@@ -149,7 +149,7 @@ A breach of unsecured PHI triggers notification obligations unless the covered e
 **Key divergences from PIPEDA (stricter on all counts):**
 - **Privacy Impact Assessments (PIAs) mandatory** for any new project involving PI that presents privacy risks (Art. 63.5 PPIPS) — not optional as under PIPEDA
 - **Explicit opt-in consent required** for sensitive PI (Art. 12 PPIPS) — opt-out insufficient
-- **72-hour breach notification** to CAI (Art. 3.2 PPIPS) — vs PIPEDA's "without unreasonable delay"
+- **Prompt breach notification** to CAI + mandatory confidentiality-incident register — vs PIPEDA's "without unreasonable delay" *(corrected 2026-07-05: this file previously stated a 72-hour clock citing "Art. 3.2 PPIPS"; primary-source check found no fixed clock — see `.fable/reconciliation-log.md`)*
 - **Right to de-indexing** (Art. 28.1 PPIPS) — broader than GDPR erasure in some respects
 - **Right to data portability** (Art. 27 PPIPS) — machine-readable format
 - **Data localization:** PI may not be communicated outside Quebec without adequate protection assessment (Art. 17 PPIPS)
@@ -406,18 +406,20 @@ Requires "specific purposes and sufficient necessity" AND separate consent:
 
 **Eight Conditions for Lawful Processing (Chapter 3, Part A — ss. 8-25):**
 
-| § | Condition | Core obligation | Minimization principle |
+| §§ | Condition | Core obligation | Minimization principle |
 |---|---|---|---|
 | § 8 | Accountability | Responsible party must ensure compliance | — |
-| § 9 | Processing limitation | Lawful processing; not excessive | P1 |
-| **§ 10** | **Purpose specification** | **Collected for specific, explicitly defined, lawful purpose** | **P1, P2** |
-| § 11 | Further processing limitation | Further processing compatible with original purpose | P2 |
-| § 12 | Information quality | Complete, accurate, not misleading, updated | P3 |
-| § 13 | Openness | Data subject notified of collection | — |
-| § 14 | Security safeguards | Integrity and confidentiality via technical/organisational measures | P7 |
-| § 15 | Data subject participation | Access and correction rights | P4 |
+| §§ 9–12 | Processing limitation | Lawful processing (s. 9); **minimality — adequate, relevant, not excessive (s. 10)**; consent/justification (s. 11); direct collection (s. 12) | P1 |
+| **§§ 13–14** | **Purpose specification** | **Specific, explicitly defined, lawful purpose (s. 13); retention limited to purpose (s. 14)** | **P1, P2, P4** |
+| § 15 | Further processing limitation | Further processing compatible with original purpose | P2 |
+| § 16 | Information quality | Complete, accurate, not misleading, updated | P3 |
+| §§ 17–18 | Openness | Documentation; data subject notified of collection | — |
+| §§ 19–22 | Security safeguards | Integrity/confidentiality via technical & organisational measures; operator duties; breach notification (s. 22) | P7 |
+| §§ 23–25 | Data subject participation | Access and correction rights | P4 |
 
-**§ 9 (Processing limitation) + § 10 (Purpose specification) together constitute the POPIA minimization framework.** § 9 requires that PI be adequate, relevant, and not excessive (mirrors GDPR Art. 5(1)(c) verbatim). § 10 requires collection for a specific, explicitly defined purpose communicated to the data subject.
+*(Section ranges corrected 2026-07-05 against the Act — this table previously compressed each condition to a single shifted section number; see `.fable/reconciliation-log.md`.)*
+
+**§ 10 (minimality, within processing limitation ss. 9–12) + § 13 (purpose specification) together constitute the POPIA minimization framework.** § 10 requires that PI be adequate, relevant, and not excessive (mirrors GDPR Art. 5(1)(c) verbatim). § 13 requires collection for a specific, explicitly defined purpose communicated to the data subject. *(Anchors corrected 2026-07-05.)*
 
 **Special information (§ 26):** Religious/philosophical beliefs; race/ethnic origin; trade union membership; political persuasion; health/sex life; biometric information; criminal behaviour. Prohibited processing except on specific grounds in § 27.
 

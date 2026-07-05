@@ -12,7 +12,7 @@
 Processing of personal data of individuals in the UAE by entities operating in the UAE (sourced). Free-zone carve-outs: DIFC/ADGM (above).
 
 ## A1 — Enforcement
-UAE Data Office. Penalties: up to AED 5M; up to AED 20M for intentional/systematic violations (sourced) `[VERIFY — implementing-regulation penalty schedules were pending at the PDPL's issuance; confirm current amounts against the executive regulations]`.
+UAE Data Office. Penalties: **administrative fines AED 50,000 – 5M** (web check 2026-07-05); Data Office may also suspend/restrict processing; factors: severity, sensitive data, volume, intent, history. *(Correction note: the suite's "up to AED 20M for intentional/systematic" figure was not corroborated by the primary-source check — treat as withdrawn.)* Implementing rules: **Cabinet Decision No. 33 of 2024** (in force 2024).
 
 ## A2 — Lawful Basis & Consent
 `basis_model:` enumerated-bases — six bases including consent and legitimate interests (sourced). Sensitive escalation: explicit consent (sourced). Tag: `PROCEDURAL`.
@@ -33,7 +33,7 @@ Implicit in the six-bases + consent structure; dedicated anchor *not located* `[
 *Not located* `[UNVERIFIED]`. P4. Tag: `ARCH-SATISFIES` pending anchor.
 
 ## A8 — Breach Notification
-*Not located in suite sources* `[UNVERIFIED — PDPL requires notification to the Data Office "immediately" per implementing regs; no clock in suite]`. `clock_model:` pending.
+`clock_model:` fixed-clock (de facto) — Data Office operates a **72-hour de facto breach-notification standard**; detailed timelines in Cabinet Decision No. 33 of 2024 (web check 2026-07-05) `[UNVERIFIED at article level — confirm the Decision's breach articles before reliance]`. Tag: duty `PROCEDURAL`.
 
 ## A9 — Children
 Children's data is a sensitive category (see A5); age threshold *not located*.

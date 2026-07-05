@@ -3,7 +3,7 @@
 > *"It is possible to construct a system... in such a way that it would be impossible for outsiders, and even for the system operator, to determine the correspondence between the identities."*
 > — David Chaum, "Security without Identification" (1985)
 
-Chaum's claim, forty years on, is now checkable against statute. This file is the bridge between the suite's two layers, read **primitive-first**: for each cryptographic primitive, which legal obligations it *dissolves* (the duty never attaches), which it *discharges* (the duty attaches and the primitive satisfies it), and where the law *mandates* it outright. The inverse view (axis-first) is `regulatory-taxonomy--arch-rollup.md`; citations resolve to `regulatory-taxonomy--*.md` records (axes A0–A12, sectoral S-records).
+Chaum's claim, forty years on, is now checkable against statute. This file is the bridge between the suite's two layers, read **primitive-first**: for each cryptographic primitive, which legal obligations it *dissolves* (the duty never attaches), which it *discharges* (the duty attaches and the primitive satisfies it), and where the law *mandates* it outright. The inverse view (axis-first) is `regulatory-taxonomy--arch-rollup.md`; citations resolve to the 26 `regulatory-taxonomy--*.md` records (axes A0–A12, sectoral S-records).
 
 **How to use:** pick primitives in the design workflow (`privacy-architecture.md` Steps 1–3), then pull each primitive's row here into the ADR's Regulatory Mapping block — the compliance argument writes itself from record citations instead of freetext.
 

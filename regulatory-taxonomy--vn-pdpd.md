@@ -5,7 +5,9 @@
 | **Record** | `vn-pdpd` · **Status/Tier:** SCAFFOLD / Tier 3b · **Schema:** v1.0 · **Current as of:** 2026-07-04 |
 | **Instrument** | Decree 13/2023/ND-CP on Personal Data Protection; effective July 1 2023 |
 | **Sources** | `data-minimization--regulatory-reference.md` §Vietnam (brief entry + quick-select row "Art. 9 (minimization)") |
-| **Reform watch** | A full PDP *Law* elevating the Decree has been in Vietnam's legislative pipeline `[UNVERIFIED — confirm status; would supersede this record]` |
+| **Reform watch** | **RESOLVED — SUPERSEDED** (see banner) |
+
+> **⚠ SUPERSEDED INSTRUMENT (confirmed 2026-07-05):** the Law on Personal Data Protection, **No. 91/2025/QH15** (enacted June 26 2025, **effective January 1 2026 — in force now**), replaced Decree 13/2023. This record documents the Decree-13 regime and must be re-authored against the PDPL before any downstream use. Known from the primary-source check: PDPL **Art. 9 = consent** (voluntary, informed, explicit, granular, revocable); **data-subject rights sit at Art. 4**; this also resolves the old quick-select collision — the Decree's "Art. 9 (minimization)" label was wrong even for the Decree (Decree Art. 9 = data-subject rights). Verify localization carry-over (Decree Art. 26 → PDPL) before relying on conflict C3's Vietnam entry.
 
 ## A0 — Scope
 Personal data of Vietnamese citizens; processing in Vietnam and by foreign entities processing Vietnamese citizens' data `[UNVERIFIED — Art. 1 scope; the brief entry doesn't detail reach]`.

@@ -110,7 +110,7 @@ Each obligation is tagged for whether architecture or only process can satisfy i
 | 🇰🇷 PIPA | `regulatory-taxonomy--kr-pipa.md` | 3b | SCAFFOLD |
 | 🇦🇪 PDPL (federal; DIFC/ADGM separate) | `regulatory-taxonomy--ae-pdpl.md` | 3b | SCAFFOLD |
 | 🇳🇬 NDPA | `regulatory-taxonomy--ng-ndpa.md` | 3b | SCAFFOLD |
-| 🇻🇳 PDPD → **superseded by PDPL 91/2025/QH15, eff. 2026-01-01** | `regulatory-taxonomy--vn-pdpd.md` | 3b | SCAFFOLD (SUPERSEDED — re-author) |
+| 🇻🇳 PDPL 91/2025/QH15 (re-authored 2026-07-05; predecessor `--vn-pdpd.md` retained as HISTORICAL) | `regulatory-taxonomy--vn-pdpl.md` | 3b | SCAFFOLD |
 | Long tail (AR 25.326, NZ Privacy Act, US states, SA/KE/ID — no suite source) | `regulatory-taxonomy--stubs.md` | 3c | STUB |
 | 🇺🇸 HIPAA (health) | `regulatory-taxonomy--us-hipaa.md` | S | SECTORAL-OVERLAY |
 | 🇺🇸 GLBA / FTC Safeguards (financial) | `regulatory-taxonomy--us-glba.md` | S | SECTORAL-OVERLAY |
@@ -155,5 +155,17 @@ Frozen 2026-07-04 after the axis set survived three structurally distinct regime
 Every axis accommodates all three via its enumerated field values; no axis is null for any of the three; no regime required a bespoke axis. The overlay/divergence-block mechanism handles sub-national and post-Brexit forks without new axes.
 
 **Change control:** post-freeze changes append here (date · change · reason · records re-validated). The sectoral variant profile, when authored, extends this file without altering A0–A12.
+
+---
+
+## Currency Protocol (added 2026-07-05, motivated by the Vietnam supersession)
+
+Statute rot is the failure mode of a hand-curated legal reference. Rules:
+
+1. **Every record carries `current as of`** in its header; a record older than **one quarter** is stale for advisory use until re-checked.
+2. **Quarterly currency sweep:** web-check each record's reform-watch items, enforcement developments, and instrument status; update `current as of` even when nothing changed (the date is the evidence the check ran).
+3. **Supersession trigger:** on any signal that an instrument is replaced or amended (new law enacted, commencement order, implementing regulation), the record gets a banner *immediately* — before re-authoring — so no downstream artifact consumes it silently. Precedent: `vn-pdpd` → `vn-pdpl` (PDPL 91/2025 caught in the 2026-07-05 sweep); Malaysia A1727 three-phase commencement.
+4. **Derived artifacts regenerate** (floor, conflicts, arch-rollup, quick index) after any currency change that touches a floor-setting or conflict-party cell.
+5. **Known standing watches:** Bill C-27 (PIPEDA replacement) · DPDPA commencement (India, not in force) · ePrivacy Regulation (stalled) · CPPA rulemaking (ADM/risk assessments) · VN Decree 53 localization interplay · MY Cross-Border Transfer Guidelines contents · DIFC/ADGM records.
 
 - **2026-07-04 — v1.0 review (no schema change).** Axes re-validated against all nine populated records: no nulls, no bespoke axes, enums absorbed all three structural outliers. Gaps logged for **v1.1**: (1) governance-roles field under A1 — DPO/representative/records-of-processing/registration (Law 25 privacy officer, MY 2024 DPO; GDPR Arts. 30/37 and PIPL Art. 52 `[UNVERIFIED — not in suite sources]`); (2) direct-marketing sub-field under A2 (POPIA § 69, SG PDPA Part IX DNC; ePrivacy Art. 13 is sectoral). Neither blocks the derived artifacts — both are pure-PROCEDURAL classes; bundle with the sectoral variant profile.

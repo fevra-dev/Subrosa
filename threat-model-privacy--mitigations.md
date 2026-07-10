@@ -12,14 +12,14 @@ This file expands on the asset-taxonomy.md mitigation section with deeper implem
 |---|---|---|---|---|---|
 | C-01 | Unique password per service via password manager | M1 | LOW | HIGH | KeePassXC (local-first) or Bitwarden (cloud sync) |
 | C-02 | Hardware MFA (YubiKey 5 series) for T1/T2 accounts | M1 | MED | HIGH | Eliminates SIM swap + phishing-based MFA bypass entirely |
-| C-03 | TOTP MFA (Aegis on Android, Raivo on iOS) | M1 | LOW | HIGH | Not SMS — TOTP is phishing-resistant, SIM-swap immune |
+| C-03 | TOTP MFA (Aegis on Android, Ente Auth or 2FAS on iOS) | M1 | LOW | HIGH | Not SMS — TOTP resists SIM swap. (Raivo is no longer recommendable post-2023 acquisition) |
 | C-04 | Remove phone number from all accounts where optional | M1 | LOW | HIGH | Eliminates SIM swap surface entirely |
 | C-05 | Email alias system (SimpleLogin, AnonAddy) | M1 | MED | HIGH | One alias per service; breach isolation; enumeration prevention |
 | C-06 | Passkeys where available (FIDO2/WebAuthn) | M1 | LOW | HIGH | Phishing-resistant by cryptographic design |
 | C-07 | Account recovery codes stored offline (printed, locked) | M3 | LOW | HIGH | Last-resort recovery without digital exposure |
 | C-08 | HaveIBeenPwned monitoring for all email addresses | M2 | LOW | MED | Early warning of breach; trigger password rotation |
 | C-09 | Credit freeze at all three bureaus (Equifax, Experian, TransUnion) | M1 | LOW | HIGH | Blocks new credit without unfreeze; financial identity theft prevention |
-| C-10 | Separate email account for high-sensitivity contexts | M1 | MED | MED | Proton Mail or Tutanota; encrypted at rest; zero-knowledge |
+| C-10 | Separate email account for high-sensitivity contexts | M1 | MED | MED | Proton Mail or Tuta (formerly Tutanota); encrypted at rest; zero-knowledge |
 
 ---
 

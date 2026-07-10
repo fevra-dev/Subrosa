@@ -78,7 +78,7 @@ Result: Sender cannot link P to the receiver's identity.
 
 **Key image:** A deterministic function of the private key — `I = x·H(P)`. Prevents double-spending: signing the same key twice produces the same key image, which the network rejects.
 
-**Current status in Monero:** Ring CT (Confidential Transactions) + RingCT signatures + Bulletproofs for range proofs. Current ring size: 16 decoys minimum.
+**Current status in Monero:** Ring CT (Confidential Transactions) + RingCT signatures + Bulletproofs for range proofs. Ring size fixed at 16 (15 decoys + the real input) since 2022.
 
 **Limitations:**
 - Ring size provides probabilistic, not perfect, privacy
@@ -181,8 +181,8 @@ Used by spl-token-2022 confidential transfers. Verification is cheap on-chain (~
 ### Light Protocol (Compressed ZK Accounts)
 State compression + ZK proofs for private on-chain state. Active development. Combines Bubblegum-style compression with ZK privacy.
 
-### Elusiv Protocol
-Privacy protocol for Solana — ZK-based private transfers and compliance layer. Allows selective disclosure (reveal transaction details to auditor). Mainnet deployed.
+### Elusiv Protocol *(historical — sunset 2024)*
+Privacy protocol for Solana — ZK-based private transfers with a selective-disclosure compliance layer (auditor reveal). Reached mainnet, then shut down in 2024; retained here as the reference design for compliance-compatible privacy on Solana. Do not build on it.
 
 ---
 
@@ -212,7 +212,7 @@ Understanding why privacy coins work (and don't work) informs better Solana priv
 
 | Coin | Technique | Default private? | Weakness |
 |---|---|---|---|
-| Monero | RingCT + stealth + Kovri | Yes (mandatory) | Ring analysis; Kovri incomplete |
+| Monero | RingCT + stealth + Dandelion++ (Kovri was abandoned) | Yes (mandatory) | Ring analysis; decoy-selection heuristics |
 | Zcash | Groth16 ZK-SNARK | No (opt-in) | Transparent pool dominates usage |
 | Grin | MimbleWimble + Bulletproof | Yes | Graph-cut linkability; no scripting |
 | Dash | CoinJoin (PrivateSend) | No (opt-in) | Not cryptographically private |

@@ -7,11 +7,13 @@ Canonical patterns for entity detection. Use as a reference during structured da
 ## Personal Identifiers
 
 ```
-# Email
-[\w.+-]+@[\w-]+\.[a-zA-Z]{2,}
+# Email (domain part must allow subdomains, or the match truncates
+# at the first label and the redaction span is wrong)
+[\w.+-]+@[\w-]+(\.[\w-]+)*\.[a-zA-Z]{2,}
 
-# Phone (North American + international)
-(\+?1[-.\s]?)?(\(?\d{3}\)?[-.\s]?)?\d{3}[-.\s]?\d{4}
+# Phone (North American + international) — word-bounded, or any long
+# digit run produces false partial matches
+\b(\+?1[-.\s]?)?(\(?\d{3}\)?[-.\s]?)?\d{3}[-.\s]?\d{4}\b
 \+\d{1,3}[\s-]?\d{1,4}[\s-]?\d{1,4}[\s-]?\d{1,9}
 
 # SSN / SIN (Canada)
@@ -21,8 +23,11 @@ Canonical patterns for entity detection. Use as a reference during structured da
 # IP Address (v4)
 \b(?:\d{1,3}\.){3}\d{1,3}\b
 
-# IP Address (v6)
+# IP Address (v6) — full form
 ([0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}
+# IPv6 compressed (::) forms — the pattern above misses them, and most
+# real-world IPv6 is written compressed. Heuristic (over-matches; score MEDIUM):
+\b(?:[0-9a-fA-F]{1,4}:){1,7}:(?:[0-9a-fA-F]{1,4}(?::[0-9a-fA-F]{1,4}){0,6})?\b
 
 # MAC Address
 ([0-9A-Fa-f]{2}[:-]){5}[0-9A-Fa-f]{2}
@@ -35,14 +40,16 @@ Canonical patterns for entity detection. Use as a reference during structured da
 ```
 # Credit card (Visa, MC, Amex, Discover)
 \b(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|3[47][0-9]{13}|6(?:011|5[0-9]{2})[0-9]{12})\b
-# With separators:
+# With separators (16-digit 4-4-4-4 layout; Amex separates 4-6-5 — catch via
+# the unseparated pattern or a dedicated \b\d{4}[-\s]\d{6}[-\s]\d{5}\b):
 \b(?:\d{4}[-\s]?){3}\d{4}\b
 
 # CVV
 \b[0-9]{3,4}\b  # Only meaningful in context of card data
 
-# IBAN
-[A-Z]{2}\d{2}[A-Z0-9]{4}\d{7}([A-Z0-9]?){0,16}
+# IBAN (generic: 2-letter country + 2 check digits + 11-30 alphanumeric BBAN;
+# BBAN structure is country-specific — validate per-country if precision matters)
+\b[A-Z]{2}\d{2}[A-Z0-9]{11,30}\b
 ```
 
 ---
@@ -53,9 +60,10 @@ Canonical patterns for entity detection. Use as a reference during structured da
 # Generic API key assignment (Python, JS, env)
 (?i)(api_?key|api_?token|secret|access_?key|bearer|auth_?token)\s*[=:]\s*['"]?[\w\-\.]{16,}['"]?
 
-# Common key prefixes
-sk-[a-zA-Z0-9]{20,}          # OpenAI / Anthropic style
-pk-[a-zA-Z0-9]{20,}
+# Common key prefixes (charset must include - and _ : Anthropic keys are
+# sk-ant-api03-... — a hyphenless charset fails on them)
+sk-[a-zA-Z0-9_-]{16,}        # OpenAI / Anthropic style
+pk-[a-zA-Z0-9_-]{16,}
 ghp_[a-zA-Z0-9]{36}          # GitHub PAT
 xoxb-[0-9]+-[a-zA-Z0-9-]+    # Slack bot token
 ya29\.[a-zA-Z0-9._-]{50,}    # Google OAuth

@@ -3,9 +3,11 @@ name: privacy-suite
 description: Master privacy skill — diagnoses need and routes to the right specialist skill. Use when: user says "privacy", "OPSEC", "anonymity", "am I safe to share this", "what are my risks", "help me stay private", "secure this", "check this before I post/push/send", or "what could someone learn about me"; when the request spans multiple privacy concerns at once; when starting a new project, identity, or pseudonym and unsure where to begin; when something was accidentally exposed and damage control is needed; when preparing any artifact, schema, file, or communication for external use. Routes to: threat-model-privacy (who wants my data and why, risk baseline, adversary profiles), data-minimization (schema/API/OCSF field audits, what to drop/hash/encrypt, GDPR/PIPEDA compliance), opsec-review (inferential leakage audit before sharing — what an adversary can infer, not just what's explicit), redact (strip PII/credentials/wallet addresses from text and code), metadata-hygiene (clean EXIF/document properties/git history from files before sharing). Sequences multiple skills for complex requests: pre-publication = redact → metadata-hygiene → opsec-review; new project = threat-model-privacy → data-minimization → metadata-hygiene; incident response = triage → rotate credentials → redact/metadata-hygiene → threat-model-privacy reassessment.
 ---
 
-# Privacy Suite
+# Privacy Suite — **Subrosa**
 
-Master routing skill for the seven-skill privacy toolkit. Diagnoses the user's privacy need and dispatches to the appropriate specialist skill — or composes multiple skills in sequence.
+*Sub rosa: under the rose — the Roman symbol hung over council tables meaning "what is said here stays here." Confidentiality by mutual understanding; selective disclosure by architecture.*
+
+Master routing skill for the Subrosa privacy toolkit. Diagnoses the user's privacy need and dispatches to the appropriate specialist skill — or composes multiple skills in sequence.
 
 ---
 
@@ -326,7 +328,7 @@ Seven-phase DPIA/PIA workflow producing regulator-ready documentation. Mandatory
 Adversarial inference audit for artifacts before external exposure. Three adversary profiles (Public/Targeted/Insider). Seven signal categories: infrastructure fingerprinting, org structure, timing, tradecraft, supply chain, geolocation, identity correlation. CRITICAL→INFO severity tiers. Code-specific and doc/social-specific signal libraries. Pseudonymous persona escalation mode.
 
 ### `redact`
-Multi-pass PII detection and sanitization. Three modes: REDACT, PSEUDONYMIZE (default), TOKENIZE. Entity categories: personal identifiers (including all 18 HIPAA PHI), health/medical, financial, credentials/secrets, crypto/Web3, organizational. Typed pseudonymization labels with consistent intra-document mapping. Redaction manifest with confidence tiers. Special handling: code, logs, JSON/YAML, markdown.
+Multi-pass PII detection and sanitization. Five modes: REDACT, PSEUDONYMIZE (default), TOKENIZE, HIPAA_SAFE_HARBOR (18-identifier de-identification), GDPR_ANONYMIZE (k-anonymity/l-diversity). Entity categories: personal identifiers (including all 18 HIPAA PHI), health/medical, financial, credentials/secrets, crypto/Web3, organizational. Typed pseudonymization labels with consistent intra-document mapping. Redaction manifest with confidence tiers. Special handling: code, logs, JSON/YAML, markdown.
 
 ### `metadata-hygiene`
 Embedded binary and structured metadata cleaning for files before sharing. Five metadata risk tiers (location → identity → device → temporal → organizational). Coverage: images (EXIF/IPTC/XMP), documents (PDF/Office — track changes, speaker notes, company fields), audio/video (GPS in iPhone video, iTunes Apple ID in M4A, BWF broadcast wave chunks), archives (TAR uname string, ZIP Unix extra field, macOS AppleDouble files), git repositories, compiled binaries. ExifTool/mat2/git-filter-repo command reference. Verification steps. Residual risk statement.

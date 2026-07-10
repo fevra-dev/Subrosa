@@ -41,3 +41,9 @@ Defensible reading: a guise is *chosen self-presentation* — Hughes' "power to 
 ---
 
 **Recommendation:** `subrosa` first, `scrim` second. Decide after an availability sweep (GitHub org / npm / crates / TM databases / domains) — happy to run it.
+
+---
+
+## ✅ DECISION (2026-07-05): **Subrosa**
+
+Operator-selected. Repo: `github.com/fevra-dev/Subrosa`. The suite is **Subrosa** — under the rose: confidentiality by mutual understanding, selective disclosure by architecture. This file is retained as the decision record.

@@ -2,46 +2,45 @@
 
 | | |
 |---|---|
-| **Record** | `my-pdpa` · **Status/Tier:** SCAFFOLD / Tier 2 · **Schema:** v1.0 · **Current as of:** 2026-07-04 |
-| **Instrument** | Personal Data Protection Act 2010 (Act 709); amended by PDP (Amendment) Act 2024 `[UNVERIFIED]` |
+| **Record** | `my-pdpa` · **Status/Tier:** SCAFFOLD / Tier 2 · **Schema:** v1.0 · **Current as of:** 2026-07-05 (web-upgraded) |
+| **Instruments** | Personal Data Protection Act 2010 (Act 709) + PDP (Amendment) Act 2024 (Act A1727 — royal assent Oct 9 2024, gazetted Oct 17 2024, **in force in three phases: Jan 1 / Apr 1 / Jun 1 2025**) + Commissioner's Guidelines on breach notification and DPO appointment (2025) |
+| **Sources** | Originally authored with **no suite source** (all cells [UNVERIFIED]); **upgraded 2026-07-05 with web-sourced facts** (pdp.gov.my Act A1727 text; Data Protection Report/NRF; Mayer Brown; DLA Piper; Lexology — see reconciliation log). Statutory **section numbers remain `[UNVERIFIED]`** unless stated; amounts, dates, and thresholds below are web-verified. |
 
-> **⚠ No Guise suite source exists for this jurisdiction.** This record is authored from model knowledge only. **Every citation below is `[UNVERIFIED — confirm against primary source]`** — the per-axis tags below restate this once per axis rather than per line. Confirm all of it against the Act and the 2024 Amendment before any downstream use. Cells where confidence was insufficient are marked *not located* rather than guessed.
+## A0 — Scope `[section anchors UNVERIFIED]`
+Processing of personal data in respect of **commercial transactions**; Federal/State Governments excluded. 2024 Amendment renames "data user" → **"data controller"** and extends direct obligations to **data processors** (security). Extraterritorial reach: limited (established-in-Malaysia or equipment-in-Malaysia model).
 
-## A0 — Scope `[UNVERIFIED throughout]`
-Applies to processing of personal data **in respect of commercial transactions**; the Federal and State Governments are excluded. Extraterritorial reach: limited — applies to data users established in Malaysia or using equipment in Malaysia. Thresholds: none.
+## A1 — Enforcement
+Personal Data Protection Commissioner (JPDP/PDPD). Penalties (web-verified): Data Protection Principles breaches raised **RM300,000 → RM1,000,000** and imprisonment **2 → 3 years** (A1727). Private right of action: *not located*.
 
-## A1 — Enforcement `[UNVERIFIED throughout]`
-Personal Data Protection Commissioner (Jabatan Perlindungan Data Peribadi, under the digital ministry). Penalty ceiling: raised by the 2024 Amendment — amounts *not located* (pre-amendment fines were in the RM100k–500k range per offence with imprisonment options; confirm current figures). Private right of action: *not located*.
+## A2 — Lawful Basis & Consent `[section anchors UNVERIFIED]`
+`basis_model:` consent-centric — General Principle requires consent unless a listed necessity ground applies (contract, legal obligation, vital interests, justice, public functions). Seven Personal Data Protection Principles structure the Act (General; Notice & Choice; Disclosure; Security; Retention; Data Integrity; Access). Sensitive personal data: explicit consent. Tag: `PROCEDURAL`.
 
-## A2 — Lawful Basis & Consent `[UNVERIFIED throughout]`
-`basis_model:` consent-centric — the **General Principle (s. 6)** requires consent unless a listed necessity ground applies (contract performance, legal obligation, vital interests, justice, public functions). Seven Personal Data Protection Principles structure the Act: General (s. 6) · Notice & Choice (s. 7) · Disclosure (s. 8) · Security (s. 9) · Retention (s. 10) · Data Integrity (s. 11) · Access (s. 12). Sensitive escalation: **explicit consent** for sensitive personal data (s. 40). Tag: `PROCEDURAL`.
+## A3 — Collection Limitation `[section anchors UNVERIFIED]`
+`test_type:` necessity — personal data must not be excessive in relation to purpose. P-mapping: **P1**. Tag: `ARCH-DISSOLVES`.
 
-## A3 — Collection Limitation `[UNVERIFIED throughout]`
-`test_type:` necessity. Personal data must not be excessive in relation to purpose (adequacy/relevance/non-excessiveness limb within the General Principle, s. 6(3)). P-mapping: **P1**. Tag: `ARCH-DISSOLVES`.
+## A4 — Purpose Limitation `[section anchors UNVERIFIED]`
+Notice & Choice fixes the purpose set; Disclosure Principle bars other-purpose disclosure without consent. P2. Tag: `PROCEDURAL`.
 
-## A4 — Purpose Limitation `[UNVERIFIED throughout]`
-Disclosure Principle (s. 8): no disclosure for purposes other than those disclosed at collection without consent. Notice & Choice (s. 7) fixes the purpose set. P2. Tag: `PROCEDURAL`.
+## A5 — Sensitive Categories
+`sensitive_model:` prohibitive-list (consent-escalation form): physical/mental health; political opinions; religious or similar beliefs; commission/alleged commission of an offence; **+ biometric data (added by A1727, web-verified — "personal data resulting from technical processing of physical, physiological or behavioural characteristics")**. Explicit consent required. Tag: `PROCEDURAL`.
 
-## A5 — Sensitive Categories `[UNVERIFIED throughout]`
-`sensitive_model:` prohibitive-list (consent-escalation form). Sensitive personal data (s. 4 definition; s. 40 processing conditions): physical/mental health, political opinions, religious or similar beliefs, commission or alleged commission of an offence; the 2024 Amendment added **biometric data**. Explicit consent required. Tag: `PROCEDURAL`.
+## A6 — Rights
+Access + correction (Act 709 principles) `[section anchors UNVERIFIED]`; consent withdrawal; direct-marketing cessation. **Data portability: NEW from June 1 2025 (A1727, web-verified)** — direct controller-to-controller transmission on request, subject to technical feasibility and format compatibility. Response clocks: *not located*. Tag: `PROCEDURAL`.
 
-## A6 — Rights `[UNVERIFIED throughout]`
-Access (s. 12 principle; ss. 30–31 mechanics) · correction (ss. 34–35) · consent withdrawal (s. 38) · cessation for direct marketing (s. 43). **Data portability: added by the 2024 Amendment.** Erasure / restriction / objection-general / ADM: *not located*. Response clock: 21 days for access requests — *not located* confidence; confirm. Tag: `PROCEDURAL`.
+## A7 — Retention & Erasure `[section anchors UNVERIFIED]`
+Retention Principle: no longer than necessary; reasonable steps to destroy or permanently delete thereafter. P4. Tag: `ARCH-SATISFIES`.
 
-## A7 — Retention & Erasure `[UNVERIFIED throughout]`
-Retention Principle (s. 10): no longer than necessary for the purpose; take reasonable steps to destroy or permanently delete thereafter. P4. Tag: `ARCH-SATISFIES`.
+## A8 — Breach Notification
+`clock_model:` **fixed-clock (web-verified, from June 1 2025):** notify the Commissioner as soon as practicable and **no later than 72 hours** from becoming aware of the breach; notify affected individuals **without unnecessary delay where significant harm is likely** (Commissioner's Guidelines, 2025). Pre-2024 the Act had no breach duty. Tag: duty `PROCEDURAL`.
 
-## A8 — Breach Notification `[UNVERIFIED throughout]`
-`clock_model:` fixed-clock post-2024 `[UNVERIFIED]`. Pre-2024 the Act had **no** breach-notification duty; the 2024 Amendment introduced mandatory notification to the Commissioner and to affected individuals where significant harm — deadlines *not located* (implementing guidelines specify; confirm). Tag: duty `PROCEDURAL`.
+## A9 — Children
+No statutory age threshold or child-consent regime — *not located*. Tag: —.
 
-## A9 — Children `[UNVERIFIED throughout]`
-No statutory age threshold or child-consent regime in the Act — *not located*. Tag: —.
+## A10 — Cross-Border Transfer
+`transfer_model:` transitioning — the s. 129 ministerial whitelist mechanism was removed by A1727 in favor of receiving-jurisdiction assessment `[UNVERIFIED at section level]`; **Cross-Border Transfer Guidelines issued 2025 (web-verified existence; contents not reviewed)**. Tag: `PROCEDURAL`.
 
-## A10 — Cross-Border Transfer `[UNVERIFIED throughout]`
-`transfer_model:` transitioning. s. 129 originally restricted transfers to ministerially whitelisted jurisdictions (whitelist never operationalized); the **2024 Amendment repealed the whitelist mechanism** in favor of receiving-jurisdiction law/protection-standard assessment. Tag: `PROCEDURAL`.
+## A11 — Security Safeguards `[section anchors UNVERIFIED]`
+Security Principle: practical protective steps; A1727 extends security obligations **directly to data processors** (web-verified). **P7**. Tag: `ARCH-SATISFIES`.
 
-## A11 — Security Safeguards `[UNVERIFIED throughout]`
-Security Principle (s. 9): practical steps to protect personal data against loss, misuse, modification, unauthorized/accidental access or disclosure, alteration, destruction; registered data users follow security standards issued by the Commissioner. The 2024 Amendment made **DPO appointment mandatory** for prescribed classes. **P7**. Tag: `ARCH-SATISFIES` (safeguards) + `PROCEDURAL` (DPO).
-
-## A12 — DPIA / PIA `[UNVERIFIED throughout]`
-`dpia_model:` none in the Act; *not located* whether 2024 implementing guidelines add assessment duties.
+## A12 — DPIA / PIA + Governance
+`dpia_model:` none in the Act. **DPO mandatory from June 1 2025 (web-verified)** for controllers *and* processors meeting thresholds: **>20,000 data subjects; or >10,000 sensitive-data subjects; or regular and systematic monitoring** — Commissioner notified of appointments. (Governance-roles fact — parked for the v1.1 A1 field.) Tag: `PROCEDURAL`.

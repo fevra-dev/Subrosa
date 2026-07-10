@@ -187,7 +187,7 @@ Run detection across ALL of the following in every pass:
 
 ### Step 1 — Confirm scope and mode
 Ask the user:
-1. What mode? (REDACT / PSEUDONYMIZE / TOKENIZE) — default PSEUDONYMIZE
+1. What mode? (REDACT / PSEUDONYMIZE / TOKENIZE / HIPAA_SAFE_HARBOR / GDPR_ANONYMIZE) — default PSEUDONYMIZE
 2. Any categories to skip? (e.g. "keep email domains", "preserve wallet address format")
 3. Any custom sensitive terms to add? (internal codenames, project names)
 

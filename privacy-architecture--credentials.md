@@ -39,7 +39,7 @@ Chaum's 1982 blind signature scheme was the first cryptographic implementation o
 
 ---
 
-## BBS+ Signatures (Boneh-Boyen-Shacham)
+## BBS+ Signatures (BBS: Boneh–Boyen–Shacham 2004; the "+" multi-message extension: Au–Susilo–Mu 2006)
 
 **What it does:** Sign a vector of messages. The holder can later prove possession of a valid signature over a *subset* of messages without revealing the others, and without the verifier being able to link two presentations of the same credential.
 

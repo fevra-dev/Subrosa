@@ -32,11 +32,11 @@ ID3v2 is the dominant tagging standard for MP3. ID3v1 (older, limited) also comm
 # Using eyeD3
 eyeD3 --remove-all filename.mp3
 
-# Using exiftool
-exiftool -all= filename.mp3
-
-# Using ffmpeg (re-encode, strips all metadata)
+# Using ffmpeg (stream-copy — no re-encode, no quality loss)
 ffmpeg -i input.mp3 -map_metadata -1 -c:a copy output.mp3
+
+# NOTE: exiftool CANNOT write MP3 (read-only format for it) — do not use
+# `exiftool -all=` here; it silently does nothing and the tags remain.
 ```
 
 ### Vorbis Comments (FLAC, OGG, Opus)
@@ -54,9 +54,11 @@ FLAC uses Vorbis comments — free-form key=value pairs. No fixed schema; any fi
 | Any custom field | Variable | Producers sometimes add GPS, session, studio fields |
 
 ```bash
-# Strip all Vorbis comments from FLAC
+# Strip all Vorbis comments from FLAC (metaflac is the canonical tool;
+# exiftool reads FLAC but cannot write it)
 metaflac --remove-all-tags filename.flac
-exiftool -all= filename.flac
+# Also remove embedded artwork (its own EXIF rides inside):
+metaflac --remove --block-type=PICTURE filename.flac
 ```
 
 ### iTunes/M4A (AAC in MP4 container)
@@ -92,10 +94,13 @@ WAV files often carry minimal metadata, but professional audio workflows add BWF
 | **`axml` / `XMP` embedded** | **T2** | XMP metadata with producer/author fields |
 
 ```bash
-# Strip BWF metadata from WAV
-exiftool -BEXT:all= -iXML:all= filename.wav
-# Or strip everything:
-exiftool -all= filename.wav
+# exiftool CANNOT write WAV/RIFF — strip via ffmpeg remux (stream-copy;
+# ffmpeg's WAV muxer omits bext/iXML/INFO unless explicitly asked to write them)
+ffmpeg -i input.wav -map_metadata -1 -c:a copy output.wav
+# Verify the chunks are gone:
+exiftool output.wav | grep -iE "originator|bext|ixml|description"
+# Surgical BWF editing (audio-industry standard tool): BWF MetaEdit
+bwfmetaedit --out-core-remove filename.wav
 ```
 
 ---
@@ -174,10 +179,13 @@ MKV uses a flexible tag system. Common tags:
 | Attachment sections | Variable | May contain album art with EXIF, subtitle files, etc. |
 
 ```bash
-# Strip MKV metadata
-mkvpropedit filename.mkv --delete-attachment all --tags global:""
-# Or with exiftool:
-exiftool -all= filename.mkv
+# Strip MKV metadata — remux with ffmpeg (stream-copy; drops tags and attachments)
+ffmpeg -i input.mkv -map 0:v -map 0:a -map 0:s? -map_metadata -1 -c copy output.mkv
+# Surgical tag removal in place (mkvtoolnix; attachments are deleted by id):
+mkvpropedit filename.mkv --tags all:
+mkvmerge -i filename.mkv          # list attachment ids
+mkvpropedit filename.mkv --delete-attachment 1
+# NOTE: exiftool CANNOT write Matroska — `exiftool -all=` on .mkv is a silent no-op.
 ```
 
 ---

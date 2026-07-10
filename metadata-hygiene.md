@@ -164,8 +164,8 @@ exiftool -all= filename.jpg
 # Strip ALL, overwrite in place (no backup)
 exiftool -all= -overwrite_original filename.jpg
 
-# Strip ALL from entire directory
-exiftool -all= -overwrite_original /path/to/dir/
+# Strip ALL from entire directory (add -r to recurse into subdirectories)
+exiftool -all= -overwrite_original -r /path/to/dir/
 
 # Strip only GPS
 exiftool -GPS:all= filename.jpg
@@ -173,8 +173,12 @@ exiftool -GPS:all= filename.jpg
 # Strip specific fields
 exiftool -Author= -Artist= -Copyright= filename.jpg
 
-# Preserve copyright, strip everything else
+# Strip everything, then set a copyright string (order matters: -all= runs first)
 exiftool -all= -copyright="Your Name" filename.jpg
+
+# Strip everything but keep the ICC color profile (bare -all= removes it,
+# which can visibly shift colors)
+exiftool -all= --icc_profile:all filename.jpg
 ```
 
 ### mat2 (privacy-focused, Linux/macOS)
@@ -186,8 +190,11 @@ mat2 --show filename.pdf
 mat2 filename.pdf
 # Outputs: filename.cleaned.pdf
 
-# Lightweight flag for completeness check
-mat2 --check filename.pdf
+# Verify the cleaned output (mat2 has no --check flag; verify by showing)
+mat2 --show filename.cleaned.pdf
+
+# Lighter-touch cleaning that preserves more file integrity
+mat2 --lightweight filename.pdf
 ```
 
 ### ImageMagick (images — strip and convert)
@@ -216,24 +223,12 @@ git config user.email
 git config user.name "pseudonym"
 git config user.email "pseudonym@example.com"
 
-# Rewrite history to change author (use with caution — rewrites all commits)
-git filter-branch --env-filter '
-OLD_EMAIL="real@email.com"
-NEW_NAME="pseudonym"
-NEW_EMAIL="pseudonym@example.com"
-if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]; then
-    export GIT_COMMITTER_NAME="$NEW_NAME"
-    export GIT_COMMITTER_EMAIL="$NEW_EMAIL"
-fi
-if [ "$GIT_AUTHOR_EMAIL" = "$OLD_EMAIL" ]; then
-    export GIT_AUTHOR_NAME="$NEW_NAME"
-    export GIT_AUTHOR_EMAIL="$NEW_EMAIL"
-fi
-' --tag-name-filter cat -- --branches --tags
-
-# Modern alternative: git-filter-repo (preferred over filter-branch)
+# Rewrite history to change author — use git-filter-repo (git's own docs
+# deprecate filter-branch; it is slow and footgun-prone)
 pip install git-filter-repo
+# mailmap.txt:  New Name <new@email.com> <old@email.com>
 git filter-repo --mailmap mailmap.txt
+# Full identity/history playbook: references/git-metadata.md
 ```
 
 ---

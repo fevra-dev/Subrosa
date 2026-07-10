@@ -29,7 +29,7 @@ Three properties (GMR 1985):
 | **Marlin** | Trusted (universal) | ~1KB | Moderate | ~3ms | No | Similar to PLONK |
 | **Bulletproofs** | None | ~1-2KB (range), grows with circuit | Slow | Slow | No | Range proofs; no trusted setup |
 | **STARK** | None | ~40-200KB | Very slow | Fast | Yes | High security; no trusted setup; post-quantum |
-| **Plonky2** | None | ~100KB | Fast | Fast | No | Recursive proofs; Polygon ecosystem |
+| **Plonky2** | None | ~100KB | Fast | Fast | Yes (FRI/hash-based) | Recursive proofs; Polygon ecosystem |
 | **Nova/SuperNova** | None | Constant | Incremental | Fast | No | Recursive / folding; IVC |
 
 **Trusted setup note:** Groth16 requires a circuit-specific ceremony. PLONK requires a universal ceremony (usable for any circuit up to a size). STARKs and Bulletproofs require no setup — the security relies on hash functions only. For new systems: prefer PLONK-family (one ceremony, reusable) or STARKs (no ceremony) over Groth16 unless proof size is critical.
@@ -148,7 +148,7 @@ If the random secret ("toxic waste") from a Groth16 ceremony is not destroyed an
 → STARKs are too large for acoustic transmission  
 
 **Post-quantum requirement:**  
-→ STARKs only — all SNARK systems rely on elliptic curve discrete log (not post-quantum)  
+→ FRI/hash-based systems only — STARKs and Plonky2. Pairing/curve-based SNARKs (Groth16, PLONK/KZG, Bulletproofs, Nova) rely on elliptic-curve assumptions Shor's algorithm breaks  
 
 **No trusted setup requirement:**  
 → STARKs, Bulletproofs, or Halo2 (IPA-based, no trusted setup)  
@@ -178,7 +178,7 @@ If using Groth16 or PLONK, a trusted setup is required. Two phases:
 - Ben-Sasson et al. (2018) — "Scalable, transparent, and post-quantum secure computational integrity." zk-STARKs.
 - Bünz et al. (2018) — "Bulletproofs: Short Proofs for Confidential Transactions and More." Range proofs without trusted setup.
 - Gabizon, Williamson, Ciobotaru (2019) — "PLONK: Permutations over Lagrange-bases for Oecumenical Noninteractive arguments of Knowledge."
-- Boneh et al. (2020) — "Recursive Proof Composition without a Trusted Setup." Halo.
+- Bowe, Grigg, Hopwood (2019) — "Recursive Proof Composition without a Trusted Setup." Halo.
 - Trail of Bits (2023) — "Audit Techniques for Zero-Knowledge Circuits." Vulnerability taxonomy.
 
 ---
@@ -199,7 +199,7 @@ NIST finalized three post-quantum cryptographic standards in August 2024:
 | **FIPS 204** | ML-DSA (Dilithium) | Digital signature | Module lattice / SIS | Signatures, authentication |
 | **FIPS 205** | SLH-DSA (SPHINCS+) | Digital signature | Hash functions only | High-security signatures, no lattice assumption |
 
-A fourth standard — **FIPS 206 (ML-DSA-Ed / Falcon)** — was under final review as of mid-2024. Monitor NIST for status.
+A fourth standard — **FIPS 206 (FN-DSA / Falcon)** — was still in draft as of mid-2024. Monitor NIST for status.
 
 **Security levels (NIST categories):**
 - Level 1: equivalent to AES-128
@@ -235,9 +235,9 @@ This is secure if either algorithm is secure — provides PQC protection without
 
 Replaces ECDSA and Ed25519 for signatures.
 
-**Performance vs. Ed25519:**
-- Public key: 1312 bytes (vs. 32 bytes)
-- Signature: 2420 bytes (vs. 64 bytes) at Level 3
+**Performance vs. Ed25519** (ML-DSA-44 / security category 2 parameters):
+- Public key: 1312 bytes (vs. 32 bytes) — Level 3 (ML-DSA-65): 1952 bytes
+- Signature: 2420 bytes (vs. 64 bytes) — Level 3 (ML-DSA-65): 3309 bytes
 - Signing: ~3x slower than Ed25519
 - Verification: comparable
 

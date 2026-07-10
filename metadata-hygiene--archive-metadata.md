@@ -51,11 +51,12 @@ with zipfile.ZipFile('archive.zip') as z:
 # BAD:
 zip archive.zip /Users/realname/project/file.py
 
-# GOOD — add from within directory:
-cd /tmp/staging && zip -r archive.zip .
+# GOOD — add from within directory, with -X to exclude the Unix extra
+# fields entirely (no uid/gid stored at all):
+cd /tmp/staging && zip -X -r archive.zip .
 
-# BETTER — use relative paths explicitly:
-cd /tmp/staging && zip archive.zip file.py subdir/file2.py
+# BETTER — relative paths + -X:
+cd /tmp/staging && zip -X archive.zip file.py subdir/file2.py
 ```
 
 ### Stripping ZIP metadata
@@ -137,11 +138,15 @@ macOS `tar` creates archives with macOS-specific metadata:
 - **`.DS_Store`** — Finder metadata; may contain folder structure details, view preferences, icon positions
 
 ```bash
-# Exclude macOS metadata when creating TAR:
-COPYFILE_DISABLE=1 tar -czf clean.tar.gz --exclude='.DS_Store' --exclude='._*' directory/
+# Exclude macOS metadata when creating TAR — macOS system tar (bsdtar)
+# understands --no-mac-metadata:
+tar --no-mac-metadata --exclude='.DS_Store' -czf clean.tar.gz directory/
+# (COPYFILE_DISABLE=1 achieves the same suppression of ._* AppleDouble files)
 
-# Or use GNU tar on macOS (via Homebrew):
-gtar --owner=0 --group=0 --no-mac-metadata -czf clean.tar.gz directory/
+# GNU tar on macOS (via Homebrew) has NO --no-mac-metadata flag — combine
+# ownership scrubbing with COPYFILE_DISABLE and excludes instead:
+COPYFILE_DISABLE=1 gtar --owner=0 --group=0 --numeric-owner \
+  --exclude='.DS_Store' --exclude='._*' -czf clean.tar.gz directory/
 ```
 
 ---
@@ -161,11 +166,14 @@ gtar --owner=0 --group=0 --no-mac-metadata -czf clean.tar.gz directory/
 | Method token | T3 | Compression algorithm — fingerprinting signal |
 
 ```bash
-# Create 7z without extra metadata
-7z a -mhc=off clean.7z directory/  # -mhc: disable header compression (easier to inspect)
-# Better: use zip or tar for sharing; use 7z only for encryption
-
-# Strip 7z metadata: not easily done in place — re-create from clean staging
+# 7z has no reliable metadata-strip switch (header-compression flags like
+# -mhc do NOT affect stored timestamps). Approach: clean staging + timestamp
+# normalization before archiving:
+STAGING=$(mktemp -d) && cp -R needed-files/ "$STAGING"/
+find "$STAGING" -exec touch -t 198001010000 {} +
+cd "$STAGING" && 7z a clean.7z .
+# Better: prefer zip -X or scrubbed tar for sharing; use 7z only when its
+# encryption (-p -mhe=on, which also hides filenames) is the point.
 ```
 
 ---
@@ -183,7 +191,7 @@ RAR archives (WinRAR, unrar) store:
 # Strip RAR metadata: re-create as ZIP or TAR (preferred)
 # RAR is a proprietary format with limited cross-platform metadata stripping
 unrar x archive.rar /tmp/extracted/
-zip -r clean.zip /tmp/extracted/  # Re-archive as ZIP with clean staging
+cd /tmp/extracted && zip -X -r clean.zip .  # relative paths + no Unix extra fields
 ```
 
 ---

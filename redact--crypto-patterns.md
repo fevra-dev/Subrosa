@@ -9,7 +9,7 @@ Detailed format specs for Web3 address detection and confidence scoring.
 | Type | Format | Length | Charset | Confidence signal |
 |---|---|---|---|---|
 | Wallet address | Base58 | 32–44 chars | `[1-9A-HJ-NP-Za-km-z]` | Context: `pubkey`, `wallet`, `from`, `to`, `mint`, `owner` |
-| Transaction hash | Base58 | 87–88 chars | Same | Context: `txid`, `signature`, `tx`, `hash` |
+| Transaction hash | Base58 | 86–88 chars (base58 of a 64-byte signature) | Same | Context: `txid`, `signature`, `tx`, `hash` |
 | Program ID | Base58 | 32–44 chars | Same | Context: `programId`, `program` |
 | Token mint | Base58 | 32–44 chars | Same | Context: `mint`, `token`, `SPL` |
 
@@ -73,7 +73,7 @@ BIP39 uses a wordlist of 2048 words. A 12-word or 24-word sequence of lowercase 
 
 | Type | Format |
 |---|---|
-| Solana keypair JSON | `[1-9A-HJ-NP-Za-km-z]{64,88}` inside JSON array or base58 string |
+| Solana keypair file | JSON **array of 64 integers (0–255)** — e.g. `[12,84,...]`; the base58 *export* of the same secret key is an 86–88 char base58 string |
 | Ethereum private key | 64 hex chars (32 bytes), often with `0x` prefix |
 | PEM format | `-----BEGIN PRIVATE KEY-----` block |
 | WIF (Bitcoin) | `5`, `K`, or `L` prefix, 51–52 chars base58 |

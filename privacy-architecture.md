@@ -345,7 +345,8 @@ Note: This is acoustic traffic analysis resistance, not encryption —
 - `references/web3-privacy.md` — Web3 / blockchain privacy: stealth addresses, ring signatures, confidential transactions, ZK rollups, Tornado Cash architecture analysis, Solana-specific privacy tooling
 - `references/tee.md` — Trusted execution environments: Intel SGX, ARM TrustZone, Apple Secure Enclave, Solana Seed Vault, known side-channel vulnerabilities, attestation protocols
 - `references/comms.md` — Communications privacy: Tor/onion routing, mixnets, Signal Protocol, forward secrecy, acoustic channel privacy (Kyma context)
-- `references/regulatory-dissolution.md` — The Statutory Dissolution Map: primitive → obligations dissolved/discharged across the 25-record taxonomy; the ARCH-MANDATES statutes; C1–C7 resolutions; the record-cited ADR pattern
+- `references/regulatory-dissolution.md` — The Statutory Dissolution Map: primitive → obligations dissolved/discharged across the 26-record taxonomy; the ARCH-MANDATES statutes; C1–C7 resolutions; the record-cited ADR pattern
+- `references/lineage.md` — The Cypherpunk Lineage: all twelve canonical texts (Diffie–Hellman 1976 → Nakamoto 2008) mapped to the primitive each authorizes and its place in this suite
 
 ---
 

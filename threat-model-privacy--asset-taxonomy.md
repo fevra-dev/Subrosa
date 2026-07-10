@@ -68,7 +68,7 @@ Organized by attack vector. Each control tagged with: `[M1/M2/M3]` tier, effort 
 | Unique password per service | M1 | LOW | HIGH | Password manager eliminates friction |
 | Password manager (Bitwarden, 1Password, KeePassXC) | M1 | LOW | HIGH | Local-first preferred (KeePassXC) |
 | Hardware MFA (YubiKey) for T1/T2 accounts | M1 | MED | HIGH | Eliminates SIM swap and phishing-based MFA bypass |
-| TOTP (not SMS) MFA on all accounts | M1 | LOW | HIGH | Aegis (Android) or Raivo (iOS) preferred |
+| TOTP (not SMS) MFA on all accounts | M1 | LOW | HIGH | Aegis (Android), Ente Auth or 2FAS (iOS) |
 | Remove phone number from accounts where optional | M1 | LOW | MED | Eliminates SIM swap surface |
 | Email alias system (SimpleLogin, AnonAddy) | M1 | MED | HIGH | Prevents email enumeration and breach correlation |
 | Passkeys where available | M1 | LOW | HIGH | Phishing-resistant by design |
@@ -99,7 +99,7 @@ Organized by attack vector. Each control tagged with: `[M1/M2/M3]` tier, effort 
 |---|---|---|---|---|
 | Signal for sensitive communications | M1 | LOW | HIGH | E2E + disappearing messages |
 | Disappearing messages enabled by default | M1 | LOW | MED | Limits historical exposure if device compromised |
-| Separate email account for sensitive contexts | M1 | MED | MED | Proton Mail, Tutanota for higher sensitivity |
+| Separate email account for sensitive contexts | M1 | MED | MED | Proton Mail, Tuta (formerly Tutanota) for higher sensitivity |
 | Avoid SMS for MFA or sensitive content | M1 | LOW | HIGH | SMS is not encrypted and SIM-swappable |
 | VPN for untrusted networks | M1 | LOW | MED | Prevents ISP-level traffic analysis; choose carefully |
 | Email alias per service/context | M1 | MED | HIGH | Breach isolation + identity separation |

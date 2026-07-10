@@ -144,26 +144,24 @@ The `-0500` reveals EST/EDT (US East / Canada East). For pseudonymous work, this
 
 **Mitigation — commit in UTC:**
 ```bash
-# One-time: commit with UTC timestamp
-GIT_COMMITTER_DATE="$(date -u)" GIT_AUTHOR_DATE="$(date -u)" git commit -m "message"
+# Per-invocation or permanent: run git under UTC — both author and
+# committer timestamps then record +0000
+TZ=UTC git commit -m "message"
 
-# Permanent: set timezone for git operations
+# Or export for the whole session
 export TZ=UTC
-git commit -m "message"
-
-# Or configure git globally
-git config --global core.commitGraph false  # (unrelated, for safety)
-# No built-in UTC setting — use TZ env var approach
 ```
+Git has no built-in "always UTC" config — the TZ environment variable is the mechanism.
 
-**Rewrite existing timestamps to UTC:**
+**Rewrite existing timestamp offsets to UTC** (filter-repo exposes dates as raw
+bytes `b"<epoch> <offset>"` — not datetime objects):
 ```bash
 git filter-repo --commit-callback '
-import datetime
-commit.author_date = commit.author_date.replace(tzinfo=datetime.timezone.utc)
-commit.committer_date = commit.committer_date.replace(tzinfo=datetime.timezone.utc)
+    commit.author_date = commit.author_date.split(b" ")[0] + b" +0000"
+    commit.committer_date = commit.committer_date.split(b" ")[0] + b" +0000"
 '
 ```
+Note: this normalizes the *offset* (the locale leak); the epoch instant is unchanged, so activity-hour patterns still show in UTC terms — batching or date-fuzzing is the mitigation if work-hour inference matters.
 
 ---
 

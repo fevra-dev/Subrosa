@@ -36,7 +36,7 @@ A calibrated opening — admits exactly as much light as the operator chooses. P
 | **Palimpsest** | Erasure-and-rewrite resonance (Art. 17 energy) | On inspection it's anti-privacy: a palimpsest is famous because the erased layer *remains recoverable* — a trap name |
 
 ## The case for keeping **Guise**
-Defensible reading: a guise is *chosen self-presentation* — Hughes' "power to selectively reveal oneself" is literally the power to choose one's guise, and `privacy-suite.md` already frames pseudonymity as first-class. Short, available (you hold the repo), and renaming has real cost (links, memory, momentum). If the deception connotation doesn't bother you in a portfolio context, keeping it is not a mistake — but Sub Rosa says *confidence*, Guise says *cover*.
+Defensible reading: a guise is *chosen self-presentation* — Hughes' "power to selectively reveal oneself" is literally the power to choose one's guise, and `skills/privacy-suite/SKILL.md` already frames pseudonymity as first-class. Short, available (you hold the repo), and renaming has real cost (links, memory, momentum). If the deception connotation doesn't bother you in a portfolio context, keeping it is not a mistake — but Sub Rosa says *confidence*, Guise says *cover*.
 
 ---
 

@@ -123,6 +123,9 @@ Alice → [Encrypt for Exit] → [Encrypt for Middle] → [Encrypt for Guard]
 
 ## Mixnets
 
+> *"A technique based on public key cryptography is presented that allows an electronic mail system to hide who a participant communicates with as well as the content of the communication — in spite of an unsecured underlying telecommunication system."*
+> — David Chaum, "Untraceable Electronic Mail, Return Addresses, and Digital Pseudonyms" (1981), *Communications of the ACM 24(2)*
+
 **Concept (Chaum, 1981):** Messages are batched, encrypted in layers, and shuffled. Even a global adversary observing all traffic cannot link input messages to output messages.
 
 **Chaum Mixnet:**

@@ -2,7 +2,7 @@
 
 COPPA (US under-13), GDPR Art. 8 (EU under-16), and analogous requirements across PIPEDA, LGPD, PIPL, and POPIA.
 
-> **Source of truth:** the age-threshold table derives from `taxonomy/regulatory-taxonomy.md` records — axis A9 in each record (COPPA is a sectoral overlay pending its variant profile). Reconciled 2026-07-04; log: `.fable/reconciliation-log.md`. On conflict, the record wins (see `SKILL.md` §Regulatory Source of Truth).
+> **Source of truth:** the age-threshold table derives from `taxonomy/regulatory-taxonomy.md` records — axis A9 in each record (COPPA is a sectoral overlay — S-profile record `us-coppa`). Reconciled 2026-07-04; log: `.fable/reconciliation-log.md`. On conflict, the record wins (see `SKILL.md` §Regulatory Source of Truth).
 
 ---
 

@@ -2,7 +2,7 @@
 
 Compliant cookie banner templates, category definitions, GPC signal handling, and jurisdiction-specific requirements.
 
-> **Source of truth:** GPC legal-status and consent-standard anchors derive from `taxonomy/regulatory-taxonomy.md` records (`eu-gdpr-uk`, `us-ca-ccpa`); the ePrivacy Directive itself is a sectoral overlay pending its variant profile (see master §Design Contract 4). Reconciled 2026-07-04; log: `.fable/reconciliation-log.md`. On conflict, the record wins (see `SKILL.md` §Regulatory Source of Truth).
+> **Source of truth:** GPC legal-status and consent-standard anchors derive from `taxonomy/regulatory-taxonomy.md` records (`eu-gdpr-uk`, `us-ca-ccpa`); the ePrivacy Directive itself is a sectoral overlay — S-profile record `eu-eprivacy` (see master §Design Contract 4). Reconciled 2026-07-04; log: `.fable/reconciliation-log.md`. On conflict, the record wins (see `SKILL.md` §Regulatory Source of Truth).
 
 ---
 

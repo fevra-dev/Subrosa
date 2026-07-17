@@ -43,7 +43,7 @@ taxonomy/                        The normalized regulatory layer
 
 ## Methodology (why this is trustworthy)
 
-Every statutory claim was either traced to a grounding source or flagged — never guessed. The discipline caught real errors that a hand-authored reference had carried confidently: a folkloric "72-hour" Quebec breach clock (the statute says *promptly*), a section-shifted POPIA condition table, a duplicated LGPD rights anchor, a conflated Swiss provision, an uncorroborated UAE penalty figure — and one entire superseded statute (Vietnam's Decree 13 → PDPL 91/2025). All corrections are logged with sources in `.fable/reconciliation-log.md`; a Currency Protocol (quarterly sweeps, supersession banners) keeps the records from rotting.
+Every statutory claim was either traced to a grounding source or flagged — never guessed. The discipline caught real errors that a hand-authored reference had carried confidently: a folkloric "72-hour" Quebec breach clock (the statute says *promptly*), a section-shifted POPIA condition table, a duplicated LGPD rights anchor, a conflated Swiss provision, an uncorroborated UAE penalty figure — and one entire superseded statute (Vietnam's Decree 13 → PDPL 91/2025). All corrections are logged with sources in `.fable/reconciliation-log.md`; a Currency Protocol (quarterly sweeps, supersession banners) keeps the records from rotting. The repo enforces its own invariants in CI: `tools/validate.py` verifies every cross-reference resolves, every skill's frontmatter is well-formed, and every record carries a current `Current as of` date — and prints the `[UNVERIFIED]` census so flag-debt is visible per commit.
 
 ## The canonical texts
 
@@ -52,8 +52,10 @@ Subrosa's design principle — privacy must be structural, not procedural — ha
 | Text | Author | Year | Core contribution |
 |---|---|---|---|
 | "New Directions in Cryptography" | Diffie & Hellman | 1976 | Public key cryptography — made everything possible |
+| "Untraceable Electronic Mail, Return Addresses, and Digital Pseudonyms" | David Chaum | 1981 | Mix networks — metadata unlinkability; ancestor of every mixnet |
 | "Blind Signatures for Untraceable Payments" | David Chaum | 1982 | Anonymous digital cash — first working implementation |
 | "Security without Identification" | David Chaum | 1985 | Full philosophical and technical statement of privacy-by-architecture |
+| "The Knowledge Complexity of Interactive Proof Systems" | Goldwasser, Micali & Rackoff | 1985 | Zero-knowledge formalized — proof without disclosure |
 | "The Crypto Anarchist Manifesto" | Timothy C. May | 1988 | Political framework; crypto anarchy program |
 | "Why I Wrote PGP" | Philip Zimmermann | 1991 | Cryptography as civil disobedience |
 | "A Cypherpunk's Manifesto" | Eric Hughes | 1993 | Privacy as selective disclosure; transaction necessity |

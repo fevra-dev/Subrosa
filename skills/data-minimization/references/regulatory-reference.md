@@ -2,7 +2,7 @@
 
 Field-level applicability guide for privacy and data protection law across major jurisdictions. Includes HIPAA, PIPEDA/Law 25, GDPR, CCPA/CPRA, LGPD, PIPL, COPPA, Australia Privacy Act, APPI, DPDPA, and POPIA.
 
-**Regulatory status:** Current as of June 2026. Verify effective dates, pending rulemakings, and enforcement guidance against primary sources before advising in a regulated context. This reference is for schema design and audit — not legal advice.
+**Regulatory status:** Current as of July 2026 (EU AI Act timeline updated 2026-07-17 per the Digital Omnibus on AI). Verify effective dates, pending rulemakings, and enforcement guidance against primary sources before advising in a regulated context. This reference is for schema design and audit — not legal advice.
 
 > **Source of truth:** this file was the grounding source for the `taxonomy/regulatory-taxonomy--*.md` records (reconciled 2026-07-04). Going forward the records are canonical for jurisdiction facts and this file is the deep-dive companion; fixes land in the record first, then here. Log: `.fable/reconciliation-log.md`.
 
@@ -198,12 +198,12 @@ A breach of unsecured PHI triggers notification obligations unless the covered e
 | Right to delete | § 1798.105 | Delete PI on verifiable request; no soft-delete | P4, P6 |
 | Right to correct | § 1798.106 (CPRA) | Correct inaccurate PI on request | P3 |
 | Right to opt out | §§ 1798.120, 1798.135 | No sale/sharing without opt-out | P2 |
-| **Data minimization** | **§ 1798.100(a)(3) (CPRA)** | **Reasonably necessary and proportionate to disclosed purpose** | **P1** |
+| **Data minimization** | **§ 1798.100(c) (CPRA)** | **Reasonably necessary and proportionate to disclosed purpose** | **P1** |
 | **Purpose limitation** | **§ 1798.100(a)(4) (CPRA)** | **No use incompatible with purposes disclosed at collection** | **P2** |
 | Sensitive PI | § 1798.121 (CPRA) | Right to limit use; special notice required | P1, P6, P7 |
 | Security | § 1798.150 | Reasonable security; private right of action for breaches | P7 |
 
-**§ 1798.100(a)(3) proportionality test:** not just necessity but proportionality — a field may be necessary but still fail if collection is disproportionate to the stated purpose.
+**§ 1798.100(c) proportionality test** *(anchor corrected 2026-07-17)*: not just necessity but proportionality — a field may be necessary but still fail if collection is disproportionate to the stated purpose.
 
 **Sensitive PI (§ 1798.140(ae)):** SSN/SIN/passport/DL numbers; financial account + credentials; precise geolocation (within 1,850 feet / ~565m); racial/ethnic origin; religious beliefs; union membership; contents of mail/email/texts; genetic data; biometric data; health/medical; sexual orientation or gender identity. Always CRITICAL tier.
 
@@ -477,7 +477,7 @@ Regulatory basis:
   GDPR Art. 25(1): privacy-by-design met via compensating controls.
   PIPEDA Cl. 4.4.1: collection not indiscriminate — documented purpose.
   PIPEDA Cl. 4.7.1: safeguards appropriate to sensitivity level.
-  CCPA § 1798.100(a)(3): reasonably necessary and proportionate
+  CCPA § 1798.100(c): reasonably necessary and proportionate
     to stated security purpose.
   LGPD Art. 6(III): limited to minimum necessary for security purpose.
   APPs APP 3.3: reasonably necessary for security function.
@@ -633,7 +633,7 @@ W3C Community Group specification. A browser-level signal (`Sec-GPC: 1` HTTP hea
 
 ## EU AI Act
 
-**Regulation (EU) 2024/1689** of the European Parliament and of the Council of 13 June 2024 on artificial intelligence. Published OJ L 2024/1689 Jul 12 2024. **Phased application:** Prohibited practices — Feb 2 2025. GPAI models — Aug 2 2025. High-risk AI systems (Annex III) — Aug 2 2026. **Enforcement:** National market surveillance authorities; European AI Office for GPAI models. **Penalties:** Up to €35M or 7% global annual turnover (prohibited practices); €15M or 3% (other provisions); €7.5M or 1% (incorrect information).
+**Regulation (EU) 2024/1689** of the European Parliament and of the Council of 13 June 2024 on artificial intelligence. Published OJ L 2024/1689 Jul 12 2024. **Phased application:** Prohibited practices — Feb 2 2025. GPAI models — Aug 2 2025. High-risk AI systems: **Annex III — Dec 2 2027; Annex I (embedded products) — Aug 2 2028** (deferred by the Digital Omnibus on AI, adopted Jun 2026; AI-generated-content marking Dec 2 2026; other Art. 50 transparency Aug 2 2026). **Enforcement:** National market surveillance authorities; European AI Office for GPAI models. **Penalties:** Up to €35M or 7% global annual turnover (prohibited practices); €15M or 3% (other provisions); €7.5M or 1% (incorrect information).
 
 **Scope:** Providers placing AI systems on EU market or putting into service in EU; providers/deployers in third countries where output is used in EU. Extraterritorial — mirrors GDPR scope logic.
 

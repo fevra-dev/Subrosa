@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Record** | `br-lgpd` · **Status/Tier:** SCAFFOLD / Tier 2 · **Schema:** v1.0 · **Current as of:** 2026-07-04 |
+| **Record** | `br-lgpd` · **Status/Tier:** SCAFFOLD / Tier 2 · **Schema:** v1.0 · **Current as of:** 2026-07-17 (verification pass) |
 | **Instrument** | Lei Geral de Proteção de Dados, Law No. 13,709/2018 (as amended by Law 13,853/2019); in force Aug 2020, penalties Aug 2021 |
 | **Sources** | `skills/data-minimization/references/regulatory-reference.md` §LGPD · `skills/consent-language/references/breach-notification.md` · `skills/consent-language/references/childrens-consent.md` · `skills/consent-language/references/rights-language.md` |
 
@@ -13,7 +13,7 @@ Extraterritorial (Art. 3): any processing of data of individuals in Brazil regar
 ANPD. Penalties: up to BRL 50M per violation or 2% of Brazil revenue (capped BRL 50M per infraction). Private right of action: *not located*.
 
 ## A2 — Lawful Basis & Consent
-`basis_model:` enumerated-bases — the full Art. 7 basis list is not in suite sources `[UNVERIFIED — confirm Art. 7 against primary source]`. Sensitive escalation: specific legal basis required — explicit consent or an Art. 11(II) ground. Children: specific consent from parent/guardian (Art. 14). Tag: `PROCEDURAL`.
+`basis_model:` enumerated-bases — **Art. 7 — ten enumerated bases, I–X (web-verified 2026-07-17)**: consent · legal/regulatory obligation · public-policy execution · research · contract performance · judicial/administrative/arbitral rights · protection of life/safety · health protection · legitimate interests · credit protection. Sensitive escalation: specific legal basis required — explicit consent or an Art. 11(II) ground. Children: specific consent from parent/guardian (Art. 14). Tag: `PROCEDURAL`.
 
 ## A3 — Collection Limitation
 `test_type:` necessity. **Art. 6(III)** — "limitação ao mínimo necessário para a realização de suas finalidades" (limitation to the minimum necessary for the purposes). Primary minimization hook; GDPR Art. 5(1)(c) analog. P-mapping: **P1**. Tag: `ARCH-DISSOLVES`.
@@ -28,7 +28,7 @@ Art. 6(I) purpose (legitimate, explicit, informed) + Art. 6(II) adequacy (compat
 Access Art. 18(II) · rectification Art. 18(III) · anonymization/blocking/**deletion of unnecessary or excessive data** Art. 18(IV) (a minimization *right* — unique among modeled regimes) · erasure of consented data Art. 18(VI) · portability Art. 18(V) · **objection Art. 18 § 2** *(primary-source corrected 2026-07-05 — the suite rights matrix had duplicated Art. 18(II); § 2 grants opposition to processing on non-consent bases in case of noncompliance)* · ADM review Art. 20 · free access principle Art. 6(IV). Response clock: **15 days**, no extension listed (per rights matrix). Complaint: gov.br/anpd. Restriction / opt-out-of-sale / limit-sensitive / de-indexing: —. Tag: `PROCEDURAL`.
 
 ## A7 — Retention & Erasure
-Deletion right Art. 18(VI); prevention principle Art. 6(VIII). A dedicated storage-limitation article is *not located* in suite sources `[UNVERIFIED — Arts. 15–16 govern termination/retention; confirm]`. P4. Tag: `ARCH-SATISFIES` (TTL/crypto-erasure).
+Deletion right Art. 18(VI); prevention principle Art. 6(VIII). Storage limitation: **Art. 15** (termination events: purpose achieved / no longer necessary / period ended / revocation / ANPD order) + **Art. 16** (deletion after termination; four retention exceptions incl. legal obligation and anonymized research) — web-verified 2026-07-17. P4. Tag: `ARCH-SATISFIES` (TTL/crypto-erasure).
 
 ## A8 — Breach Notification
 `clock_model:` fixed-clock. Art. 48 + ANPD Resolution CD/ANPD No. 15/2023: **3 business days to ANPD; 5 business days to data subjects** (high-risk incidents). Threshold: significant risk to data subjects. Tag: duty `PROCEDURAL`; trigger surface shrinks with minimized holdings.

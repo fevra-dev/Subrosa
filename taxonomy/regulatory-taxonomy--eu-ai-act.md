@@ -2,8 +2,9 @@
 
 | | |
 |---|---|
-| **Record** | `eu-ai-act` · **Status:** SECTORAL-OVERLAY (S-profile v1.1) · **Current as of:** 2026-07-05 |
-| **Instruments** | Regulation (EU) 2024/1689; phased: prohibitions Feb 2 2025 · GPAI Aug 2 2025 · high-risk (Annex III) Aug 2 2026 |
+| **Record** | `eu-ai-act` · **Status:** SECTORAL-OVERLAY (S-profile v1.1) · **Current as of:** 2026-07-17 (currency sweep, web-verified) |
+| **Instruments** | Regulation (EU) 2024/1689; phased: prohibitions Feb 2 2025 · GPAI Aug 2 2025 · high-risk **deferred by Digital Omnibus (below)** |
+| **Reform watch** | **Digital Omnibus on AI** — Parliament Jun 16 2026 · Council Jun 29 2026 · OJ publication expected Jul 2026 (web-verified 2026-07-17). Defers high-risk application: **Annex III → Dec 2 2027** · **Annex I embedded-product → Aug 2 2028**; AI-generated-content marking → Dec 2 2026; other Art. 50 transparency unchanged (**Aug 2 2026**). Substantive amendments (new non-consensual-intimate-imagery prohibition, narrowed safety-component definition, SMC simplifications) **not yet folded into S0–S5** — re-verify after OJ publication |
 | **Sources** | `skills/data-minimization/references/regulatory-reference.md` §EU AI Act · `skills/privacy-impact-assessment/references/dpia-triggers.md` §AI Act Art. 9 |
 
 ## S0 — Scope Trigger

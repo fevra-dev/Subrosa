@@ -34,7 +34,7 @@ Declare input type at start of analysis or infer from content.
 
 ## Regulatory Source of Truth
 
-Statutory citations and jurisdiction facts (deadlines, thresholds, category lists, penalty ceilings) in this skill and its reference files derive from the normalized taxonomy: `taxonomy/regulatory-taxonomy.md` + the per-jurisdiction records (`taxonomy/regulatory-taxonomy--*.md`, axes A0–A12). Records consumed here: `ca-pipeda-law25`, `eu-gdpr-uk`, `us-ca-ccpa`, `br-lgpd`, `za-popia`, `cn-pipl`, `sg-pdpa`, `my-pdpa`, `th-pdpa` (+ HIPAA/GLBA/COPPA/BIPA as sectoral overlays pending their variant profile).
+Statutory citations and jurisdiction facts (deadlines, thresholds, category lists, penalty ceilings) in this skill and its reference files derive from the normalized taxonomy: `taxonomy/regulatory-taxonomy.md` + the per-jurisdiction records (`taxonomy/regulatory-taxonomy--*.md`, axes A0–A12). Records consumed here: `ca-pipeda-law25`, `eu-gdpr-uk`, `us-ca-ccpa`, `br-lgpd`, `za-popia`, `cn-pipl`, `sg-pdpa`, `my-pdpa`, `th-pdpa` (+ HIPAA/GLBA/COPPA/BIPA as sectoral overlays — S-profile records `us-hipaa`, `us-glba`, `us-coppa`, `us-il-bipa`).
 
 On any discrepancy between this skill's files and a record: **the record wins** — unless this file is more specific or more correct, in which case fix the record and log the reconciliation in `.fable/reconciliation-log.md`. Never resolve a conflict by inventing a citation. For "design-to-strictest" defaults use `taxonomy/regulatory-taxonomy--floor.md`; for cross-regime incompatibilities use `taxonomy/regulatory-taxonomy--conflicts.md`.
 

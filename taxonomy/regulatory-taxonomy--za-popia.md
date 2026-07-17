@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Record** | `za-popia` · **Status/Tier:** SCAFFOLD / Tier 2 · **Schema:** v1.0 · **Current as of:** 2026-07-05 (primary-source corrected) |
+| **Record** | `za-popia` · **Status/Tier:** SCAFFOLD / Tier 2 · **Schema:** v1.0 · **Current as of:** 2026-07-17 (verification pass) |
 | **Instrument** | Protection of Personal Information Act, Act 4 of 2013; enforcement operative July 1 2021 |
 | **Sources** | `skills/data-minimization/references/regulatory-reference.md` §POPIA · `skills/consent-language/references/breach-notification.md` · `skills/consent-language/references/childrens-consent.md` · **primary-source web check 2026-07-05** (gov.za Act text; popia.co.za; see reconciliation log) |
 
@@ -39,7 +39,7 @@ Data-subject participation **ss. 23–25**: access (s. 23), correction/deletion 
 **Under 18**; parental/guardian consent — § 35 (per children's-consent age table). Tag: `PROCEDURAL`.
 
 ## A10 — Cross-Border Transfer
-s. 72 — adequacy / binding corporate rules / consent / contract necessity `[UNVERIFIED — anchor widely cited but not context-verified; confirm s. 72(1) grounds]`. `transfer_model:` adequacy+mechanisms pending confirmation.
+**s. 72(1)** (web-verified 2026-07-17) — grounds: recipient bound by law / BCRs / binding agreement providing substantially-similar protection (incl. onward-transfer rules) · consent · contract performance with or in the interest of the data subject · transfer for the data subject's benefit where consent is impracticable but likely. `transfer_model:` adequacy+mechanisms.
 
 ## A11 — Security Safeguards
 **ss. 19–22:** appropriate, reasonable technical and organisational measures against loss, damage, unauthorised destruction, and unlawful access/processing (s. 19); operator duties (ss. 20–21); breach notification (s. 22). **P7**. Tag: `ARCH-SATISFIES`.

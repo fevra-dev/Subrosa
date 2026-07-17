@@ -6,7 +6,7 @@
 | **Instruments** | Regulation (EU) 2016/679 (in force 25 May 2018) · UK GDPR + Data Protection Act 2018, c. 12 |
 | **Status / Tier** | FULL / Tier 1 |
 | **Schema** | v1.0 |
-| **Current as of** | 2026-07-04 (content dated June 2026 in sources) |
+| **Current as of** | 2026-07-17 (verification pass) |
 | **Sources** | `skills/data-minimization/references/regulatory-reference.md` · `skills/data-minimization/references/pipeda-gdpr.md` · `skills/consent-language/SKILL.md` · `skills/consent-language/references/rights-language.md` · `skills/consent-language/references/breach-notification.md` · `skills/consent-language/references/childrens-consent.md` · `skills/consent-language/references/cookie-consent.md` · `skills/privacy-impact-assessment/references/dpia-triggers.md` |
 | **Related sectoral overlays** | ePrivacy Directive 2002/58/EC (*lex specialis* for terminal-equipment access — cookie consent is ePrivacy, not GDPR) · EU AI Act Reg. 2024/1689 · NIS2 · DORA — registered SECTORAL in master |
 
@@ -24,11 +24,11 @@
 
 - Authority: national supervisory DPAs (ICO, CNIL, BfDI, Irish DPC, etc.); EDPB coordination.
 - Penalty ceiling: **Art. 83(4)** €10M / 2% global turnover (incl. Art. 25 violations) · **Art. 83(5)** €20M / 4% (incl. Art. 5 violations). Minimization failures sit in the *upper* tier.
-- Private right of action: not stated in suite sources — *not located*. `[UNVERIFIED — Art. 79/82 provide judicial remedy and compensation; confirm against primary source]`
+- Private right of action: **Arts. 79 (right to an effective judicial remedy) + 82 (right to compensation from controller or processor)** — web-verified 2026-07-17.
 
 ## A2 — Lawful Basis & Consent Model
 
-- `basis_model:` **enumerated-bases** — Art. 6(1): consent (a), contract (b), legal obligation (c), legitimate interests (f) (bases as used across `skills/consent-language/SKILL.md`; the vital-interests and public-task bases are not exercised in suite sources — *not located there*, standard Art. 6(1)(d),(e) `[UNVERIFIED]`).
+- `basis_model:` **enumerated-bases** — Art. 6(1): consent (a), contract (b), legal obligation (c), legitimate interests (f) (bases as used across `skills/consent-language/SKILL.md`; plus **Art. 6(1)(d) vital interests and 6(1)(e) public-interest/official-authority task — web-verified 2026-07-17**, unexercised in suite sources).
 - Consent standard: Art. 4(11) — freely given, specific, informed, unambiguous affirmative action; no pre-ticked boxes (Planet49 C-673/17); as easy to withdraw as to give (Art. 7(3)).
 - Sensitive escalation: Art. 9(1) prohibition absent explicit consent or an Art. 9(2) ground — **opt-in by construction**.
 - Legitimate interests require a documented LIA; absolute objection right for direct marketing (Art. 21(2)).
@@ -85,10 +85,10 @@ P-mapping: P4 (+ P6 via 17(1)). Tag: `ARCH-SATISFIES` (TTL, crypto-erasure) · `
 ## A8 — Breach Notification
 
 - `clock_model:` **fixed-clock.**
-- **Art. 33:** 72 hours to DPA from awareness (awareness ≠ certainty — notify and update; Part 1/Part 2 pattern per `skills/consent-language/references/breach-notification.md`). All breaches to regulator unless unlikely to risk rights `[UNVERIFIED — the "unlikely to result in a risk" carve-out is standard Art. 33(1) text but not stated in suite sources]`.
+- **Art. 33:** 72 hours to DPA from awareness (awareness ≠ certainty — notify and update; Part 1/Part 2 pattern per `skills/consent-language/references/breach-notification.md`). All breaches to regulator **unless "unlikely to result in a risk to the rights and freedoms of natural persons"** (Art. 33(1), text web-verified 2026-07-17); late notification must carry reasons for the delay; phased disclosure allowed (Art. 33(4)).
 - **Art. 34:** individuals without undue delay where high risk; content per 34(2); public-communication alternative 34(3)(c) for disproportionate effort.
 
-Tag: duty `PROCEDURAL`; trigger `ARCH-SATISFIES` (Art. 34 exemption where data rendered unintelligible — strong encryption defeats the individual-notice trigger `[UNVERIFIED — Art. 34(3)(a) basis; suite sources state the practical rule ("PI was encrypted with strong keys; risk is low") without the citation]`).
+Tag: duty `PROCEDURAL`; trigger `ARCH-SATISFIES` (Art. 34 exemption where data rendered unintelligible — strong encryption defeats the individual-notice trigger — **Art. 34(3)(a): measures "that render the personal data unintelligible to any person who is not authorised to access it, such as encryption"** (text web-verified 2026-07-17)).
 
 ## A9 — Children
 
@@ -100,14 +100,14 @@ Tag: `PROCEDURAL` (verification mechanics); AADC defaults are `ARCH-SATISFIES` o
 
 ## A10 — Cross-Border Transfer
 
-- `transfer_model:` **adequacy+mechanisms.** Disclosure duty: Art. 13(1)(f). Mechanisms: adequacy decisions, SCCs, BCRs under Chapter V `[UNVERIFIED — Arts. 44–49 not cited in suite sources; confirm]`. Switzerland holds adequacy (sourced); Argentina holds adequacy (Decision 2003/490/EC, sourced).
+- `transfer_model:` **adequacy+mechanisms.** Disclosure duty: Art. 13(1)(f). Mechanisms (Chapter V, Arts. 44–50 — web-verified 2026-07-17): adequacy decisions (**Art. 45**), appropriate safeguards incl. Commission SCCs (**Art. 46(2)(c)**) and BCRs (**Arts. 46(2)(b)/47**), derogations (**Art. 49**). Switzerland holds adequacy (sourced); Argentina holds adequacy (Decision 2003/490/EC, sourced).
 - Practical enforcement signal (sourced): GA4 without safeguards ruled non-compliant by CNIL/DSK/Austrian DSB over US transfers.
 
 Tag: `PROCEDURAL` (mechanism paperwork) + `ARCH-DISSOLVES` where data is non-personal before export (aggregation/DP) or never leaves (local processing, PSI/MPC).
 
 ## A11 — Security Safeguards
 
-- Art. 5(1)(f) integrity & confidentiality; Art. 32 `[UNVERIFIED — Art. 32 not cited in suite sources; suite grounds security in 5(1)(f)]`. Specificity: principles-based.
+- Art. 5(1)(f) integrity & confidentiality; **Art. 32 security of processing** (risk-appropriate technical/organisational measures — web-verified 2026-07-17). Specificity: principles-based.
 
 P-mapping: P7. Tag: `ARCH-SATISFIES`.
 
@@ -116,7 +116,7 @@ P-mapping: P7. Tag: `ARCH-SATISFIES`.
 - `dpia_model:` **mandatory-triggered.**
 - **Art. 35(3)** automatic triggers: (a) systematic extensive automated evaluation/profiling with significant effects; (b) large-scale Art. 9/10 processing; (c) large-scale systematic monitoring of public areas.
 - **EDPB Guidelines 09/2022:** nine criteria; **two or more → mandatory**. National mandatory lists (ICO 11, CNIL 17, BfDI 16) under Art. 35(4).
-- Prior consultation: Art. 36 when residual risk high `[UNVERIFIED — Art. 36 named in skills/privacy-suite/SKILL.md description ("Art. 36 prior consultation trigger") but mechanics not detailed in sources]`.
+- Prior consultation: **Art. 36** — consult the supervisory authority before processing where the DPIA leaves unmitigated high residual risk (function web-verified 2026-07-17).
 
 Tag: `PROCEDURAL`; selective-disclosure design shrinks the risk register the DPIA must document.
 

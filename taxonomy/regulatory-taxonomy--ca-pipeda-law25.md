@@ -6,9 +6,9 @@
 | **Instruments** | PIPEDA, S.C. 2000, c. 5 (Schedule 1 principles; breach ss. 10.1–10.3) · Quebec Law 25, S.Q. 2021, c. 25 (amending PPIPS) |
 | **Status / Tier** | FULL / Tier 1 |
 | **Schema** | v1.0 |
-| **Current as of** | 2026-07-04 (content dated June 2026 in sources) |
+| **Current as of** | 2026-07-17 (currency sweep, web-verified) |
 | **Sources** | `skills/data-minimization/references/regulatory-reference.md` · `skills/data-minimization/references/pipeda-gdpr.md` · `skills/consent-language/references/breach-notification.md` · `skills/consent-language/references/childrens-consent.md` · `skills/consent-language/references/rights-language.md` · `skills/privacy-impact-assessment/references/dpia-triggers.md` |
-| **Reform watch** | Bill C-27 (CPPA + AIDA) would replace PIPEDA with a GDPR-aligned regime — verify current Parliamentary status before relying on PIPEDA-specific analysis |
+| **Reform watch** | **Bill C-27 died on the Order Paper** (prorogation, Jan 6 2025); no PIPEDA replacement tabled as of mid-2026 — new comprehensive legislation expected from the 45th Parliament. Meanwhile **Bill C-15** (Budget 2025 Implementation Act No. 1; third reading Feb 26 2026) adds a **data-mobility framework** to PIPEDA. Web-verified 2026-07-17 |
 
 **Design rule (sourced):** design to Law 25 standard for any Quebec data subjects — stricter than PIPEDA on all counts and materially aligned with GDPR.
 

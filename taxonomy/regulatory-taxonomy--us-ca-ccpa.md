@@ -3,10 +3,10 @@
 | | |
 |---|---|
 | **Record** | `us-ca-ccpa` |
-| **Instruments** | CCPA, Cal. Civ. Code §§ 1798.100–1798.199.100 (eff. Jan 1 2020) · CPRA, Prop. 24 (Nov 2020; substantive provisions eff. Jan 1 2023) · CPPA regs, Cal. Code Regs. tit. 11 |
+| **Instruments** | CCPA, Cal. Civ. Code §§ 1798.100–1798.199.100 (eff. Jan 1 2020) · CPRA, Prop. 24 (Nov 2020; substantive provisions eff. Jan 1 2023) · CPPA regs, Cal. Code Regs. tit. 11 — **ADMT / risk-assessment / cybersecurity-audit regs adopted Jul 24 2025, OAL-approved Sep 23 2025, eff. Jan 1 2026** |
 | **Status / Tier** | FULL / Tier 1 |
 | **Schema** | v1.0 |
-| **Current as of** | 2026-07-04 (content dated June 2026 in sources) |
+| **Current as of** | 2026-07-17 (currency sweep, web-verified) |
 | **Sources** | `skills/data-minimization/references/regulatory-reference.md` · `skills/data-minimization/references/pipeda-gdpr.md` · `skills/consent-language/SKILL.md` · `skills/consent-language/references/rights-language.md` · `skills/consent-language/references/breach-notification.md` · `skills/consent-language/references/cookie-consent.md` |
 | **Related** | Other US state omnibus laws (CO, CT, VA, UT, TX, MT, OR, DE per `skills/consent-language/references/cookie-consent.md`) — long-tail candidates, not modeled here. Federal sectoral overlays (COPPA, HIPAA, GLBA, BIPA-IL) registered SECTORAL in master |
 
@@ -17,13 +17,13 @@
 ## A0 — Scope & Applicability
 
 - **Territorial:** businesses collecting PI of California residents ("consumers").
-- **Thresholds:** for-profit businesses meeting any of: >$25M annual gross revenue; buys/sells/shares PI of 100,000+ consumers or households; ≥50% revenue from selling/sharing PI. `[UNVERIFIED — thresholds not in suite sources; confirm § 1798.140(d) against primary source]`
-- Extraterritorial reach: follows residency of the consumer, not location of the business `[UNVERIFIED]`.
+- **Thresholds (§ 1798.140(d), web-verified 2026-07-17):** for-profit businesses doing business in California meeting any of: >$25M annual gross revenue (CPI-adjusted to **$26.625M for 2026**, per CPPA adjustment); buys/sells/shares PI of 100,000+ consumers or households; ≥50% revenue from selling/sharing PI.
+- Extraterritorial reach: follows the **consumer's California residency**, subject to the doing-business-in-California nexus (§ 1798.140(d) chapeau — web-verified 2026-07-17).
 
 ## A1 — Enforcement
 
 - Authority: **CPPA** (rulemaking + enforcement transferred from AG, § 1798.199.40).
-- Penalty ceiling: not stated in suite sources — *not located*. `[UNVERIFIED — administrative fines per violation under § 1798.155; confirm amounts]`
+- Penalty ceiling (**§ 1798.155**, web-verified 2026-07-17): administrative fines up to **$2,500 per violation; $7,500 per intentional violation or violations involving PI of consumers known to be under 16** (amounts CPI-adjusted by the CPPA).
 - **Private right of action: YES, breach-only** — § 1798.150 (reasonable security; statutory damages for breaches). No general private right of action.
 
 ## A2 — Lawful Basis & Consent Model
@@ -38,7 +38,7 @@ Tag: `PROCEDURAL` (notice + signal plumbing); GPC honoring is `ARCH-SATISFIES` (
 ## A3 — Collection Limitation (minimization hook)
 
 - `test_type:` **proportionality + necessity.**
-- **§ 1798.100(a)(3):** collection, use, retention, and sharing must be "reasonably necessary and proportionate" to the disclosed purpose. Proportionality is a second limb beyond necessity — a field may be necessary yet still fail as disproportionate.
+- **§ 1798.100(c)** *(anchor corrected 2026-07-17 — previously miscited as (a)(3), which is the retention-disclosure/limitation provision)*: collection, use, retention, and sharing must be "reasonably necessary and proportionate" to the disclosed purpose. Proportionality is a second limb beyond necessity — a field may be necessary yet still fail as disproportionate.
 
 P-mapping: **P1**. Tag: `ARCH-DISSOLVES` — same construction-satisfies logic as GDPR Art. 25 / PIPEDA 4.4.
 
@@ -66,7 +66,7 @@ Tag: `ARCH-DISSOLVES` where the sensitive attribute is never held in usable form
 | **Opt out of sale/sharing** | §§ 1798.120, 1798.135 |
 | **Limit use of sensitive PI** | § 1798.121 |
 | Non-discrimination for exercising rights | § 1798.125 |
-| Restriction / objection / ADM | — (no GDPR-style equivalents in suite sources; CPPA ADM rulemaking `[UNVERIFIED — confirm current reg status]`) |
+| **ADMT** (significant decisions): pre-use notice, **opt-out**, access to logic/key parameters/effects | CPPA ADMT regs, eff. Jan 1 2026; compliance by **Jan 1 2027** (web-verified 2026-07-17). No GDPR-style restriction/objection rights |
 
 - **Response clock:** 45 days + 45-day extension (notify within first 45) — per `skills/consent-language/references/rights-language.md`. Opt-outs: 15 business days.
 - Complaint route: cppa.ca.gov.
@@ -76,7 +76,7 @@ Tag: `PROCEDURAL`.
 ## A7 — Retention & Erasure
 
 - Deletion on verifiable request (§ 1798.105) — **no soft-delete** (sourced).
-- Retention disclosure: retention periods or criteria must be disclosed at collection `[UNVERIFIED — § 1798.100(a)(3) retention limb sourced; the at-collection retention-disclosure duty under § 1798.100(b) not detailed in suite sources]`.
+- Retention disclosure (**§ 1798.100(a)(3)**, web-verified 2026-07-17): the at-collection notice must state the intended **retention period per category, or the criteria** used to determine it — and PI may not be retained longer than reasonably necessary for the disclosed purpose.
 
 P-mapping: P4, P6. Tag: `ARCH-SATISFIES` (hard-delete paths, TTL); `ARCH-DISSOLVES` for never-collected/aggregate-only holdings.
 
@@ -89,7 +89,7 @@ Tag: the exposure is economic, not procedural — `ARCH-SATISFIES`/`ARCH-DISSOLV
 
 ## A9 — Children
 
-- CCPA/CPRA layer: affirmative authorization (opt-in) required for sale/sharing of PI of consumers under 16; parental consent under 13 `[UNVERIFIED — § 1798.120(c) not in suite sources; confirm]`.
+- CCPA/CPRA layer (**§ 1798.120(c)**, web-verified 2026-07-17): no sale/sharing with actual knowledge the consumer is under 16 unless **13–16 affirmatively authorize it themselves; under-13 requires parent/guardian authorization**; willful disregard of age = actual knowledge.
 - Federal overlay: **COPPA** (under 13, verifiable parental consent) — registered SECTORAL; full mechanics in `skills/consent-language/references/childrens-consent.md`.
 
 Tag: `PROCEDURAL`.
@@ -108,9 +108,10 @@ P-mapping: P7. Tag: `ARCH-SATISFIES`.
 
 ## A12 — DPIA / PIA
 
-- `dpia_model:` **none** in the statute as sourced. CPPA rulemaking on risk assessments / cybersecurity audits for high-risk processing: `[UNVERIFIED — confirm current status of CPPA regs before advising]`.
+- `dpia_model:` **regulatory risk-assessment** — none in the statute; the CPPA regs (eff. Jan 1 2026, web-verified 2026-07-17) require documented **risk assessments before significant-risk processing**: selling/sharing PI, processing sensitive PI, ADMT for significant decisions, training ADMT on PI. Ongoing pre-2026 activities: assess by **Dec 31 2027**; first filing to the CPPA (attestation + summary) **Apr 1 2028**.
+- **Annual cybersecurity audits** for businesses deriving ≥50% revenue from selling/sharing PI, or meeting the revenue threshold plus 250k+ consumers / 50k+ sensitive-PI consumers; submissions phased **Apr 1 2028 / 2029 / 2030** by revenue tier.
 
-Tag: — (pending rulemaking).
+Tag: `PROCEDURAL` (assessment + filing duties).
 
 ---
 
@@ -118,5 +119,5 @@ Tag: — (pending rulemaking).
 
 - Only Tier-1 regime with **no lawful-basis concept**, **no regulator breach clock**, and a **breach-only private right of action**.
 - Only regime whose sensitive-data protection is a *consumer right* (limit-use) rather than a processing prohibition (GDPR Art. 9) or consent escalation (Law 25 Art. 12).
-- Proportionality limb (§ 1798.100(a)(3)) is the strictest *wording* of the minimization test among Tier-1 — a necessity-passing field can still fail.
+- Proportionality limb (§ 1798.100(c)) is the strictest *wording* of the minimization test among Tier-1 — a necessity-passing field can still fail.
 - GPC: the only Tier-1 regime where a browser signal is a legally binding opt-out (tit. 11 § 7026); EU treats GPC as withdrawal-only (EDPB Op. 8/2024); UK as legitimate signal (ICO draft).

@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Record** | `kr-pipa` · **Status/Tier:** SCAFFOLD / Tier 3b · **Schema:** v1.0 · **Current as of:** 2026-07-04 |
+| **Record** | `kr-pipa` · **Status/Tier:** SCAFFOLD / Tier 3b · **Schema:** v1.0 · **Current as of:** 2026-07-17 (verification pass) |
 | **Instrument** | Personal Information Protection Act (개인정보 보호법), Act No. 11990 (2011); substantially amended 2023 (Act No. 19234) |
 | **Sources** | `skills/data-minimization/references/regulatory-reference.md` §Korea PIPA |
 
@@ -36,7 +36,7 @@ Art. 3(1) clear purpose specification; collection bound to it. P2. Tag: `PROCEDU
 `clock_model:` promptness-standard with guidance clock — **Art. 34:** notify individuals "without delay" (PIPC guidance: within **5 days**); notify PIPC for breaches over **1,000 individuals**. Tag: duty `PROCEDURAL`; the 1,000-threshold is holdings-dependent.
 
 ## A9 — Children
-*Not located in suite sources* `[UNVERIFIED — Art. 22-2 / Art. 39-3 lineage: under-14 requires legal-representative consent; confirm anchor]`.
+**Art. 22-2 (web-verified 2026-07-17):** under-14 processing requires **legal-representative consent plus confirmation the representative actually consented** (verification element, e.g. SMS); notices to under-14s must use clear, plain language.
 
 ## A10 — Cross-Border Transfer
 `transfer_model:` adequacy+mechanisms (2023 update, sourced): adequacy decisions and **Standard Protection Clauses (SPCs — Korea's SCC equivalent)**. Tag: `PROCEDURAL` + `ARCH-DISSOLVES` for non-personal-before-export (Art. 28-2 pseudonymization ladder).
@@ -45,4 +45,4 @@ Art. 3(1) clear purpose specification; collection bound to it. P2. Tag: `PROCEDU
 Art. 3(6) technical/managerial/physical safeguards; Art. 23 adds the distinct-storage requirement for sensitive PI. **P7 + P6**. Tag: `ARCH-SATISFIES`.
 
 ## A12 — DPIA / PIA
-*Not located in suite sources* `[UNVERIFIED — PIPA mandates PIAs for public institutions (Art. 33); private-sector status differs; confirm]`.
+**Art. 33 (web-verified 2026-07-17): PIAs mandatory for public institutions** (personal-information-file triggers; submitted to the PIPC); **voluntary for the private sector**.

@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Record** | `au-apps` · **Status/Tier:** FULL / Tier 3a · **Schema:** v1.0 · **Current as of:** 2026-07-04 |
+| **Record** | `au-apps` · **Status/Tier:** FULL / Tier 3a · **Schema:** v1.0 · **Current as of:** 2026-07-17 (verification pass) |
 | **Instruments** | Privacy Act 1988 (Cth) + Australian Privacy Principles (Schedule 1, as amended 2012); penalty amendments: Privacy and Other Legislation Amendment Act 2024 (s. 13G) |
 | **Sources** | `skills/data-minimization/references/regulatory-reference.md` §APPs · `skills/consent-language/references/breach-notification.md` · `skills/consent-language/references/childrens-consent.md` |
 | **Reform watch** | Small-business exemption narrowing under reform proposals (sourced) |
@@ -34,7 +34,7 @@ Access — APP 12 · correction — APP 13. No erasure *right* (see A7's entity-
 **APP 11.2:** take reasonable steps to **destroy or de-identify** PI no longer needed for any permitted purpose — the APP analog of GDPR Art. 5(1)(e)/PIPEDA 4.5.3 (sourced), framed as an entity duty rather than a data-subject right. P4. Tag: `ARCH-SATISFIES` (TTL/de-identification pipelines are direct performance); de-identify option makes this friendlier to aggregate-retention designs than erasure-only regimes.
 
 ## A8 — Breach Notification
-`clock_model:` promptness-standard. NDB scheme: notify OAIC and individuals **ASAP** where breach is **likely to result in serious harm** (per `skills/consent-language/references/breach-notification.md`). Statutory anchor `[UNVERIFIED — Part IIIC ss. 26WE–26WR; not in suite sources]`. Tag: duty `PROCEDURAL`; serious-harm threshold is holdings-dependent.
+`clock_model:` promptness-standard. NDB scheme: notify OAIC and individuals **ASAP** where breach is **likely to result in serious harm** (per `skills/consent-language/references/breach-notification.md`). Statutory anchors (web-verified 2026-07-17, OAIC): **Part IIIC — s. 26WE (eligible data breach) · s. 26WK (statement to the Commissioner as soon as practicable) · s. 26WL (notify individuals, or publish where not practicable)**. Tag: duty `PROCEDURAL`; serious-harm threshold is holdings-dependent.
 
 ## A9 — Children
 **Under 15** — OAIC guidance, not statutory (per `skills/consent-language/references/childrens-consent.md`); parental consent. Tag: `PROCEDURAL`.
@@ -46,4 +46,4 @@ Access — APP 12 · correction — APP 13. No erasure *right* (see A7's entity-
 **APP 11:** reasonable steps to protect PI from misuse, interference, loss, unauthorised access/modification/disclosure. Principles-based. **P7**. Tag: `ARCH-SATISFIES`.
 
 ## A12 — DPIA / PIA
-`dpia_model:` none in suite sources for the private sector — *not located* `[UNVERIFIED — PIAs mandatory for Australian Government agencies under the Privacy (Australian Government Agencies — Governance) APP Code; confirm private-sector status]`.
+`dpia_model:` **split** — private sector: none statutory; **agencies: PIA mandatory for all high-privacy-risk projects + published PIA register — Privacy (Australian Government Agencies — Governance) APP Code 2017, s. 12** (web-verified 2026-07-17).

@@ -17,7 +17,7 @@ Structured PIA/DPIA workflow producing regulator-ready documentation. Mandatory 
 
 ## Regulatory Source of Truth
 
-Statutory citations and jurisdiction facts in this skill and its reference files derive from the normalized taxonomy: `taxonomy/regulatory-taxonomy.md` + the per-jurisdiction records (`taxonomy/regulatory-taxonomy--*.md`; DPIA/PIA triggers are axis **A12**). Records consumed here: `ca-pipeda-law25`, `eu-gdpr-uk`, `us-ca-ccpa`, `br-lgpd`, `cn-pipl`, `sg-pdpa` (+ HIPAA § 164.308 and EU AI Act Art. 9 as sectoral overlays pending their variant profile).
+Statutory citations and jurisdiction facts in this skill and its reference files derive from the normalized taxonomy: `taxonomy/regulatory-taxonomy.md` + the per-jurisdiction records (`taxonomy/regulatory-taxonomy--*.md`; DPIA/PIA triggers are axis **A12**). Records consumed here: `ca-pipeda-law25`, `eu-gdpr-uk`, `us-ca-ccpa`, `br-lgpd`, `cn-pipl`, `sg-pdpa` (+ HIPAA § 164.308 and EU AI Act Art. 9 as sectoral overlays — S-profile records `us-hipaa`, `eu-ai-act`).
 
 On any discrepancy between this skill's files and a record: **the record wins** — unless this file is more specific or more correct, in which case fix the record and log the reconciliation in `.fable/reconciliation-log.md`. Never resolve a conflict by inventing a citation. The assessment floor (PIA-before-any-risky-project, Law 25 Art. 63.5) lives in `taxonomy/regulatory-taxonomy--floor.md` axis A12.
 

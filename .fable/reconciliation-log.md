@@ -54,3 +54,32 @@ One line per reconciliation: file · claim · outcome (record-wins / subfile-win
 
 - `privacy-suite.md` · "GDPR/PIPAA/HIPAA/LGPD" typo · **fixed** → PIPEDA.
 - `privacy-suite.md` · taxonomy routing section + skill summary added.
+
+## 2026-07-17 — quarterly currency sweep (standing watches; web-verified)
+
+- **EU AI Act — Digital Omnibus on AI**: Annex III high-risk deferred **Aug 2 2026 → Dec 2 2027**; Annex I embedded-product → Aug 2 2028; AI-generated-content marking → Dec 2 2026; other Art. 50 transparency unchanged (Aug 2 2026). Parliament Jun 16 2026 · Council Jun 29 2026 · OJ publication expected Jul 2026 · **records fixed** — `eu-ai-act` header/reform-watch + reg-reference §EU AI Act phased-application block. Sources: Travers Smith; Morgan Lewis; Inside Global Tech; artificialintelligenceact.eu.
+- **CCPA — CPPA regs finalized**: ADMT/risk-assessment/cyber-audit regs adopted Jul 24 2025, OAL-approved Sep 23 2025, **eff. Jan 1 2026**; ADMT compliance Jan 1 2027; pre-2026 activities assessed by Dec 31 2027; first filings Apr 1 2028; audits phased 2028–2030 · **record fixed** — `us-ca-ccpa` A6 ADM row + A12 upgraded from [UNVERIFIED]; master quick-index row updated. Sources: cppa.ca.gov (Sep 23 2025 announcement); White & Case; Skadden.
+- **Canada — Bill C-27 dead**: died on the Order Paper at prorogation **Jan 6 2025**; no PIPEDA replacement tabled as of mid-2026; **Bill C-15** (third reading Feb 26 2026) adds data-mobility framework to PIPEDA · **record fixed** — `ca-pipeda-law25` reform-watch row. Sources: Fasken; Blakes; Gowling WLG; LEGISinfo.
+- **India — DPDP Rules 2025**: notified **Nov 14 2025**; phased commencement Nov 14 2025 / Nov 14 2026 (Consent Managers) / **May 13 2027** (core duties) · **record fixed** — `in-dpdpa` banner rewritten from "NOT IN FORCE" to phased-commencement; A5/A8 flags annotated with Rules dates. Sources: MeitY notification coverage (S&R Associates; Shardul Amarchand Mangaldas; Privacy World).
+- **Vietnam — Decree 356/2025/ND-CP** (Dec 31 2025, eff. Jan 1 2026) **formally replaced Decree 13/2023** — resolves the `vn-pdpl` Transition hedge ("presumably ceases effect"); `vn-pdpd` historical banner annotated. Sources: DLA Piper Data Protection Laws of the World (VN); DataGuidance.
+- **Malaysia — CBPDT Guidelines No. 3/2025** (Apr 29 2025) contents reviewed: whitelist replaced by receiving-jurisdiction assessment (substantially-similar law / at-least-equivalent protection / exceptions) · **record fixed** — `my-pdpa` A10; standing-watch item closed. Sources: pdp.gov.my GP_CBPDT; Mayer Brown; Hogan Lovells.
+
+## 2026-07-17 — UNVERIFIED resolution pass (primary-source web verification, 12 records)
+
+**Citation error caught and corrected suite-wide:** the CCPA minimization/proportionality test ("reasonably necessary and proportionate") was miscited as **§ 1798.100(a)(3)** in 9 locations across 5 files — the correct anchor is **§ 1798.100(c)**; (a)(3) is the at-collection retention-disclosure/limitation provision. Both grounding sources (`pipeda-gdpr.md`, `regulatory-reference.md`) carried the error, which is why every derived artifact repeated it. All 9 corrected with dated notes (record + floor + quick index + both grounding sources). Sources: FindLaw § 1798.100; law.justia; Greenberg Traurig analysis.
+
+**Anchors resolved from [UNVERIFIED] (34 flags, all web-verified 2026-07-17):**
+- `eu-gdpr-uk` (7): Arts. 79/82 (remedy/compensation) · 6(1)(d)/(e) bases · 33(1) "unlikely to result in a risk" carve-out + 33(4) phased disclosure · 34(3)(a) unintelligible-data exemption (exact text) · Chapter V Arts. 45/46(2)(c)/47/49 · 32 security · 36 prior consultation. Source: gdpr-info.eu article pages.
+- `us-ca-ccpa` (6): § 1798.140(d) thresholds (incl. 2026 CPI adjustment $26.625M) · residency reach · § 1798.155 fines ($2,500/$7,500) · § 1798.100(a)(3) retention disclosure · § 1798.120(c) minors two-tier opt-in · anchor correction above.
+- `au-apps` (2): Part IIIC ss. 26WE/26WK/26WL (OAIC) · agencies PIA mandate — APP Code 2017 s. 12 + PIA register (OAIC/legislation.gov.au).
+- `kr-pipa` (2): Art. 22-2 under-14 legal-representative consent + verification · Art. 33 PIA public-mandatory/private-voluntary.
+- `jp-appi` (1): Art. 26 breach — four trigger classes, prelim ~3–5 days, confirmed 30/60 days (IAPP; DLA Piper).
+- `sg-pdpa` (1): ss. 21/22 + Fifth/Sixth Schedule exceptions + s. 22A preservation (SSO; PDPC guidelines).
+- `cn-pipl` (3): Art. 19 shortest-period retention · Art. 57 breach (incl. individual-notice waiver) · Art. 51 safeguards catalogue (chinalawtranslate family).
+- `br-lgpd` (2): Art. 7 ten bases · Arts. 15/16 termination/elimination (lgpd-brazil.info; IAPP).
+- `za-popia` (1): s. 72(1) transfer grounds (popia.co.za; Michalsons).
+- `in-dpdpa` (5): s. 3(b) extraterritoriality · §§ 11–14 rights · s. 8(5) safeguards · s. 8(6) dual breach intimation · s. 16(1) blacklist transfer model (FPF; dpdpa.com).
+- `us-coppa` (2): § 312.4 notice content verified against eCFR (closes the 2026-07-05 flag) · § 1798.120(c) cross-reference.
+- `ch-nfadp` (2): Art. 25 access · Arts. 16/17 transfer adequacy + exceptions (bj.admin.ch; EDÖB).
+
+Remaining [UNVERIFIED] lines: 80 (down from ~113) — concentrated in TH/NG/AE/MY scaffolds ("not located in suite sources" coverage notes) and structural-absence claims, left flagged deliberately. All touched records' `Current as of` bumped to 2026-07-17.

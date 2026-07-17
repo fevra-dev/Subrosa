@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Record** | `jp-appi` · **Status/Tier:** FULL / Tier 3a · **Schema:** v1.0 · **Current as of:** 2026-07-04 |
+| **Record** | `jp-appi` · **Status/Tier:** FULL / Tier 3a · **Schema:** v1.0 · **Current as of:** 2026-07-17 (verification pass) |
 | **Instrument** | Act on the Protection of Personal Information (個人情報の保護に関する法律), Act No. 57 of 2003; major amendments 2015 (eff. 2017) and 2020 (eff. April 2022) |
 | **Sources** | `skills/data-minimization/references/regulatory-reference.md` §APPI |
 
@@ -33,7 +33,7 @@ Art. 17(1) purpose specification bounds acquisition and use. P2. Tag: `PROCEDURA
 **Art. 19:** keep personal data accurate and up to date within the scope necessary for the purpose, and **delete without delay when no longer required** — a self-executing entity-side deletion duty. **Statutory intermediate categories (2022):** pseudonymously processed information (仮名加工情報) — internal use under lighter obligations; anonymously processed information (匿名加工情報) — stricter de-identification standard, outside core obligations. P4 (P6/P7 for the categories). Tag: `ARCH-SATISFIES` — the category system is a statutory reward ladder for exactly the transforms the suite's remediation vocabulary applies (TOKENIZE → 仮名加工, AGGREGATE/anonymize → 匿名加工).
 
 ## A8 — Breach Notification
-*Not located in suite sources* — no Japan row in the breach timeline table `[UNVERIFIED — 2022 amendments added mandatory PPC reporting + individual notice for defined breach classes (sensitive data, financial harm risk, 1,000+ subjects); confirm anchors and clocks]`. `clock_model:` pending confirmation. Tag: duty `PROCEDURAL`.
+*Not located in suite sources* — no Japan row in the breach timeline table — now web-verified 2026-07-17: **Art. 26 (2022 amendment)** — mandatory PPC report + individual notice for four classes: sensitive-data breaches · risk of property/financial harm · likely improper-purpose (e.g. cyberattack) · **1,000+ data subjects**. Clocks: preliminary report **promptly** (PPC guidelines: ~3–5 days); confirmed report **30 days** (60 for improper-purpose); individuals promptly (no fixed limit). `clock_model:` fixed-clock (reports) + promptness (individuals). Tag: duty `PROCEDURAL`.
 
 ## A9 — Children
 *Not located* — no Japan row in the children's age table; APPI sets no general age threshold `[UNVERIFIED — PPC guidance treats minors' consent capacity case-by-case; confirm]`.

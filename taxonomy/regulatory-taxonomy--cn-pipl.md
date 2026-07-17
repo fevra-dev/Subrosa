@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Record** | `cn-pipl` · **Status/Tier:** SCAFFOLD / Tier 2 · **Schema:** v1.0 · **Current as of:** 2026-07-04 |
+| **Record** | `cn-pipl` · **Status/Tier:** SCAFFOLD / Tier 2 · **Schema:** v1.0 · **Current as of:** 2026-07-17 (verification pass) |
 | **Instrument** | Personal Information Protection Law of the PRC, promulgated Aug 20 2021, effective Nov 1 2021 |
 | **Sources** | `skills/data-minimization/references/regulatory-reference.md` §PIPL · `skills/consent-language/references/breach-notification.md` · `skills/consent-language/references/childrens-consent.md` · `skills/consent-language/references/rights-language.md` · `skills/privacy-impact-assessment/references/dpia-triggers.md` §PIPL Art. 55 · `skills/data-minimization/SKILL.md` Step 2b(5) |
 
@@ -30,10 +30,10 @@ Art. 6 "directly related to the processing purpose" + least-impact-method requir
 Access Art. 45 · rectification Art. 46 · erasure Art. 47 · objection Art. 44 · portability Art. 45 · ADM Art. 24 (per suite rights matrix). Response clock: *not located*. Guardian exercise on behalf of minors under 14 (per childrens-consent file). Tag: `PROCEDURAL`.
 
 ## A7 — Retention & Erasure
-Retention-period disclosure duty (Art. 17); erasure right (Art. 47). Dedicated storage-limitation article: *not located* `[UNVERIFIED — Art. 19 shortest-time-necessary rule; confirm]`. P4. Tag: `ARCH-SATISFIES`.
+Retention-period disclosure duty (Art. 17); erasure right (Art. 47). Storage limitation: **Art. 19 — retention limited to the shortest period necessary for the processing purpose** (web-verified 2026-07-17). P4. Tag: `ARCH-SATISFIES`.
 
 ## A8 — Breach Notification
-`clock_model:` promptness-standard (immediacy). "Immediately" to both regulator and individuals; threshold: any breach of personal information (per `skills/consent-language/references/breach-notification.md`). Statutory anchor `[UNVERIFIED — Art. 57; not cited in suite sources]`. Tag: duty `PROCEDURAL`.
+`clock_model:` promptness-standard (immediacy). "Immediately" to both regulator and individuals; threshold: any breach of personal information (per `skills/consent-language/references/breach-notification.md`). Statutory anchor **Art. 57** (web-verified 2026-07-17): immediate remedial measures + notice to authorities and individuals (categories, cause, potential harm, remedial measures, contact); **individual notice waivable where remedial measures effectively avoid harm — unless the regulator orders notice** (the PIPL cousin of GDPR Art. 34(3)(a)). Tag: duty `PROCEDURAL`.
 
 ## A9 — Children
 **Under 14** — minor PI is *sensitive* by definition (Art. 31): guardian consent, dedicated processing rules, disclosure directly to guardians, guardian identity verification (per childrens-consent file). Tag: `PROCEDURAL`.
@@ -42,7 +42,7 @@ Retention-period disclosure duty (Art. 17); erasure right (Art. 47). Dedicated s
 `transfer_model:` approval-based (strictest globally, sourced). Arts. 38–43 — one of: **CAC security assessment** (mandatory for CII operators; processors of 1M+ individuals' PI; or 100k+ individuals / 10k+ sensitive-PI individuals in the preceding year); CAC-recognized certification; **CAC Standard Contract** (eff. June 1 2023); other CAC-prescribed conditions. Art. 43 reciprocal countermeasures. **Sourced schema rule: if you cannot lawfully transfer it, don't collect it** — transfer feasibility constrains collection from day one. Tag: `PROCEDURAL` (mechanism) + `ARCH-DISSOLVES` where processing stays in-country or data is non-personal pre-export — the strongest business case in any regime for local-only/PSI/MPC designs (`skills/privacy-architecture/SKILL.md`).
 
 ## A11 — Security Safeguards
-*Not located as a dedicated axis in suite sources* `[UNVERIFIED — Art. 51 technical measures; confirm]`; safeguard adequacy is assessed inside the Art. 55/56 PIA (measures "lawful, effective, appropriate to risk"). **P7**. Tag: `ARCH-SATISFIES`.
+**Art. 51** (web-verified 2026-07-17): internal management systems + operating procedures · **categorical management** · technical measures (encryption, de-identification) · access-authority limits + training · incident-response plans; safeguard adequacy is assessed inside the Art. 55/56 PIA (measures "lawful, effective, appropriate to risk"). **P7**. Tag: `ARCH-SATISFIES`.
 
 ## A12 — DPIA / PIA
 `dpia_model:` mandatory-triggered. **Art. 55** — PIA required *before*: processing sensitive PI; automated decision-making; entrusting processing / sharing / disclosure; providing PI overseas; other processing with major influence on individuals. **Art. 56** content: lawfulness/legitimacy/necessity of purpose and means; impact on rights + security risk; whether protection measures are lawful, effective, proportionate. **Records retained ≥ 3 years.** Tag: `PROCEDURAL`.

@@ -2,10 +2,10 @@
 
 | | |
 |---|---|
-| **Record** | `vn-pdpl` · **Status/Tier:** SCAFFOLD / Tier 3b · **Schema:** v1.0 · **Current as of:** 2026-07-05 (web-sourced) |
+| **Record** | `vn-pdpl` · **Status/Tier:** SCAFFOLD / Tier 3b · **Schema:** v1.0 · **Current as of:** 2026-07-17 (currency sweep, web-verified) |
 | **Instruments** | Law on Personal Data Protection No. 91/2025/QH15 (enacted June 26 2025, **effective January 1 2026**) + implementing Decree No. 356/2025/ND-CP (issued Dec 31 2025, effective Jan 1 2026) |
 | **Sources** | **Web research 2026-07-05** (Tilleke & Gibbins; Rouse; FPF; luatvietnam — see reconciliation log). No suite grounding source exists for the new law; article-level anchors are `[UNVERIFIED]` unless stated. Predecessor regime: `regulatory-taxonomy--vn-pdpd.md` (historical) |
-| **Transition** | Decree 13/2023 presumably ceases effect (formal repeal mechanism not stated in sources); consented processing under Decree 13 may continue without fresh consent |
+| **Transition** | **Decree 356/2025/ND-CP formally replaced Decree 13/2023** (web-verified 2026-07-17 — resolves the earlier "presumably ceases effect" hedge); consented processing under Decree 13 may continue without fresh consent |
 
 ## A0 — Scope
 Controllers/processors of Vietnamese personal data. **Graduated application:** small/startup enterprises get a 5-year grace period (from Jan 1 2026) on DPIA and DPO duties; household/micro-enterprises exempt — carve-outs: entities providing data-processing services, directly processing sensitive data, or processing large subject volumes get no grace.

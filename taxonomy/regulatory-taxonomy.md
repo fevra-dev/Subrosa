@@ -86,7 +86,7 @@ Each obligation is tagged for whether architecture or only process can satisfy i
 | `FULL` | All axes populated with normalized values, citations, P-mappings, and enforcement-mode tags; reconciled against every suite file that mentions the regime; divergence blocks complete |
 | `SCAFFOLD` | All axes present; each has at minimum a normalized value + primary citation (or `[UNVERIFIED]`); tags applied; detail tables abbreviated |
 | `STUB` | Record header + empty axes marked *not populated*, with pointers to any existing suite content |
-| `SECTORAL` | Registered but not modeled on these axes; needs the sectoral variant profile (later phase) |
+| `SECTORAL-OVERLAY` | Modeled on the Sectoral Overlay Profile (S0–S5, v1.1) as a modifier on the omnibus baseline — never forced onto A0–A12 |
 
 ---
 
@@ -136,9 +136,9 @@ Compact answers to the motivating queries. Full strictest-wins derivation happen
 
 **Sensitive-data consent posture:** opt-in/explicit — GDPR Art. 9, Law 25 Art. 12 PPIPS, PIPL Arts. 28–32 (separate consent), LGPD Art. 11, APPI Art. 17(2) · rights-based limit — CCPA § 1798.121 · contextual, no closed list — PIPEDA (sensitivity scales safeguards, Cl. 4.7.1).
 
-**Minimization test wording:** necessity (3-limb) — GDPR Art. 5(1)(c) · necessity + non-indiscriminate — PIPEDA Cl. 4.4.1 · reasonably-necessary-and-proportionate — CCPA § 1798.100(a)(3) · minimum-necessary + excessive-collection prohibition — PIPL Art. 6 · reasonable-person — Singapore PDPA s. 18.
+**Minimization test wording:** necessity (3-limb) — GDPR Art. 5(1)(c) · necessity + non-indiscriminate — PIPEDA Cl. 4.4.1 · reasonably-necessary-and-proportionate — CCPA § 1798.100(c) *(anchor corrected 2026-07-17)* · minimum-necessary + excessive-collection prohibition — PIPL Art. 6 · reasonable-person — Singapore PDPA s. 18.
 
-**DPIA mandatory:** GDPR Art. 35(3) triggers + EDPB 09/2022 two-of-nine · Quebec Law 25 Art. 63.5 (any risky tech project, before implementation) · PIPL Art. 55 (sensitive PI, ADM, entrustment/sharing, export) · CCPA: CPPA risk-assessment rulemaking `[UNVERIFIED — confirm current reg status]`. Source: `skills/privacy-impact-assessment/references/dpia-triggers.md`.
+**DPIA mandatory:** GDPR Art. 35(3) triggers + EDPB 09/2022 two-of-nine · Quebec Law 25 Art. 63.5 (any risky tech project, before implementation) · PIPL Art. 55 (sensitive PI, ADM, entrustment/sharing, export) · CCPA: CPPA risk-assessment regs **in force Jan 1 2026** (pre-2026 activities assessed by Dec 31 2027; first filings Apr 1 2028) — verified 2026-07-17. Source: `skills/privacy-impact-assessment/references/dpia-triggers.md`.
 
 ---
 
@@ -154,7 +154,7 @@ Frozen 2026-07-04 after the axis set survived three structurally distinct regime
 
 Every axis accommodates all three via its enumerated field values; no axis is null for any of the three; no regime required a bespoke axis. The overlay/divergence-block mechanism handles sub-national and post-Brexit forks without new axes.
 
-**Change control:** post-freeze changes append here (date · change · reason · records re-validated). The sectoral variant profile, when authored, extends this file without altering A0–A12.
+**Change control:** post-freeze changes append here (date · change · reason · records re-validated). The Sectoral Overlay Profile (S0–S5, v1.1, added 2026-07-05) extends this file without altering A0–A12.
 
 ---
 
@@ -166,6 +166,6 @@ Statute rot is the failure mode of a hand-curated legal reference. Rules:
 2. **Quarterly currency sweep:** web-check each record's reform-watch items, enforcement developments, and instrument status; update `current as of` even when nothing changed (the date is the evidence the check ran).
 3. **Supersession trigger:** on any signal that an instrument is replaced or amended (new law enacted, commencement order, implementing regulation), the record gets a banner *immediately* — before re-authoring — so no downstream artifact consumes it silently. Precedent: `vn-pdpd` → `vn-pdpl` (PDPL 91/2025 caught in the 2026-07-05 sweep); Malaysia A1727 three-phase commencement.
 4. **Derived artifacts regenerate** (floor, conflicts, arch-rollup, quick index) after any currency change that touches a floor-setting or conflict-party cell.
-5. **Known standing watches:** Bill C-27 (PIPEDA replacement) · DPDPA commencement (India, not in force) · ePrivacy Regulation (stalled) · CPPA rulemaking (ADM/risk assessments) · VN Decree 53 localization interplay · MY Cross-Border Transfer Guidelines contents · DIFC/ADGM records.
+5. **Known standing watches** *(swept 2026-07-17)*: CA federal reform (C-27 died on prorogation Jan 6 2025; successor expected from the 45th Parliament; C-15 data-mobility amendment to PIPEDA, Feb 2026) · DPDPA phase-in (Rules notified Nov 14 2025; core duties May 13 2027) · ePrivacy Regulation (stalled) · CPPA regs enforcement posture (in force Jan 1 2026; ADMT compliance Jan 1 2027; first filings Apr 1 2028) · **EU AI Act Digital Omnibus fold-in** (OJ publication; substantive amendments pending in `eu-ai-act` S-record) · VN Decree 53 localization interplay · DIFC/ADGM records. *Resolved:* MY CBPDT Guidelines contents (reviewed 2026-07-17).
 
 - **2026-07-04 — v1.0 review (no schema change).** Axes re-validated against all nine populated records: no nulls, no bespoke axes, enums absorbed all three structural outliers. Gaps logged for **v1.1**: (1) governance-roles field under A1 — DPO/representative/records-of-processing/registration (Law 25 privacy officer, MY 2024 DPO; GDPR Arts. 30/37 and PIPL Art. 52 `[UNVERIFIED — not in suite sources]`); (2) direct-marketing sub-field under A2 (POPIA § 69, SG PDPA Part IX DNC; ePrivacy Art. 13 is sectoral). Neither blocks the derived artifacts — both are pure-PROCEDURAL classes; bundle with the sectoral variant profile.

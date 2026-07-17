@@ -63,6 +63,8 @@ Privacy by architecture did not begin with Hughes in 1993. It began with public 
 
 Diffie and Hellman's 1976 paper made the entire Cypherpunk program technically possible. Before it, secure communication required a pre-shared secret — which meant a meeting, a courier, or a trusted third party. After it, two strangers on a network could establish a shared secret without ever having met. The intermediary became optional. The trusted third party became a choice, not a necessity.
 
+Chaum answered five years later with the mix network — "Untraceable Electronic Mail, Return Addresses, and Digital Pseudonyms" (1981) — making the *channel itself* unlinkable: batch, layer-encrypt, shuffle, and even a global observer cannot join sender to recipient. And in 1985, Goldwasser, Micali, and Rackoff formalized the zero-knowledge proof — verification that conveys "no additional knowledge other than the correctness of the proposition in question." Between them: metadata privacy and selective disclosure, both proved constructible before the movement had a name.
+
 > *"It is possible to construct a system for carrying out transactions... in such a way that it would be impossible for outsiders, and even for the system operator, to determine the correspondence between the identities... The solution is to use an anonymous transaction system... making Big Brother obsolete."*
 > — David Chaum, "Security without Identification: Transaction Systems to Make Big Brother Obsolete" (1985), *Communications of the ACM 28(10)*
 

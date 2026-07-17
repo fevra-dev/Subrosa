@@ -3,6 +3,9 @@
 > *"The methods are based upon public-key encryption, zero-knowledge interactive proof systems, and various software protocols for interaction, authentication, and verification."*
 > — Timothy C. May, The Crypto Anarchist Manifesto (1988)
 
+> *"...proofs that convey no additional knowledge other than the correctness of the proposition in question."*
+> — Goldwasser, Micali & Rackoff, "The Knowledge Complexity of Interactive Proof Systems" (1985)
+
 ZKPs were formalized by Goldwasser, Micali, and Rackoff (1985). May cited them in 1988 as the technical basis for the Cypherpunk program. Thirty-five years of research has made them practical.
 
 ---

@@ -77,12 +77,12 @@ Field-level applicability guide for Canadian, EU, and California privacy law.
 | Right to delete | § 1798.105 | Must delete PI on verifiable consumer request; no soft-delete | P4, P6 |
 | Right to correct | § 1798.106 (CPRA) | Must correct inaccurate PI on request | P3 |
 | Right to opt out of sale/sharing | §§ 1798.120, 1798.135 | Must not sell or share PI without opt-out | P2 |
-| **Data minimization** | **§ 1798.100(a)(3) (CPRA)** | **Collect only what is reasonably necessary and proportionate to the disclosed purpose** | **P1** |
+| **Data minimization** | **§ 1798.100(c) (CPRA)** | **Collect only what is reasonably necessary and proportionate to the disclosed purpose** | **P1** |
 | **Purpose limitation** | **§ 1798.100(a)(4) (CPRA)** | **Don't use PI for purposes incompatible with those disclosed at collection** | **P2** |
 | Sensitive PI restrictions | § 1798.121 (CPRA) | Right to limit use of sensitive PI; special notice required | P1, P6, P7 |
 | Security obligations | § 1798.150 | Reasonable security procedures; private right of action for breaches | P7 |
 
-**§ 1798.100(a)(3) (CPRA data minimization):** "A business' collection, use, retention, and sharing of a consumer's personal information shall be reasonably necessary and proportionate to achieve the purposes for which the personal information was collected or processed." This is a proportionality test — not just necessity. A field may be necessary but still fail if its collection is disproportionate to the purpose.
+**§ 1798.100(c) (CPRA data minimization)** *(anchor corrected 2026-07-17 — (a)(3) is the retention-disclosure/limitation provision)*: "A business' collection, use, retention, and sharing of a consumer's personal information shall be reasonably necessary and proportionate to achieve the purposes for which the personal information was collected or processed." This is a proportionality test — not just necessity. A field may be necessary but still fail if its collection is disproportionate to the purpose.
 
 **Sensitive PI (§ 1798.140(ae)):** SSN/SIN/passport/driver's license numbers; financial account + credentials; precise geolocation (within 1,850 feet); racial/ethnic origin; religious beliefs; union membership; contents of mail/email/text messages; genetic data; biometric data; health/medical information; sexual orientation or gender identity. Consumers have the right under § 1798.121 to direct businesses to limit use of sensitive PI to what is necessary to perform the service. Always CRITICAL tier.
 
@@ -147,7 +147,7 @@ Regulatory basis:
     each IP collected for documented fraud detection purpose.
   PIPEDA Clause 4.7.1: safeguards appropriate to sensitivity
     (encryption, access control, TTL).
-  CCPA § 1798.100(a)(3): collection reasonably necessary
+  CCPA § 1798.100(c): collection reasonably necessary
     and proportionate to stated security purpose.
 
 Review date:          [quarterly — or on material change to

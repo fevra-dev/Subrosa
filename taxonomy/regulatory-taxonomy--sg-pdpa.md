@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Record** | `sg-pdpa` · **Status/Tier:** SCAFFOLD / Tier 2 · **Schema:** v1.0 · **Current as of:** 2026-07-04 |
+| **Record** | `sg-pdpa` · **Status/Tier:** SCAFFOLD / Tier 2 · **Schema:** v1.0 · **Current as of:** 2026-07-17 (verification pass) |
 | **Instrument** | Personal Data Protection Act 2012 (No. 26 of 2012), substantially amended by PDP (Amendment) Act 2020 (No. 40 of 2020), eff. Feb 1 2021 |
 | **Sources** | `skills/data-minimization/references/regulatory-reference.md` §Singapore PDPA · `skills/consent-language/references/breach-notification.md` |
 
@@ -25,7 +25,7 @@ s. 18: collect/use/disclose only for purposes notified and consented to; s. 20 n
 `sensitive_model:` contextual — **no statutory special-category list appears in suite sources**; the PDPA regulates sensitivity through the reasonableness and protection obligations rather than an enumerated class `[UNVERIFIED — PDPC guidance treats e.g. NRIC numbers, health and financial data as higher-risk; confirm before relying]`. Tag: `ARCH-SATISFIES` (sensitivity-scaled safeguards).
 
 ## A6 — Rights
-Access/correction obligations: *not located in suite source tables* `[UNVERIFIED — canonical anchors ss. 21–22; confirm]`. Accuracy: s. 23. **Portability: Part VIA** (2020 amendment) — designated organisations must port data in machine-readable format on request; phased, currently banks and telecommunications. Do Not Call Registry: Part IX (marketing to SG numbers; up to SGD 10,000 per message). Response clock: *not located*. Tag: `PROCEDURAL`.
+Access **s. 21** (data + past-year use/disclosure; Fifth Schedule exceptions) · correction **s. 22** (with onward correction to prior recipient organisations; Sixth Schedule exceptions) · **s. 22A** preservation duty after refusing access (≥30 days) — web-verified 2026-07-17. Accuracy: s. 23. **Portability: Part VIA** (2020 amendment) — designated organisations must port data in machine-readable format on request; phased, currently banks and telecommunications. Do Not Call Registry: Part IX (marketing to SG numbers; up to SGD 10,000 per message). Response clock: *not located*. Tag: `PROCEDURAL`.
 
 ## A7 — Retention & Erasure
 **s. 25 retention limitation** — cease retention when purpose no longer served and retention not legally required. P4. Tag: `ARCH-SATISFIES` (TTL automation is direct performance).

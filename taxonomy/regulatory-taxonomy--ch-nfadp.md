@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| **Record** | `ch-nfadp` · **Status/Tier:** SCAFFOLD / Tier 3b · **Schema:** v1.0 · **Current as of:** 2026-07-04 |
+| **Record** | `ch-nfadp` · **Status/Tier:** SCAFFOLD / Tier 3b · **Schema:** v1.0 · **Current as of:** 2026-07-17 (verification pass) |
 | **Instrument** | Federal Act on Data Protection (DSG/nFADP), SR 235.1; in force Sept 1 2023 (replaces 1992 FADP) |
 | **Sources** | `skills/data-minimization/references/regulatory-reference.md` §nFADP (incl. GDPR-diff table) |
 
@@ -25,7 +25,7 @@ Within the Art. 6 proportionality principle (purpose-bound processing). P2. Tag:
 `sensitive_model:` prohibitive-list — **broader than GDPR Art. 9** (sourced): religious/ideological/political/trade-union views; health; intimate sphere; racial origin; **social-welfare measures**; **administrative and criminal proceedings/sanctions**; genetic data; biometric data uniquely identifying; **location data if revealing sensitive context**. Tag: `ARCH-DISSOLVES` where provable-not-disclosable; else `PROCEDURAL`.
 
 ## A6 — Rights
-*Not located in suite sources* beyond the diff table `[UNVERIFIED — Arts. 25–29 access/rectification range; confirm]`. Response clock: *not located*. Tag: `PROCEDURAL`.
+**Art. 25 right of access** (web-verified 2026-07-17); further rights range `[UNVERIFIED — rectification/data-release anchors (Arts. 28/32); confirm]`. Response clock: *not located*. Tag: `PROCEDURAL`.
 
 ## A7 — Retention & Erasure
 Implicit in Art. 6 proportionality + Art. 7 by-default; dedicated anchor *not located* `[UNVERIFIED]`. P4. Tag: `ARCH-SATISFIES`.
@@ -37,7 +37,7 @@ Implicit in Art. 6 proportionality + Art. 7 by-default; dedicated anchor *not lo
 *Not located* — no Switzerland row in children's table; no age threshold in source.
 
 ## A10 — Cross-Border Transfer
-Adequacy-based (mirrors GDPR model; CH itself holds EU adequacy). Dedicated anchor *not located* `[UNVERIFIED — Arts. 16–17; confirm]`. Tag: `PROCEDURAL`.
+Adequacy-based (mirrors GDPR model; CH itself holds EU adequacy). **Art. 16** — transfer only to states the Federal Council recognizes as adequate (list: Annex 1 DPO) · **Art. 17** — exceptions (consent, contract, overriding public interest, legal claims) — web-verified 2026-07-17. Tag: `PROCEDURAL`.
 
 ## A11 — Security Safeguards
 Art. 7 technical/organisational measures + privacy-friendly defaults (sourced). **P7**. Tag: `ARCH-SATISFIES`.

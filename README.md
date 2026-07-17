@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/subrosa-logo.png" alt="Subrosa — a geometric rose, hanging from its stem" width="300">
+</p>
+
 # Subrosa
 
 *Sub rosa — "under the rose." The rose hung over a Roman council table meant: what is said here stays here. Confidentiality by mutual understanding; selective disclosure by architecture.*

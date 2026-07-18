@@ -6,7 +6,7 @@
 
 *Sub rosa — "under the rose." The rose hung over a Roman council table meant: what is said here stays here. Confidentiality by mutual understanding; selective disclosure by architecture.*
 
-Subrosa is a privacy engineering suite that takes both halves of the privacy problem seriously: the **cypherpunk half** (privacy must be structural — built from cryptographic primitives that make over-disclosure impossible) and the **regulatory half** (statute-precise compliance mapping across 26 jurisdictions and sectoral regimes). Its thesis, enforced rather than asserted:
+Subrosa is a privacy engineering suite that takes both halves of the privacy problem seriously: the **cypherpunk half** (privacy must be structural — built from cryptographic primitives that make over-disclosure impossible) and the **regulatory half** (statute-precise compliance mapping across 27 jurisdictional and sectoral records). Its thesis, enforced rather than asserted:
 
 > **Compliance is a floor. Selective disclosure is the ceiling.**
 
@@ -27,9 +27,9 @@ skills/                          Nine Claude Code skills (SKILL.md + references/
                                  DP, TEE, mixnets — with the Statutory Dissolution Map
 taxonomy/                        The normalized regulatory layer
   regulatory-taxonomy.md         Frozen axis set (A0–A12) + sectoral profile (S0–S5)
-  regulatory-taxonomy--*.md      26 jurisdiction/sectoral records, citation-backed
+  regulatory-taxonomy--*.md      27 jurisdiction/sectoral records, citation-backed
   --floor.md                     Strictest-regime-wins: build to this, comply everywhere
-  --conflicts.md                 C1–C7: where regimes are mutually incompatible
+  --conflicts.md                 C1–C8: where regimes collide (incl. AML vs anonymity)
   --arch-rollup.md               Which obligations dissolve under selective disclosure
 .fable/                          Methodology provenance: lessons, reconciliation log,
                                  dogfood tests, phase prompts

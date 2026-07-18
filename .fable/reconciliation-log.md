@@ -83,3 +83,19 @@ One line per reconciliation: file · claim · outcome (record-wins / subfile-win
 - `ch-nfadp` (2): Art. 25 access · Arts. 16/17 transfer adequacy + exceptions (bj.admin.ch; EDÖB).
 
 Remaining [UNVERIFIED] lines: 80 (down from ~113) — concentrated in TH/NG/AE/MY scaffolds ("not located in suite sources" coverage notes) and structural-absence claims, left flagged deliberately. All touched records' `Current as of` bumped to 2026-07-17.
+
+## 2026-07-17 — gap-closure pass (portfolio depth; all web-verified 2026-07-17)
+
+Operator-requested final pass closing gaps identified in a coverage review against privsec.dev and the awesome-privacy repos. Five additions:
+
+- **C8 — identification mandates vs anonymous transaction systems** (`--conflicts.md`): the register's first architecture-vs-*law* combat entry (C1–C7 are architecture-vs-*policy* dissolution). FATF R16 Travel Rule (USD/EUR 1,000 threshold); EU TFR 2023/1113 (fully applicable Dec 30 2024, zero-threshold for CASPs + self-hosted-wallet verification >EUR 1,000); the enforcement arc — Tornado Cash OFAC sanction (Aug 2022) → *Van Loon v. Treasury* 5th Cir. (Nov 26 2024) → OFAC delisting (Mar 21 2025); Roman Storm conviction (Aug 6 2025, unlicensed money transmitter; deadlock on ML/sanctions); Pertsev (NL, 64mo, on appeal); Samourai founders' guilty pleas (Jul 30 2025), Rodriguez 5yr (Nov 2025). Resolution: Privacy Pools proof-of-innocence (`ARCH-SATISFIES`, explicitly not `ARCH-DISSOLVES`). Sources: fatf-gafi.org; EUR-Lex 2023/1113; Treasury/OFAC; DOJ/SDNY; 5th Cir. Tagged design-informing, not legal advice.
+
+- **Lineage continuation** (`lineage.md` + README + `web3-privacy.md`): the canon no longer stops at Nakamoto 2008. Added CryptoNote (2013), Zerocash (2014), Signal Double Ratchet (2016), Bulletproofs (2018), and **Privacy Pools / "Towards a Practical Equilibrium" (Buterin, Illum, Nadler, Schär, Soleimani 2023)** — the first canonical text written in the taxonomy's own language. New `web3-privacy.md` §Regulatory-Compliant Privacy with the association-set construction and its TTP/liability caveats. Also resolved a now-stale flag: the Chaum 1981 mixnet paper was marked `[UNVERIFIED — not in suite sources]` in the dissolution map; it is now sourced (lineage + comms.md), flag removed.
+
+- **UK OSA age-assurance S-record** (`--uk-osa.md`, new; registered in master): highly-effective age assurance enforceable Jul 25 2025 (Ofcom; passive self-declaration prohibited; £18M/10%-revenue fines). C5 extended with the 2025–26 wave incl. *Free Speech Coalition v. Paxton*, 606 U.S. 461 (Jun 27 2025, 6–3, upholding TX HB 1181). The record where "floor vs ceiling" is most concretely demonstrable (retention-based ID vs ZK age predicate). **Record count 26 → 27**; propagated to README + dissolution-map + privacy-architecture SKILL.
+
+- **DROP currency fix** (`us-ca-ccpa` + threat-model `mitigations.md`/`asset-taxonomy.md`): California Delete Act SB 362 / DROP live for consumers Jan 1 2026, broker processing from Aug 1 2026; CalPrivacy enforcement decisions Jan 8 2026. Replaces the "DeleteMe, tedious but effective" mitigation with the statutory one-stop mechanism. Sources: cppa.ca.gov; privacy.ca.gov/drop; Clark Hill.
+
+- **LINDDUN crosswalk + badness-enumeration anti-pattern**: new `threat-model-privacy/references/linddun-crosswalk.md` mapping the seven LINDDUN categories ↔ archetypes ↔ P1–P7 ↔ axes ↔ primitives (interoperability with the NIST-referenced standard). Named the "badness enumeration" anti-pattern in `opsec-review/SKILL.md`, crediting privsec.dev — making the suite's structural-over-reactive stance legible. This is the methodological (not tool-list) takeaway from the reviewed repos; OS-hardening/VPN/tool-directory content deliberately declined as out of scope.
+
+Conflict register now C1–C8; taxonomy 27 modeled records + derived artifacts.

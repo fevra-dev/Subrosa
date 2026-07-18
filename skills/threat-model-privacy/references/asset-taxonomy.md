@@ -128,7 +128,7 @@ Organized by attack vector. Each control tagged with: `[M1/M2/M3]` tier, effort 
 | Control | Tier | Effort | Impact | Notes |
 |---|---|---|---|---|
 | Private home address (avoid on public records) | M1 | MED | HIGH | Use PO box or registered agent for business |
-| Remove address from data broker listings | M1 | MED | MED | Tedious but effective; services like DeleteMe automate |
+| Remove address from data broker listings | M1 | LOW–MED | MED–HIGH | California: DROP (privacy.ca.gov) is a one-stop statutory deletion across registered brokers, live Jan 1 2026 (brokers honor from Aug 1 2026). Elsewhere: DeleteMe/Kanary automate per-broker opt-outs |
 | Vary physical routines | M1 | LOW | MED | Predictable patterns enable physical surveillance |
 | Device encryption + wipe capability before border crossings | M1 | MED | HIGH | Travel with clean device; restore from encrypted backup after |
 | Be aware of background in photos/videos | M1 | LOW | MED | Identifiable locations, office decor, whiteboard content |

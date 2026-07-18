@@ -217,6 +217,17 @@ After user applies fixes, offer a re-review pass to confirm resolution.
 - **Don't just find problems — provide rewrites.** Every CRITICAL/HIGH must include a concrete remediation.
 - **Pseudonymous persona mode.** If user indicates they operate under a handle/pseudonym, escalate Identity Correlation signals to HIGH by default.
 
+## The anti-pattern this skill rejects: badness enumeration
+
+The dominant failure mode in consumer privacy advice — cataloged sharply by [privsec.dev](https://privsec.dev) — is **"badness enumeration": blocking known-bad things and calling it privacy.** Blocklists, "trackers blocked" counters, tool-hopping (switch browser, add extension, install VPN), and endless curated app lists. It fails for a structural reason: enumerating what's bad is unbounded and always behind, while enumerating what you *permit* is finite and testable. A blocklist is out of date the moment a new tracker ships; a threat model is not.
+
+This skill inverts it. It does not scan for a list of known-bad strings and stop — it models **what an adversary can infer from what remains**, then reasons about the whole disclosure surface. The signal categories above are inference vectors, not a blocklist; the workflow ends in a *disclosure decision*, not a "clean/dirty" verdict.
+
+**How this shows up in review:**
+- Reject "I use a VPN / I blocked trackers, so I'm private" as a conclusion — ask *against which adversary, protecting which asset* (route to `threat-model-privacy`).
+- Prefer **minimize-what-exists** (don't publish the field) over **block-what-reads-it** (hope the reader doesn't parse it). Structural beats reactive — the suite thesis at the OPSEC layer.
+- Tool recommendations are the *last* step and always tied to a modeled threat, never a default kit. A tool list with no threat model is badness enumeration wearing a lab coat.
+
 ---
 
 ## Reference Files

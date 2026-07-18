@@ -121,8 +121,9 @@ Each obligation is tagged for whether architecture or only process can satisfy i
 | 🇪🇺 NIS2 | `regulatory-taxonomy--eu-nis2.md` | S | SECTORAL-OVERLAY |
 | 🇪🇺 DORA | `regulatory-taxonomy--eu-dora.md` | S | SECTORAL-OVERLAY |
 | 🇪🇺 AI Act | `regulatory-taxonomy--eu-ai-act.md` | S | SECTORAL-OVERLAY |
+| 🇬🇧 Online Safety Act (age assurance) | `regulatory-taxonomy--uk-osa.md` | S | SECTORAL-OVERLAY |
 
-**Derived artifacts** (regenerate on any record change): `regulatory-taxonomy--floor.md` — strictest-regime-wins design floor · `regulatory-taxonomy--conflicts.md` — cross-regime conflict register C1–C7 · `regulatory-taxonomy--arch-rollup.md` — architecture-vs-policy roll-up. Derived 2026-07-04 from Tier-1 + suite prose.
+**Derived artifacts** (regenerate on any record change): `regulatory-taxonomy--floor.md` — strictest-regime-wins design floor · `regulatory-taxonomy--conflicts.md` — cross-regime conflict register C1–C8 · `regulatory-taxonomy--arch-rollup.md` — architecture-vs-policy roll-up. Derived 2026-07-04 from Tier-1 + suite prose.
 
 ---
 

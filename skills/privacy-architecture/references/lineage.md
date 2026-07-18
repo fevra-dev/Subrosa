@@ -28,6 +28,20 @@ The through-line: each text removes one more **trusted third party** from the cr
 
 ---
 
+## The lineage continues — the argument didn't end in 2008
+
+Reading the canon as if it closed with Nakamoto is the common mistake: it treats the cypherpunk program as history rather than a live research front. The fifteen years since are where the primitives this suite *builds with* were actually forged — and where the thesis met its hardest test, the state's financial-surveillance apparatus. These are the texts the architecture layer implements today.
+
+| Text | Author · Year | Contribution | Where it lives in Subrosa |
+|---|---|---|---|
+| **CryptoNote v2.0** | Nicolas van Saberhagen · 2013 | Ring signatures + stealth addresses for mandatory, default-on transaction privacy — the design Monero implements | `references/web3-privacy.md` §Ring Signatures / §Stealth Addresses; the "privacy-by-default beats opt-in" lesson |
+| **Zerocash** | Ben-Sasson, Chiesa, Garman, Green, Miers, Tromer, Virza · 2014 | zk-SNARK-based fully-shielded payments (sender, receiver, amount hidden) — the production ancestor of every shielded pool | `references/web3-privacy.md` §Confidential Transactions (Zcash); already cited in that file's references |
+| **The Double Ratchet Algorithm** | Marlinspike & Perrin (Signal) · 2016 | Per-message forward secrecy + break-in recovery — selective disclosure applied to *time*: a key compromise doesn't unlock the past or the future | `references/comms.md` §Signal Protocol / §Double Ratchet; the standard every secure-messaging recommendation in the suite points to |
+| **Bulletproofs** | Bünz, Bootle, Boneh, Poelstra, Wuille, Maxwell · 2018 | Short range proofs with no trusted setup — made confidential amounts practical on-chain | `references/web3-privacy.md` §Confidential Transactions; Monero RingCT, the range-proof workhorse |
+| **Blockchain Privacy and Regulatory Compliance: Towards a Practical Equilibrium** ("Privacy Pools") | Buterin, Illum, Nadler, Schär, Soleimani · 2023 | ZK **proof of innocence**: prove membership in an honest-deposit association set without revealing identity — selective disclosure aimed at the regulator's own question | The **C8 resolution** (`taxonomy/regulatory-taxonomy--conflicts.md`); `references/web3-privacy.md` §Regulatory-Compliant Privacy. The first canonical text written *in the taxonomy's own language* |
+
+Privacy Pools is the hinge. The 1976–2008 canon proved privacy *constructible*; the state's answer was to criminalize the construction when it moves value (C8 — Tornado Cash, Samourai). Privacy Pools is the cypherpunk program's reply: not weaker privacy, but privacy that can *prove its own innocence* — Hughes' "reveal oneself only when desired" turned into "reveal only that the funds are clean, and nothing else." The argument is not over; it has moved from *can we build it* to *can we build it so the builder stays free*.
+
 ## The single principle
 
 Diffie–Hellman made the intermediary optional (1976). Chaum made the *channel* unlinkable (1981), then made anonymity constructive (1982) and total (1985); Goldwasser, Micali, and Rackoff proved the same year that verification need not transfer knowledge. May and Hughes gave it politics and a design test (1988, 1993). Zimmermann made it civil disobedience and demanded auditability (1991). Barlow set the boundary condition (1996); Lessig explained why code is the effective law (1999); Szabo named the enemy — the trusted third party (2001). Wei Dai (1998) and finally Nakamoto (2008) removed the last one.

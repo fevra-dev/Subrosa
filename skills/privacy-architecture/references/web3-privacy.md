@@ -132,7 +132,7 @@ Balance proof: C_input = C_output + C_fee
 - Deposit: User deposits ETH/ERC-20 and receives a secret note
 - Withdraw: User generates ZK proof that they know a secret corresponding to a deposit, without revealing which deposit
 - Nullifier: Prevents double-spending (like ring signature key image)
-- OFAC sanctions (Aug 2022): Illustrates the regulatory risk of privacy infrastructure — design with censorship vectors in mind
+- **Regulatory arc (the cautionary spine of conflict C8):** OFAC-sanctioned Aug 2022 → ***Van Loon v. Treasury* (5th Cir., Nov 2024)** held immutable smart contracts aren't sanctionable "property" → **OFAC delisted the contracts Mar 2025**. But contributor **Roman Storm was convicted (Aug 2025)** of conspiracy to run an unlicensed money transmitter, and **Samourai Wallet's founders pleaded guilty (Jul 2025)**. The lesson is no longer just "design with censorship vectors in mind" — it is that *undifferentiated* anonymity (a pool that cannot distinguish clean from illicit funds) is now the shape of privacy infrastructure regulators and prosecutors target. The architectural answer is below.
 
 **Zcash — the production ZK privacy system:**
 - Shielded pool: ZK-SNARK-based private transactions since 2016
@@ -142,6 +142,28 @@ Balance proof: C_input = C_output + C_fee
 - Transparent pool also exists — most users transact transparently (privacy opt-in, not default)
 
 **Lesson from Zcash:** Privacy-by-default produces better privacy outcomes than opt-in. If most transactions are transparent, shielded transactions stand out. Design systems where the private path is the default.
+
+---
+
+## Regulatory-Compliant Privacy — the pragmatic equilibrium
+
+> *"All users with 'good' assets have strong incentives and the ability to prove their membership in a 'good'-only association set."*
+> — Buterin, Illum, Nadler, Schär & Soleimani, *Blockchain Privacy and Regulatory Compliance: Towards a Practical Equilibrium* (2023)
+
+The Tornado Cash and Samourai prosecutions (conflict **C8** in `taxonomy/regulatory-taxonomy--conflicts.md`) drew a line: a mixer that pools *all* deposits indiscriminately — clean and illicit alike — is the architecture the AML/CFT regime (FATF R16 Travel Rule; EU TFR 2023/1113) treats as a value-transmitting service, not a privacy tool. The cypherpunk reply is not weaker privacy; it is **selective disclosure aimed at the compliance question itself.**
+
+**Privacy Pools (the construction):**
+- On withdrawal, the user proves in zero-knowledge that their deposit belongs to an **association set** of known-honest deposits — a **proof of innocence** — without revealing *which* deposit is theirs or their identity.
+- An **Association Set Provider (ASP)** curates the set (excluding sanctioned/illicit deposits). Honest users prove membership in the clean set; illicit funds cannot.
+- This is the **exact inverse of Tornado Cash's undifferentiated anonymity**: same ZK unlinkability, plus a cryptographic answer to "are these funds clean?"
+- Deployed on Ethereum by **0xbow (2025)**; Vitalik Buterin was among the first depositors.
+
+**The honest caveats (do not design without them):**
+- **The ASP is a re-introduced trusted third party** — Szabo's warning (`references/tee.md` framing) applies directly: who controls the set controls who is included. Decentralizing the ASP is an open problem.
+- **Money-transmitter liability turns on control of funds, not ledger privacy** — Privacy Pools' non-custodial design helps, but the Storm/Samourai theory (operating an unlicensed transmitter) is not automatically cured by adding a proof of innocence.
+- **`ARCH-SATISFIES`, never `ARCH-DISSOLVES`** — the AML identification duty is *answered differently*, not made to disappear. Treat this section as design-informing context, **not legal advice**; a builder in this space needs counsel, not a taxonomy.
+
+**Relevant to Solana:** the association-set pattern is chain-agnostic. A Solana confidential-transfer or ZK-account design (below) that needs to survive the C8 collision should build the proof-of-innocence affordance in from day one rather than bolt compliance on after a subpoena.
 
 ---
 
@@ -231,5 +253,8 @@ Understanding why privacy coins work (and don't work) informs better Solana priv
 - Noether, S. (2015). "Ring signature confidential transactions for Monero." *IACR ePrint 2015/1098.*
 - Bünz, B., et al. (2018). "Bulletproofs: Short proofs for confidential transactions." *IEEE S&P 2018.*
 - Ben-Sasson, E., et al. (2014). "Zerocash: Decentralized anonymous payments from Bitcoin." *IEEE S&P 2014.*
+- Buterin, V., Illum, J., Nadler, M., Schär, F., & Soleimani, A. (2023). "Blockchain Privacy and Regulatory Compliance: Towards a Practical Equilibrium." *SSRN 4563364.* (Privacy Pools / proof of innocence)
+- van Saberhagen, N. (2013). "CryptoNote v2.0." (Ring signatures + stealth addresses; the Monero design)
+- Perrin, T. & Marlinspike, M. (2016). "The Double Ratchet Algorithm." *signal.org/docs.*
 - EIP-5564. (2022). "Stealth addresses." *eips.ethereum.org/EIPS/eip-5564.*
 - Solana Labs. (2023). "SPL Token-2022 confidential transfers." *spl.solana.com.*

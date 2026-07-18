@@ -9,6 +9,7 @@
 | **Current as of** | 2026-07-17 (currency sweep, web-verified) |
 | **Sources** | `skills/data-minimization/references/regulatory-reference.md` · `skills/data-minimization/references/pipeda-gdpr.md` · `skills/consent-language/SKILL.md` · `skills/consent-language/references/rights-language.md` · `skills/consent-language/references/breach-notification.md` · `skills/consent-language/references/cookie-consent.md` |
 | **Related** | Other US state omnibus laws (CO, CT, VA, UT, TX, MT, OR, DE per `skills/consent-language/references/cookie-consent.md`) — long-tail candidates, not modeled here. Federal sectoral overlays (COPPA, HIPAA, GLBA, BIPA-IL) registered SECTORAL in master |
+| **Companion statute** | **Delete Act (SB 362)** — see A6 note; data-broker registration + one-stop deletion (DROP), enforced by the same agency (CPPA/CalPrivacy) |
 
 **Design rule (sourced):** CPRA aligned California materially with GDPR on minimization and purpose limitation — design to CPRA standard = materially GDPR-compatible for most data types.
 
@@ -70,8 +71,9 @@ Tag: `ARCH-DISSOLVES` where the sensitive attribute is never held in usable form
 
 - **Response clock:** 45 days + 45-day extension (notify within first 45) — per `skills/consent-language/references/rights-language.md`. Opt-outs: 15 business days.
 - Complaint route: cppa.ca.gov.
+- **Delete Act (SB 362) — universal broker deletion (web-verified 2026-07-17):** a *statutory* one-stop erasure mechanism distinct from the per-business § 1798.105 right. **DROP** (Delete Request & Opt-out Platform) went **live for consumers Jan 1 2026**; registered **data brokers must process DROP requests from Aug 1 2026** (retrieve ≥ every 45 days, delete within 90 days absent an exception). CalPrivacy issued broker-registration enforcement decisions within a week of launch (Jan 8 2026). This is the current state of "data-broker removal" — supersedes the manual/DeleteMe-era mitigation in `skills/threat-model-privacy/references/mitigations.md`.
 
-Tag: `PROCEDURAL`.
+Tag: `PROCEDURAL` (broker-side processing duty) + `ARCH-DISSOLVES` for holdings the broker never collected — DROP only reaches registered data brokers.
 
 ## A7 — Retention & Erasure
 

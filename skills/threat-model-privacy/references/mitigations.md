@@ -81,7 +81,7 @@ This file expands on the asset-taxonomy.md mitigation section with deeper implem
 | ID | Control | Tier | Effort | Impact | Notes |
 |---|---|---|---|---|---|
 | P-01 | Private home address (PO box or registered agent for business) | M1 | MED | HIGH | Remove from public records; data broker opt-outs |
-| P-02 | Data broker removal (DeleteMe, Kanary, or manual) | M1 | MED | MED | Spokeo, WhitePages, BeenVerified, Radaris — all must be removed |
+| P-02 | Data broker removal — **California: use DROP** (one-stop statutory deletion, live Jan 1 2026; brokers must honor from Aug 1 2026); elsewhere DeleteMe/Kanary or manual | M1 | LOW–MED | MED–HIGH | DROP reaches all *registered* CA data brokers in one request — a statutory upgrade over per-broker opt-outs (Spokeo, WhitePages, BeenVerified, Radaris). Non-CA residents still need per-broker removal |
 | P-03 | Vary physical routines (commute, gym, coffee) | M1 | LOW | MED | Predictable patterns enable physical surveillance |
 | P-04 | EXIF stripping before publishing any photo | M1 | LOW | HIGH | GPS coordinates, device model, timestamp — all in EXIF |
 | P-05 | Background audit in video/photos before publishing | M1 | LOW | MED | Whiteboards, screens, office decor, skyline — all identifiable |

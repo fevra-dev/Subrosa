@@ -346,3 +346,4 @@ When adversary has subpoena or regulatory power:
 - `references/adversary-profiles.md` — Adversary archetype library with TTPs, typical targets, and capability baselines
 - `references/asset-taxonomy.md` — Detailed asset classification guidance with sensitivity tier examples
 - `references/mitigations.md` — Control library organized by vector category, with effort/impact ratings
+- `references/linddun-crosswalk.md` — Maps the suite's archetypes / P1–P7 / taxonomy axes / primitives onto the LINDDUN privacy-threat framework (NIST-referenced). Load when interoperating with a LINDDUN or STRIDE workflow, or to tag findings for coverage-auditing in the standard vocabulary

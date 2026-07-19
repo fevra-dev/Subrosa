@@ -189,7 +189,7 @@ let signature = try key.signature(for: data)  // Signing in SE
 
 **Tools:** AWS Nitro CLI, enclave SDK (C, Rust, Python, Java).
 
-**Relevant to OpenClaw:** Privacy-preserving agent memory retrieval on AWS infrastructure — run Qdrant inside a Nitro Enclave; only attested enclave code can query the memory store.
+**Relevant to AI agent memory:** Privacy-preserving agent memory retrieval on AWS infrastructure — run Qdrant inside a Nitro Enclave; only attested enclave code can query the memory store.
 
 ---
 

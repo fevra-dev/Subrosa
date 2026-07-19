@@ -341,7 +341,7 @@ Trigger policy mode when user says "generate a policy", "I need documentation fo
 
 ## Special Contexts
 
-### OCSF / SIEM Schema (Delegate Scout, security tooling)
+### OCSF / SIEM Schema (security tooling)
 
 When auditing OCSF-mapped schemas or SPL/SIEM event structures:
 

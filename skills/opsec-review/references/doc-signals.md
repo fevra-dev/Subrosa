@@ -340,7 +340,7 @@ try/except vs. result types vs. assertions
 
 ### Severity in Pseudonymous Contexts
 
-When user operates under a pseudonym (fevra-dev or similar), escalate all stylometric findings to **HIGH** regardless of other context:
+When the user operates under a pseudonym, escalate all stylometric findings to **HIGH** regardless of other context:
 
 ```
 STYLOMETRIC RISK ASSESSMENT

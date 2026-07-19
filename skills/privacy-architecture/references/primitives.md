@@ -81,8 +81,8 @@ Correct protocol:
 
 **Use cases for privacy suite:**
 - Agent memory privacy: check if two agents' memory sets overlap without full disclosure
-- Delegate Scout: check if wallet appears in a risk list without revealing the list
-- Exchange.Art: match buyer/seller interests without revealing preference lists
+- Wallet risk screening: check if a wallet appears in a risk list without revealing the list
+- NFT marketplace: match buyer/seller interests without revealing preference lists
 
 ---
 
@@ -128,7 +128,7 @@ Supports arbitrary computation on encrypted data. Bootstrapping periodically "re
 - Large neural network inference — impractical without GPU cluster
 - Mobile devices — prover cost prohibitive for current FHE schemes
 
-**Relevant to OpenClaw:** FHE-based private memory retrieval is theoretically appealing but practically impractical in 2024. Watch TFHE-rs GPU benchmarks — this may be viable on server-side within 2-3 years.
+**Relevant to AI agent memory:** FHE-based private memory retrieval is theoretically appealing but practically impractical in 2024. Watch TFHE-rs GPU benchmarks — this may be viable on server-side within 2-3 years.
 
 ---
 
@@ -227,8 +227,8 @@ Pr[M(D1) ∈ S] ≤ e^ε × Pr[M(D2) ∈ S]
 
 **Relevant to privacy suite:**
 - Agent behavioral analytics (Section 3.5 of portfolio paper) — ε-DP on query embeddings
-- Delegate Scout aggregated risk statistics — DP sum/count queries over delegation data
-- Exchange.Art trading pattern analytics — DP on purchase behavior
+- Aggregated wallet-risk statistics — DP sum/count queries over delegation data
+- Marketplace trading-pattern analytics — DP on purchase behavior
 
 ---
 
@@ -249,7 +249,7 @@ Pr[M(D1) ∈ S] ≤ e^ε × Pr[M(D2) ∈ S]
 - `Path ORAM` reference implementation (multiple languages)
 - Running Qdrant in TEE is a pragmatic alternative for moderate threat models
 
-**Relevant to:** Private RAG retrieval for OpenClaw (see SKILL.md pattern); Delegate Scout private scanner queries.
+**Relevant to:** Private RAG retrieval for AI agent memory (see SKILL.md pattern); private security-scanner queries.
 
 ---
 

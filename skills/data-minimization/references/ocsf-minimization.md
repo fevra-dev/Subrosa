@@ -48,7 +48,7 @@ Every OCSF event inherits the **Base Event** fields. These must be audited along
 
 ## Class-Specific Minimization
 
-### Class 2008 — IAM Analysis Finding (Delegate Scout primary class)
+### Class 2008 — IAM Analysis Finding (delegation-security tooling primary class)
 
 **Use case:** Security findings about identity and access management — delegation risk, excessive permissions, anomalous access patterns.
 

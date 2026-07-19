@@ -200,7 +200,7 @@ Design:
   
 Tools: Noir (circuit), Solana Program Library (verifier), 
        BBS+ (credential issuance)
-Relevant to: Delegate Scout risk attestation, KYC compliance 
+Relevant to: on-chain risk attestation, KYC compliance 
              without identity disclosure
 ```
 
@@ -252,7 +252,7 @@ Tools: Oblivious ORAM library (Go/Rust), Gramine (SGX),
 Note: PIR has high computational overhead (~100x vs. plain retrieval).
       For most threat models, namespace-scoped retrieval (Control RS-1 
       from agent memory taxonomy) is the practical alternative.
-Relevant to: OpenClaw memory privacy, MINJA mitigation
+Relevant to: AI agent memory privacy, MINJA mitigation
 ```
 
 **Pattern: Differentially private analytics over agent interactions**
@@ -271,7 +271,7 @@ Design:
               
 Tools: OpenDP (Python), Google DP library (C++/Go), 
        Apple's Differential Privacy WWDC resources
-Relevant to: OpenClaw fleet behavioral analytics, 
+Relevant to: agent-fleet behavioral analytics, 
              agent memory temporal correlation mitigation
 ```
 
@@ -390,9 +390,9 @@ P3: count(access | access.user_id = U, access.day = D) ≤ MAX_DAILY_ACCESS
 
 **Current state:** Prototype-feasible. No production deployment known as of 2024. Active research area. Proving time for a single log entry audit predicate: ~1-5 seconds on server hardware (Groth16). For high-volume systems, batch proving across multiple log entries in a single proof is required.
 
-**Relevance to Delegate Scout:** On-chain security event logging with GDPR compliance. Prove that Delegate Scout logged a security event and that the log entry satisfies OCSF class requirements — without revealing the wallet addresses, transaction details, or user identifiers in the log.
+**Relevance to on-chain security tooling:** On-chain security event logging with GDPR compliance. Prove that the tool logged a security event and that the log entry satisfies OCSF class requirements — without revealing the wallet addresses, transaction details, or user identifiers in the log.
 
-**Relevance to OpenClaw:** Agent tool call audit trail. Prove that agent actions were within policy bounds — without revealing the content of tool calls to third-party auditors.
+**Relevance to agent fleets:** Agent tool call audit trail. Prove that agent actions were within policy bounds — without revealing the content of tool calls to third-party auditors.
 
 ### Simpler Near-Term Alternative
 
@@ -470,4 +470,4 @@ Data controller A (retailer) ──→ Clean room ←── Data controller B (a
 **Relevant to the suite:**
 - `data-minimization` → clean room as a SYNTHESIZE-equivalent for multi-party analytics
 - `references/primitives.md` → PSI and MPC are the cryptographic foundations
-- Delegate Scout: clean room pattern for sharing risk signals with exchanges without revealing raw wallet data
+- Wallet risk tooling: clean room pattern for sharing risk signals with exchanges without revealing raw wallet data

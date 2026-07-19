@@ -252,8 +252,8 @@ Analyst: [user or Claude]
 ASSET INVENTORY
 ───────────────────────────────────
 [T1] Source code IP (proprietary application source)
-[T1] Pseudonym / fevra-dev identity separation
-[T2] Client relationships at Exchange.Art
+[T1] Pseudonym / real-identity separation
+[T2] Client / employer relationships
 [T3] Home address
 ...
 

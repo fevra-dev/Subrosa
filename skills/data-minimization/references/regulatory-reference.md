@@ -807,7 +807,7 @@ Final report within **1 month** (detailed description, type of threat, mitigatio
 - Essential entities: up to €10M or 2% global annual turnover (whichever higher)
 - Important entities: up to €7M or 1.4% global annual turnover
 
-**Relevance to Delegate Scout:** If Exchange.Art or any Solana infrastructure provider is classified as a financial market infrastructure or digital provider in the EU, NIS2 security obligations apply including incident reporting and supply chain security requirements. Delegate Scout's security event logging design (OCSF + on-chain attestation) aligns with NIS2 Art. 23 incident documentation requirements.
+**Relevance to Solana security tooling:** If an NFT marketplace or any Solana infrastructure provider is classified as a financial market infrastructure or digital provider in the EU, NIS2 security obligations apply including incident reporting and supply chain security requirements. A security-event-logging design (OCSF + on-chain attestation) aligns with NIS2 Art. 23 incident documentation requirements.
 
 ---
 
@@ -843,7 +843,7 @@ Final report within **1 month** (detailed description, type of threat, mitigatio
 
 **Art. 28-30 — Third-party ICT risk:** Financial entities must manage ICT third-party risk. Critical ICT third-party providers are directly supervised by EU financial regulators. Contracts with ICT providers must include: data location, audit rights, security standards, incident reporting obligations.
 
-**DORA × Privacy:** Any crypto-asset service provider (CASP) operating under MiCA in the EU and using cloud, SaaS, or AI tooling must comply with DORA's third-party risk requirements. If OpenClaw or similar AI agent infrastructure is used by a CASP, the CASP must conduct due diligence on that infrastructure as a third-party ICT provider.
+**DORA × Privacy:** Any crypto-asset service provider (CASP) operating under MiCA in the EU and using cloud, SaaS, or AI tooling must comply with DORA's third-party risk requirements. If an AI agent infrastructure (e.g. a multi-agent fleet) is used by a CASP, the CASP must conduct due diligence on that infrastructure as a third-party ICT provider.
 
 ---
 

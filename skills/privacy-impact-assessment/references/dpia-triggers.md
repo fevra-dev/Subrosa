@@ -60,7 +60,7 @@ Processing data of individuals who cannot easily consent or object, or whose int
 Use of innovative technology or organisational solutions where state of the art has not been established and risks are not yet fully understood.
 ☐ Y / N / U
 
-Examples: AI/ML systems, IoT, facial recognition, acoustic data channels (note: relevant to Kyma), blockchain-based processing, federated learning.
+Examples: AI/ML systems, IoT, facial recognition, acoustic data channels, blockchain-based processing, federated learning.
 
 **Criterion 9 — Processing that prevents data subjects from exercising a right or using a service or contract**
 Processing that aims at, or results in, individuals being excluded or denied access to a service, contract, or right.

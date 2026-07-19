@@ -1,4 +1,4 @@
-# Guise Regulatory Normalization — Lessons
+# Subrosa Regulatory Normalization — Lessons
 
 ## Sectoral laws compose as overlays, not parallels — and they're where ARCH-MANDATES lives
 The operator-approved S0–S5 profile models sectoral laws as modifiers on omnibus floors (S3 map), keeping floor/conflict derivations composable. Payoff was immediate: the profile surfaced two more ARCH-MANDATES instances (BIPA § 15(c) profit ban; COPPA's non-bypassable no-PI age gate) and the cleanest dissolution argument in the suite — BIPA's entire class-action exposure collapses under on-device biometric matching. Sectoral statutes, being single-purpose, state architectural requirements more directly than omnibus ones.

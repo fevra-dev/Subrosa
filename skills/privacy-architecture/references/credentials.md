@@ -123,7 +123,7 @@ Presentation (to verifier — selective disclosure):
 | `did:sol` | Solana | Medium — on-chain, pseudonymous |
 | `did:pkh` | Blockchain address | Low — directly links to wallet |
 
-**For pseudonymous contexts:** `did:key` generates a DID from a key pair locally — no registry, no on-chain footprint. Ideal for Kyma's Morse fist biometric DID concept.
+**For pseudonymous contexts:** `did:key` generates a DID from a key pair locally — no registry, no on-chain footprint. A fit for biometric or behavioral DID concepts (e.g. a keystroke/rhythm-derived identity).
 
 **Tools:**
 - `Veramo` (TypeScript/Node.js) — full DID + VC stack, multi-method

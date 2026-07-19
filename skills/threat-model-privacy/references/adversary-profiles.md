@@ -280,7 +280,7 @@ Malicious tool logs invocation timestamps and parameter patterns to build a beha
 *Dependency confusion / typosquatting:*
 For locally installed tools (npm packages, pip packages, CLI tools), adversary publishes a malicious package with a similar name to a legitimate private package. Developer installs it inadvertently; malicious code runs with developer-level access.
 
-**Typical targets:** Any system using third-party MCP servers, npm/pip packages, browser extensions, LLM plugins, or sub-agent APIs. High-value targets: crypto wallets (Kyma, Seed Vault interaction), API key stores, health data pipelines, security tooling (Delegate Scout scanner).
+**Typical targets:** Any system using third-party MCP servers, npm/pip packages, browser extensions, LLM plugins, or sub-agent APIs. High-value targets: crypto wallets (mobile wallet / Seed Vault interaction), API key stores, health data pipelines, security tooling.
 
 **Real-world precedents:**
 - npm `event-stream` compromise (2018) — targeted cryptocurrency wallet
@@ -305,4 +305,4 @@ For locally installed tools (npm packages, pip packages, CLI tools), adversary p
 
 **Falsifier:** Not a plausible adversary if all tools are self-hosted, open-source with verified checksums, and no third-party tool has access to sensitive parameters.
 
-**Elevated risk contexts:** OpenClaw fleet (MCP-native architecture, multiple third-party tools), Kyma (MWA/MCP tool interactions with Seed Vault), any agent system with external tool integrations.
+**Elevated risk contexts:** multi-agent fleets (MCP-native architecture, multiple third-party tools), mobile wallets (MWA/MCP tool interactions with Seed Vault), any agent system with external tool integrations.

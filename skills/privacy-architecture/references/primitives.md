@@ -170,7 +170,7 @@ Multi-party (>2), various adversarial models.
 
 **MPC for Solana / Web3:**
 - **Threshold ECDSA/EdDSA:** t-of-n signing without a single key holder. Used in: tBTC bridge (Threshold Network), Lightning Network watchtowers, institutional custody (Fireblocks MPC).
-- **Relevant to Kyma:** MPC-based key management for Seed Vault — split the mobile wallet key across devices without a single point of failure.
+- **Mobile wallet key management:** MPC-based (threshold) signing splits a wallet key across devices without a single point of failure — applicable to Seed Vault-backed mobile wallets.
 
 **Performance rule of thumb:**
 - LAN MPC: practical for circuits up to ~10^8 gates

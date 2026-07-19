@@ -144,7 +144,7 @@ If the random secret ("toxic waste") from a Groth16 ceremony is not destroyed an
 → Use `solana-zk-token-proof` as reference for on-chain verifier pattern  
 → Alternatively: PLONK with the Aztec Barretenberg verifier  
 
-**Mobile proving (Kyma / Seeker):**  
+**Mobile proving (constrained / low-bandwidth devices):**  
 → Noir + Barretenberg WASM — benchmark first  
 → Alternatively: PLONK with small circuit sizes  
 → Groth16 for smallest proof transmission (acoustic channel bandwidth is limited)  

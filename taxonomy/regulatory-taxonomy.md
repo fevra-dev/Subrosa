@@ -1,6 +1,6 @@
 ---
 name: regulatory-taxonomy
-description: Normalized cross-jurisdiction regulatory mapping layer for the Guise privacy suite. One frozen axis set; one record file per jurisdiction. Use when answering any cross-jurisdiction compliance question ("who has a 72-hour breach clock", "which regimes treat geolocation as sensitive", "what age is a child in Brazil"), when adding a new jurisdiction to the suite, or when a downstream skill (consent-language, data-minimization, privacy-impact-assessment) needs a statutory citation. Records are the single source of truth; prose skills cite records.
+description: Normalized cross-jurisdiction regulatory mapping layer for the Subrosa privacy suite. One frozen axis set; one record file per jurisdiction. Use when answering any cross-jurisdiction compliance question ("who has a 72-hour breach clock", "which regimes treat geolocation as sensitive", "what age is a child in Brazil"), when adding a new jurisdiction to the suite, or when a downstream skill (consent-language, data-minimization, privacy-impact-assessment) needs a statutory citation. Records are the single source of truth; prose skills cite records.
 ---
 
 # Regulatory Taxonomy — Master

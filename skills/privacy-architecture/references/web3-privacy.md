@@ -61,7 +61,6 @@ Result: Sender cannot link P to the receiver's identity.
 - Custom Solana program for stealth address registry
 - Off-chain scanning service (or client-side with viewing key)
 - Account creation: PDA derived from stealth address
-- Relevant to Kyma: acoustic channel can transmit the ephemeral key R as part of payment metadata
 
 **Privacy properties:**
 - Sender: learns receiver's stealth address (one-time); cannot link to other payments
@@ -111,7 +110,7 @@ Balance proof: C_input = C_output + C_fee
 
 **Deployments:** Monero (RingCT), Grin, Beam, Liquid Network (Bitcoin sidechain), Aztec (Ethereum).
 
-**Solana path:** Solana's ZK Token program (experimental, mainnet-beta) implements confidential transfers for SPL tokens using ElGamal encryption + ZK proofs. This is directly relevant to Delegate Scout and Kyma.
+**Solana path:** Solana's ZK Token program (experimental, mainnet-beta) implements confidential transfers for SPL tokens using ElGamal encryption + ZK proofs. This is directly relevant to Solana confidential-transfer designs.
 
 **`spl-token-2022` Confidential Transfers:**
 - Extension to SPL Token-2022 standard
@@ -224,7 +223,7 @@ Privacy protocol for Solana — ZK-based private transfers with a selective-disc
 
 5. **ZK-compressed transaction submission:** Research area — submit proofs rather than transactions directly to reduce metadata linkage.
 
-**Kyma acoustic channel consideration:** Transactions submitted via acoustic channel ultimately hit an RPC somewhere. The acoustic channel provides payload privacy (encrypted content) but the submitting device's IP still reaches the RPC. Architecture should include VPN or Tor on the submitting device.
+**Out-of-band submission consideration:** Transactions submitted via any out-of-band channel ultimately hit an RPC somewhere. The channel may provide payload privacy (encrypted content), but the submitting device's IP still reaches the RPC. Put a VPN or Tor on the submitting device.
 
 ---
 

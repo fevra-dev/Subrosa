@@ -251,7 +251,7 @@ Analyst: [user or Claude]
 
 ASSET INVENTORY
 ───────────────────────────────────
-[T1] Source code IP (Delegate Scout, Kyma)
+[T1] Source code IP (proprietary application source)
 [T1] Pseudonym / fevra-dev identity separation
 [T2] Client relationships at Exchange.Art
 [T3] Home address

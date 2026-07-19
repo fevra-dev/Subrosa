@@ -1,6 +1,6 @@
 ---
 name: privacy-architecture
-description: Selects and applies cryptographic primitives for privacy-by-design — systems where selective disclosure is structural, not procedural. Use when user says "build this with privacy built in", "how do I avoid collecting identity", "zero-knowledge proof for this", "anonymous credential", "can I prove X without revealing Y", "stealth address", "blind signature", "private transaction", "MPC", "homomorphic encryption", "differential privacy for analytics", "TEE", "can I verify without seeing the data", or when designing a new system, protocol, or product and wants privacy to be architectural rather than a policy layer added afterward. The Cypherpunk layer of the privacy suite — implements Eric Hughes' (1993) selective disclosure principle and Timothy May's (1988) anonymous transaction system program using contemporary cryptographic primitives. Distinct from all other privacy skills: those audit and repair; this one builds.
+description: Selects and applies cryptographic primitives for privacy-by-design — systems where selective disclosure is structural, not procedural. Use when user says "build this with privacy built in", "how do I avoid collecting identity", "zero-knowledge proof for this", "anonymous credential", "can I prove X without revealing Y", "stealth address", "blind signature", "private transaction", "MPC", "homomorphic encryption", "differential privacy for analytics", "TEE", "can I verify without seeing the data", or when designing a new system, protocol, or product and wants privacy to be architectural rather than a policy layer added afterward. The Cypherpunk layer of the privacy suite — implements Eric Hughes' (1993) selective disclosure principle and Timothy May's (1988) anonymous transaction system program using contemporary cryptographic primitives. Distinct from all other privacy skills — those audit and repair; this one builds.
 ---
 
 # Privacy Architecture
@@ -136,7 +136,7 @@ A cryptographic primitive guarantees privacy only within its formal security mod
 
 1. **Trusted setup risk**: Groth16 and PLONK require a trusted setup ceremony. If the setup is compromised, proofs can be forged. Use a large multi-party ceremony (Hermez, Ethereum's Powers of Tau) or use setup-free systems (STARKs, Bulletproofs).
 
-2. **Side-channel leakage**: TEEs (SGX, TrustZone) have documented side-channel attacks — cache timing, power analysis, Spectre/Meltdown variants. Kyma's Seed Vault TEE integration is relevant here. Don't treat TEE isolation as absolute.
+2. **Side-channel leakage**: TEEs (SGX, TrustZone) have documented side-channel attacks — cache timing, power analysis, Spectre/Meltdown variants. Don't treat TEE isolation as absolute.
 
 3. **Metadata leakage**: ZKPs prove statements about data; they don't hide the existence of the interaction, its timing, size, or frequency. Combine with mixnets or cover traffic if interaction metadata is sensitive.
 
@@ -217,7 +217,7 @@ Design:
 Note: Native stealth address support on Solana is nascent — 
       implementation requires custom program. ERC-5564 exists 
       on EVM; port is the open research question.
-Relevant to: Kyma payment privacy, Exchange.Art anonymous purchasing
+Relevant to: private payments, anonymous marketplace purchasing
 ```
 
 **Pattern: Private NFT ownership attestation**
@@ -312,27 +312,8 @@ Design:
 Tools: DIF BBS+ spec (ietf-bbs-signatures), 
        Veramo (DID framework, Node.js),
        Spruce DIDKit (cross-platform)
-Relevant to: Kyma Morse fist DID, fevra-dev identity architecture,
-             Exchange.Art artist verification
-```
-
-**Pattern: Acoustic channel metadata minimization (Kyma-specific)**
-Use case: ggwave acoustic transmission reveals timing, frequency, and acoustic fingerprint — minimize what can be inferred from the side channel.
-
-```
-Design:
-  1. Cover traffic — transmit dummy acoustic bursts at fixed intervals
-     to prevent timing correlation attacks
-  2. Frequency hopping — vary carrier frequency within 15-19.5kHz 
-     range to prevent device fingerprinting via acoustic signature
-  3. Fixed-length padding — pad all payloads to a fixed acoustic 
-     burst length to prevent length-based content inference
-  4. Replay prevention — AES-256-GCM nonce + durable nonce pool 
-     already implemented; verify nonce uniqueness is enforced
-     
-Note: This is acoustic traffic analysis resistance, not encryption —
-      the AES-256-GCM layer handles confidentiality; this layer 
-      handles metadata privacy of the channel itself
+Relevant to: pseudonymous DIDs, decentralized identity architecture,
+             marketplace artist verification
 ```
 
 ---
@@ -344,9 +325,9 @@ Note: This is acoustic traffic analysis resistance, not encryption —
 - `references/primitives.md` — Foundational primitives: commitment schemes (Pedersen, hash), private set intersection, homomorphic encryption (FHE/PHE), secure MPC, differential privacy, oblivious RAM
 - `references/web3-privacy.md` — Web3 / blockchain privacy: stealth addresses, ring signatures, confidential transactions, ZK rollups, Tornado Cash architecture analysis, Solana-specific privacy tooling
 - `references/tee.md` — Trusted execution environments: Intel SGX, ARM TrustZone, Apple Secure Enclave, Solana Seed Vault, known side-channel vulnerabilities, attestation protocols
-- `references/comms.md` — Communications privacy: Tor/onion routing, mixnets, Signal Protocol, forward secrecy, acoustic channel privacy (Kyma context)
+- `references/comms.md` — Communications privacy: Tor/onion routing, mixnets, Signal Protocol, forward secrecy, the Noise Protocol Framework
 - `references/regulatory-dissolution.md` — The Statutory Dissolution Map: primitive → obligations dissolved/discharged across the 27-record taxonomy; the ARCH-MANDATES statutes; C1–C8 resolutions (incl. the AML-vs-anonymity collision); the record-cited ADR pattern
-- `references/lineage.md` — The Cypherpunk Lineage: all twelve canonical texts (Diffie–Hellman 1976 → Nakamoto 2008) mapped to the primitive each authorizes and its place in this suite
+- `references/lineage.md` — The Cypherpunk Lineage: fourteen canonical texts (Diffie–Hellman 1976 → Nakamoto 2008) plus the post-2008 continuation through Privacy Pools (2023), each mapped to the primitive it authorizes and its place in this suite
 
 ---
 

@@ -9,7 +9,7 @@ Paste everything below the line.
 
 ---
 
-I'm continuing work on **Guise**, my privacy-compliance skill suite. Phase 1
+I'm continuing work on **Subrosa**, my privacy-compliance skill suite. Phase 1
 produced a normalized regulatory taxonomy (the frozen axis set) with Tier-1
 jurisdictions fully populated. Right now that mapping is a reference nobody consumes:
 the generative skills — consent-language (and its notice/cookie/children/breach/

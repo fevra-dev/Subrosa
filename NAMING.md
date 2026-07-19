@@ -1,6 +1,8 @@
-# Naming — candidates to replace (or keep) "Guise"
+# Naming decision — **Subrosa** (retained record)
 
-**The problem with Guise:** a *guise* is an outward appearance that conceals the real — it connotes **deception**. The suite's thesis is the opposite: *honest selective disclosure* — reveal exactly what's necessary, truthfully, and nothing more (Hughes 1993). The name argues against the product. It's also phonetically ambiguous (guise/guys/geese) and hard to search.
+> **Settled 2026-07-05: the suite is Subrosa.** This file is kept as the decision record — the shortlist, the criteria, and the reasoning that produced the name. "Guise" below is the original working name that Subrosa replaced; it is preserved here only as the rejected candidate the analysis argues against.
+
+**Why the working name "Guise" was rejected:** a *guise* is an outward appearance that conceals the real — it connotes **deception**. The suite's thesis is the opposite: *honest selective disclosure* — reveal exactly what's necessary, truthfully, and nothing more (Hughes 1993). The name argued against the product. It was also phonetically ambiguous (guise/guys/geese) and hard to search.
 
 **Criteria** (Rams: less, but better):
 1. Encodes *selective* disclosure — not hiding, not masking: **calibrated revealing**

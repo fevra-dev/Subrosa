@@ -9,7 +9,7 @@ Paste everything below the line.
 
 ---
 
-I'm continuing work on **Guise**, my privacy-compliance skill suite. Phases 1–2 gave
+I'm continuing work on **Subrosa**, my privacy-compliance skill suite. Phases 1–2 gave
 me a frozen regulatory taxonomy with Tier-1/Tier-2 populated, the downstream skills
 wired to consume it, and three derived artifacts: a strictest-regime-wins default
 matrix, a cross-regime conflict register, and an architecture-vs-policy roll-up. This

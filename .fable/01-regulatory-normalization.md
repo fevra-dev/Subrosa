@@ -9,7 +9,7 @@ Paste everything below the line.
 
 ---
 
-I'm building **Guise**, a privacy-compliance skill suite (a bundle of Claude Code
+I'm building **Subrosa**, a privacy-compliance skill suite (a bundle of Claude Code
 skills) that pairs statute-level regulatory mapping with a cypherpunk architecture
 layer. The thesis, stated in privacy-suite.md, is *compliance is a floor, selective
 disclosure is the ceiling*. The suite already has deep, statute-precise content

@@ -13,9 +13,9 @@ By Szabo's razor, a TEE is not an elimination of the trusted third party but its
 |---|---|---|---|
 | Intel SGX | Intel | x86 (server/desktop) | Server-side private RAG, MPC nodes |
 | AMD SEV/SEV-SNP | AMD | x86 (server) | Cloud confidential VMs |
-| ARM TrustZone | ARM | ARMv8+ (mobile/embedded) | Kyma Seeker device, Android |
+| ARM TrustZone | ARM | ARMv8+ (mobile/embedded) | Mobile/embedded secure signing, Android |
 | Apple Secure Enclave | Apple | ARM (Apple Silicon) | iOS key storage, Face ID |
-| Solana Seed Vault | Solana/OSOM | ARM TrustZone subset | Kyma MWA 2.0 integration |
+| Solana Seed Vault | Solana/OSOM | ARM TrustZone subset | Solana mobile wallet (MWA 2.0) key isolation |
 | AWS Nitro Enclaves | AWS | x86 (cloud) | Cloud-hosted private compute |
 | Google Titan | Google | Custom ARM | Android StrongBox |
 
@@ -131,24 +131,19 @@ Seed Vault TA (Secure World)
 - Seed phrase encrypted with hardware key; decryptable only by Seed Vault TA
 - Screen confirmation (TrustZone-backed UI) required before signing
 
-**Kyma integration (Kyma SKILL.md relevance):**
-- Durable nonce pool management: nonces can be generated and stored in Seed Vault
-- AES-256-GCM key for acoustic channel encryption: stored in hardware-backed Keystore (TrustZone-backed), not Seed Vault directly
-- Transaction signing for Solana Pay over audio: Seed Vault signs; acoustic channel transmits signed tx
-
 **Seed Vault limitations:**
 - Root access to Android can potentially extract Seed Vault data via Secure World exploits (rare; requires sophisticated attack)
 - Device must have Android Keystore hardware backing (virtually all modern Android devices)
-- Backup: seed phrase backup via steganographic encoding (Kyma feature) is the primary backup path
+- Backup: seed-phrase backup (e.g. via steganographic encoding) is an app-level backup path
 
 **API:**
 ```kotlin
 // MWA 2.0 + Seed Vault signing
 val result = MobileWalletAdapter().transact(activityResultSender) {
     val authorizationResult = authorize(
-        identityUri = Uri.parse("https://kyma.fevra.dev"),
+        identityUri = Uri.parse("https://example.com"),
         iconUri = Uri.parse("favicon.ico"),
-        identityName = "Kyma"
+        identityName = "MyWallet"
     )
     // Request signing — happens in Seed Vault (Secure World)
     val signResult = signTransactions(
@@ -210,8 +205,6 @@ All TEEs share a common class of residual vulnerabilities: **side channels**. Th
 | EM emissions | Electromagnetic emissions correlated with computation | Physical access, close proximity |
 | Acoustic | CPU/coil whine correlated with computation | Physical access |
 | Memory bus | DRAM access patterns visible to DRAM controller | SGX pre-DIMM-encryption |
-
-**Acoustic side-channel note (Kyma context):** The Kyma ggwave acoustic channel operates at 15-19.5kHz — above human hearing but within range of sensitive microphones. A separate threat: the device's own CPU/coil acoustic emissions could theoretically be measured during acoustic transmission to correlate computation with transmitted content. This is a highly sophisticated physical attack requiring close proximity; not a practical concern for most threat models but worth noting in the threat model for high-security deployments.
 
 ---
 
